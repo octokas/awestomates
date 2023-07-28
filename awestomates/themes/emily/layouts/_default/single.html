@@ -1,0 +1,20 @@
+{{/*  {{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-default-single{{ end }}
+{{ define "header_classes" }}{{ end }}  */}}
+
+{{ define "main" }}
+    <main class="clearfix">
+        {{- partial "post-preview.html" . -}}
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="blog-post-item-wrap">
+                    {{- partial "pjax-container.html" . -}}
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        {{- partial "sidebar.html" . -}}
+        <h1 class="title">{{.Title}}</h1>
+        <div class="content {{if .Site.Params.enable_anchor_link}}{{ "anchor-link-enabled" }}{{ end }}">{{.Content}}</div>
+    </main>
+{{ end }}

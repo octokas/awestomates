@@ -1,0 +1,55 @@
+baseURL = 'https://awestomates.com'
+languageCode = 'en-us'
+title = 'Awestomates'
+theme = "emily"
+enableInlineShortcodes = true
+defaultContentLanguage = "en"
+enableEmoji = true
+enableGitInfo = true
+security.enableInlineShortcodes = true
+watch = true
+
+# Winston Parameters
+[params]
+  AuthorName = 'Kaska Miskolczi'
+  GitHubUser = 'batmanwgd'
+  google_analytics_id = ""
+  twitter_handle = "@awestomates"
+  showAuthorOnHomepage = true
+  showAuthorOnPosts = true
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = true
+  usePaginationOnHomepage = false
+  limitPostsOnHomepage = 3 # only used if usePaginationOnHomepage is false
+  sortPostsByDateOldestFirst = false
+  addDot = true#5cbbc3
+  addFrame = true
+  highlightColor = '#82C4CC'
+  baseColor = "#ffffff"
+  baseOffsetColor = "#eaeaea"
+  headingColor = "#1c1b1d"
+  textColor = "#4e5157"
+  dotColor = "#82C4CC"
+  enableGoogleFonts = true 
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  fontFamilyHeading = "Playfair Display"
+  fontFamilyParagraph = "Lato"
+  fontFamilyMonospace = "monospace"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+## Privacy Parameters - Disable all services
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

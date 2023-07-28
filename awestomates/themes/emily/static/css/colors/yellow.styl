@@ -1,0 +1,1707 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Template Name: Awestomates - An awesome place for stomas*/
+/* Version: 1.0 auto Release*/
+/* Build Date: 02-05-2016*/
+/* Author: Design by unvab. Coded by VLThemes*/
+/* Copyright: (C) 2016 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: *//*
+
+	01-IMPORT FONTS
+	02-VARIABLES
+	03-ALL STYLES
+	04-MENU
+	05-PAGE TITLE
+	06-GALLERY
+	07-SERVICES
+	08-SECTION ABOUT
+	09-SOCIAL LINE
+	10-PROGRESS BAR
+	11-INSTAFEED
+	12-LIGHTBOX
+	13-BLOG
+	14-PREVIEW POST
+	15-COMMENTS
+	16-PRELOADER BLOG
+	17-SIDBAR
+	18-FOOTER
+	19-PRELOADER
+
+ *//*--------------------------------------------------------*/
+
+
+
+/*----------------------*/ 
+/*   01-IMPORT FONTS    */ 
+/*----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,400italic,600,600italic,700,300')
+
+
+/*----------------------*/ 
+/*   02-VARIABLES       */ 
+/*----------------------*/
+
+$f1 = 'Josefin Sans', sans-serif
+
+$white = #ffffff
+$color = #ffffc4
+$text = #4b4b4b
+$black = #000000
+$lblack = #1d1d1d
+$gray = #8a8a8a
+
+.background-color
+	background-color $color
+
+::-moz-selection
+	background $color
+
+::selection
+	background $color
+
+/*----------------------*/ 
+/*   03-ALL STYLES      */ 
+/*----------------------*/
+	
+body
+	background-color $white
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	position relative
+	min-width 320px
+	font-family $f1
+	font-weight 300
+	line-height 1.6
+	letter-spacing .5px
+	font-size 18px
+	color $black
+
+
+@media (min-width: 544px)
+	.container
+		max-width 100%
+		padding-left 30px
+		padding-right 30px
+
+@media (min-width: 768px)
+	.container
+		max-width 100%
+		padding-left 60px
+		padding-right 60px
+
+@media (min-width: 992px)
+	.container
+		max-width 100%
+		padding-left 60px
+		padding-right 60px
+
+@media (min-width: 1200px)
+	.container
+		max-width 100%
+		padding-left 80px
+		padding-right 80px
+
+@media (min-width: 1500px)
+	.container
+		max-width 100%
+		padding-left 100px
+		padding-right 100px
+
+@media (min-width: 1920px)
+	.container
+		max-width 100%
+		max-width 1920px
+		
+.home main
+	min-height 100vh
+
+a
+	text-decoration none
+	color inherit
+	transition color .25s ease-in-out, background-color .2s ease-in-out, opacity .25s ease-in-out
+	&:hover, &:focus
+		text-decoration none
+		outline none
+		color inherit
+	&.disable
+		cursor default
+
+h1, h2, h3, h4, h5, h6
+	font-weight 400
+	line-height 1.5em
+	margin 15px 0
+	color $black
+	font-family $f1
+
+h1
+	font-size 48px
+	
+h2
+	font-size 36px
+
+h3
+	font-size 28px
+
+h4
+	font-size 24px
+
+h5
+	font-size 20px
+
+h6
+	font-size 14px
+
+p
+	margin 0 0 30px 0
+	padding 0
+	&:last-child
+		margin-bottom 0
+
+b,
+strong
+	font-weight 400
+	
+i, em
+	font-style italic
+
+ul, ol
+	&.list-none
+		list-style-type none
+		padding 0
+		margin 0
+
+img
+	border 0
+	height auto
+	max-width 100%
+	vertical-align middle
+			
+blockquote
+	margin 30px 0
+	padding 0
+	font-size 20px
+	line-height 1.6em
+	font-style italic
+	font-weight 300
+	&::before
+		content '\201C'
+	&::after
+		content '\201D'
+
+placeholder-color(color, size, textt)
+	&::-webkit-input-placeholder 
+		color color
+		font-size size
+		text-transform textt
+	&:-moz-placeholder
+		color color
+		font-size size
+		text-transform textt
+	&::-moz-placeholder
+		color color
+		font-size size
+		text-transform textt
+	&:-ms-input-placeholder  
+		color color
+		font-size size
+		text-transform textt
+
+.navbar-search
+	position relative
+	width 100%
+	.line-input
+		position absolute
+		bottom 0
+		height 1px
+		left 0
+		right 0
+		background-color $black
+		transform scaleX(1)
+		transition all .35s ease-in-out
+	input
+		border none
+		background none
+		line-height 1em
+		height 40px
+		line-height 40px
+		placeholder-color($black, 14px, uppercase)
+		&:focus + .line-input
+			transform scaleX(0)
+	button
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		width 40px
+		line-height 40px
+		font-size 20px
+		text-align center
+		border none
+		background none
+		outline none
+	
+.dt
+	display table
+	table-layout fixed
+	width 100%
+	
+.dtc
+	display table-cell
+	width 100%
+	vertical-align middle	
+	
+.jarallax
+	position relative
+	background-size cover
+	background-repeat no-repeat
+	background-position 50% 50%
+
+.btn
+	padding 12px 55px
+	font-size 14px
+	text-transform uppercase
+	text-align center
+	display inline-block
+	color $black
+	outline none
+	border none
+	position relative
+	span
+		position relative
+		z-index 2
+		transition all .4s ease-in-out
+	&::after
+		content ''
+		top 0
+		left 0
+		right 0
+		bottom 0
+		position absolute
+		z-index 1
+		transition all .4s ease-in-out
+		background-color $white
+	&::before
+		content ''
+		top 0
+		left 0
+		right 0
+		bottom 0
+		position absolute
+		z-index 1
+		transition all .4s ease-in-out
+		background-color $black
+		transform translateY(5px) translateX(5px)
+	&.btn-color
+		&::after
+			background-color $color
+	&:hover
+		text-decoration none
+		span
+			color $white
+		&::before
+			transform translateY(0px) translateX(0px)
+		&::after
+			background-color transparent
+
+.btn-load
+	font-size 14px
+	text-transform uppercase
+	line-height 22px
+	transition all .25s ease-in-out
+	i
+		margin-left 5px
+		position relative
+		top 4px
+		font-size 22px
+	&:hover
+		text-decoration none
+		opacity .8
+	
+.btn-play
+	height 60px
+	width 60px
+	display inline-block
+	line-height 60px
+	text-align center
+	font-size 30px
+	background-color $white
+	border-radius 50%
+	color $black
+	i
+		margin-top 15px
+		margin-left 5px
+	&:hover
+		background-color $color
+		color $black
+
+.return-msg
+	color #FF4A26
+	text-align center
+	text-transform uppercase
+	letter-spacing 3px
+	font-size 12px
+	margin 0
+	padding 0
+
+.form-control
+	margin-bottom 30px
+	padding 0
+	border none
+	border-radius 0
+	
+input, textarea
+	width 100%
+	display block
+	outline none
+	border-radius 0px
+	border 1px solid $black
+	placeholder-color($black, 16px, capitalize)
+	max-width 100%
+	background-color lighten($color, 20%)
+	&.input-white
+		background-color $white
+	
+input
+	padding 0 15px
+	line-height 45px
+
+textarea
+	padding 10px 15px
+	min-height 150px
+	
+
+/*----------------------*/ 
+/*   04-MENU            */ 
+/*----------------------*/
+
+.vl-navbar
+	padding 40px 0
+	
+.vl-navbar-wrap.with-border .vl-navbar
+	border-bottom 1px solid $black
+
+.menu-close-wrap
+	position absolute
+	top 0
+	left 0
+	right 0
+	
+a.logo
+	font-size 24px
+	line-height 40px
+	text-transform uppercase
+	color $black
+	text-decoration none
+	float left
+	&:hover
+		opacity .8
+
+nav.menu-wrap
+	display none
+	background-color $color
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index 9999
+	ul
+		margin 0
+		padding 0
+		list-style-type none
+	
+.menu-wrap .valign
+	position relative
+	padding 0 150px
+	top 50%
+	transform translateY(-50%)
+
+.vl-menu
+	text-align center
+	li 
+		a
+			color $black
+			display inline-block
+			font-weight 400
+			font-size 18px
+			line-height 45px
+			text-transform uppercase
+			text-decoration none
+	> li
+		margin 0
+		padding 0
+		> a
+			font-size 30px
+			line-height 1.8em
+			
+ul.sub-menu
+	display none
+	margin 0 0 20px
+	padding 5px 0 0
+
+.post-categories
+	list-style-type none
+	margin 0
+	padding 0
+	position relative
+	top 7px
+	li
+		float left
+		margin-left 8px
+		a
+			display block
+			line-height 1em
+			padding 7px 9px
+			text-transform uppercase
+			font-size 14px
+			color $black
+			font-weight 400
+			text-decoration none
+		&.active, &:hover
+			a
+				background-color $color
+
+@media (max-width: 768px)
+	.menu-wrap .valign
+		padding 0 50px
+	.vl-menu
+		li a
+			font-size 16px
+		> li > a
+			font-size 24px !important
+
+// menu burger
+$gb = 8px
+
+.menu-toggle
+	float right
+	display block
+	text-align center
+
+.menu-toggle.closed .burger-icon i
+	background-color transparent
+	&::before
+		transform translateY(8px) rotate(45deg)
+	&::after
+		transform translateY(-8px) rotate(-45deg)
+				
+.burger-icon
+	display inline-block
+	position relative
+	z-index 1
+	top 6px
+	
+.burger-icon i
+	position relative
+	margin-top $gb
+	margin-bottom $gb
+	&, 
+	&::before, 
+	&::after
+		width 30px
+		height 1px
+		background-color $black
+		display block
+
+.burger-icon i
+	&::before, 
+	&::after
+		content ''
+		position absolute
+
+.burger-icon i::before
+	top -($gb)
+	
+.burger-icon i::after
+	top $gb
+	
+
+/*----------------------*/ 
+/*   05-PAGE TITLE      */ 
+/*----------------------*/
+
+.page-title
+	padding-top 120px
+	padding-bottom 80px
+	h1
+		margin 0
+		padding 0
+		line-height 1em
+		display inline-block
+		position relative
+		span
+			position absolute
+			width 0px
+			top 50%
+			left calc(100% + 60px)
+			height 1px
+			background-color $black
+		+ p
+			margin-top 50px
+			margin-bottom 40px
+	&.active h1 span
+		width 120px
+		transition all .4s ease-in
+		transition-delay .15s
+			
+@media (max-width: 768px)
+	.page-title h1
+		font-size 34px
+
+@media (max-width: 540px)
+	.page-title h1
+		span
+			display none
+				
+/*----------------------*/ 
+/*   06-GALLERY         */ 
+/*----------------------*/
+
+.filters
+	list-style-type none
+	display inline-block
+	margin 0
+	padding 0
+	li
+		margin-bottom 10px
+		display inline-block
+		margin 0 4px
+		span
+			display block
+			line-height 1em
+			padding 7px 9px
+			cursor pointer
+			text-transform uppercase
+			font-size 14px
+			color $black
+			font-weight 400
+			text-decoration none
+		&.active-filter, &:hover
+			span
+				background-color $color
+
+
+.vl-portfolio-item
+	position relative
+	.vl-image-wrap
+		background-size cover
+		background-position 50%
+		position relative
+		padding-top 100%
+	img 
+		width 100%
+		height auto
+		display block
+	&:hover 
+		.overlay_item
+			opacity 1
+		.vl-overlay-content
+			opacity 1
+			transform scale(1)
+			
+.overlay_item
+	position absolute
+	top 0
+	left 0
+	height 100%
+	width 100%
+	border 3px solid $black
+	background-color rgba($color, 60%)
+	opacity 0
+	transition all .4s ease-in-out
+	z-index 2
+
+.vl-overlay-content
+	position absolute
+	top calc(50% - 30px)
+	left calc(50% - 30px)
+	height 60px
+	width 60px
+	text-align center
+	font-size 48px
+	color $black
+	line-height 60px
+	opacity 0
+	z-index 3
+	transition all .4s ease-in-out
+	transform scale(0)
+
+.vl-portfolio-masonry-wrapper
+	margin-left -30px
+	margin-right -30px
+	
+.vl-portfolio-masonry-wrapper .vl-portfolio-item
+	padding 15px
+
+.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item
+	float left
+	width 33.333%
+
+.vl-portfolio-masonry-wrapper[data-col="2"] .vl-portfolio-item
+	float left
+	width 50%
+
+.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item
+	float left
+	width 25%
+
+.vl-portfolio-masonry-wrapper[data-col="2"] .vl-portfolio-item.tall .vl-image-wrap,
+.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item.tall .vl-image-wrap,
+.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item.tall .vl-image-wrap
+	padding-top calc(200% + 30px)
+
+.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item.large
+	width 66.666%
+
+.vl-portfolio-masonry-wrapper[data-col="2"] .vl-portfolio-item.large
+	width 100%
+
+.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item.large
+	width 50%
+
+@media (max-width: 768px)
+	.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item.large
+		width 100%
+	.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item,
+	.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item
+		width 50%
+
+@media (max-width: 544px)
+	.vl-portfolio-masonry-wrapper[data-col="2"] .vl-portfolio-item,
+	.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item,
+	.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item
+		width 100%
+
+	.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item.large
+		width 100%
+		
+.vl-portfolio-masonry-wrapper.equal-grid
+	.vl-portfolio-item
+		padding 0
+
+.vl-portfolio-masonry-wrapper.fit-columns
+	.vl-image-wrap
+		padding-top 0
+		padding-bottom 0
+
+
+/*----------------------*/ 
+/*   07-SERVICES        */ 
+/*----------------------*/
+
+.service-list
+	.service-item
+		text-align center
+		i
+			font-size 48px
+		h6
+			text-transform uppercase
+		&:nth-child(1)
+			border-bottom 1px solid $black
+			border-right 1px solid $black
+		&:nth-child(2)
+			border-bottom 1px solid $black
+		&:nth-child(3)
+			border-right 1px solid $black
+
+@media (max-width: 1500px)
+	.service-item
+		padding 50px
+		
+@media (min-width: 1500px)
+	.service-list
+		.service-item
+			padding 50px 80px
+
+@media (max-width: 768px)
+	.service-list
+		.service-item
+			border none !important
+			padding 20px
+
+/*----------------------*/ 
+/*   08-SECTION ABOUT   */ 
+/*----------------------*/
+
+.slider-awestomates-wrap
+	position relative
+	.awestomates-arrow-prev,
+	.awestomates-arrow-next
+		position absolute
+		top 50%
+		left 0
+		z-index 50
+		display inline-block
+		span
+			min-width 40px
+			display inline-block
+			text-align center
+		i
+			margin-left 5px
+	.awestomates-arrow-prev
+		transform translateY(-50%) translateX(-120px)
+	.awestomates-arrow-next
+		left auto
+		right 0
+		transform translateY(-50%) translateX(120px)
+		i
+			margin-right 5px
+			margin-left 0
+	.slide
+		padding-bottom 10px
+		
+.slick-slide img
+	margin 0 auto
+	
+@media (max-width: 768px)
+	.slider-awestomates-wrap
+		.awestomates-arrow-prev,
+		.awestomates-arrow-next
+			display none
+		.slide
+			text-align center
+			
+@media (max-width: 992px)
+	.slider-awestomates-wrap
+		.awestomates-arrow-prev
+			transform translateY(-50%) translateX(20px)
+		.awestomates-arrow-next
+			transform translateY(-50%) translateX(-20px)
+			
+/*----------------------*/ 
+/*   09-SOCIAL LINE     */ 
+/*----------------------*/
+
+.line-social
+	position relative
+	text-align center
+	line-height 1em
+	font-size 0
+	&::after
+		content ''
+		position absolute
+		height 1px
+		margin-top -2px
+		width 100%
+		background-color $black
+		top 50%
+		left 0
+	> ul
+		display inline-block
+		background-color $white
+		padding 0 15px
+		position relative
+		z-index 2
+		li
+			float left
+			a
+				display block
+				margin 0 8px
+				height 40px
+				width 40px
+				text-align center
+				line-height 40px
+				font-size 16px
+				color $black
+				background-color $color
+				&:hover
+					background-color $black
+					color $white
+
+.line-social-black
+	> ul
+		background-color $color
+		li
+			a
+				background-color $black
+				color $white
+				&:hover
+					background-color $white
+					color $black
+
+/*----------------------*/ 
+/*   10-PROGRESS BAR    */ 
+/*----------------------*/
+
+ul.progress-bar
+	margin 0
+	padding 0
+	list-style-type none
+	li
+		margin-bottom 25px
+		color $black
+		&:last-child
+			margin-bottom 0
+		strong
+			text-transform uppercase
+			font-size 14px
+			letter-spacing 2px
+		i
+			font-style normal
+		p
+			margin-bottom 5px
+			
+.bar-wrap
+	position relative
+	display block
+	width 100%
+	height 10px
+	border 1px solid $black
+	span
+		position absolute
+		margin 3px
+		top 0
+		left 0
+		bottom 0
+		width 0
+		background-color $black
+		
+/*----------------------*/ 
+/*   11-INSTAFEED       */ 
+/*----------------------*/
+
+.instafeed
+	ul
+		display block
+		li
+			float left
+			width 12.5%
+	
+.insta-img
+	display block
+	position relative
+	.insta-overlay
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		border 3px solid $black
+		background-color rgba($color, 60%)
+		opacity 0
+		transition all .4s ease-in-out
+		z-index 2
+		strong
+			position absolute
+			left 0
+			width 100%
+			text-align center
+			top 50%
+			z-index 3
+			transition all .4s ease-in-out
+			transform scale(0)
+			height 20px
+			line-height 20px
+			margin-top -10px
+	&:hover 
+		.insta-overlay
+			opacity 1
+			strong
+				opacity 1
+				transform scale(1)
+	
+@media (max-width: 768px)
+	.instafeed
+		ul
+			li
+				width 25%
+
+@media (max-width: 480px)
+	.instafeed
+		ul
+			li
+				width 50%
+
+/*----------------------*/ 
+/*   12-LIGHTBOX        */ 
+/*----------------------*/
+
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-title
+	font-size 16px
+	font-family $f1
+	background $white
+	color $black
+	border-radius 0px
+	padding 7px 18px
+	font-weight 400
+	
+.nivo-lightbox-close
+	text-transform uppercase
+	font-size 14px
+	height 40px
+	right 0
+	top 0
+	line-height 40px
+	width 8%
+	text-align center
+	letter-spacing 2px
+
+@media (max-width: 768px)
+	.nivo-lightbox-close
+		text-indent -9999px
+		&::after
+			content '\e680'
+			font-family 'pe7'
+			display block
+			position absolute
+			font-size 34px
+			text-indent 0
+			line-height 40px
+			top 0
+			left 0
+			right 0
+			bottom 0
+			text-align center
+		
+.nivo-lightbox-theme-vlthemes.nivo-lightbox-overlay 
+	background-color $color
+	
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-content.nivo-lightbox-loading::after
+	content '\f110'
+	font-family 'FontAwesome'
+	position absolute
+	top calc(50% - 30px)
+	left calc(50% - 30px)
+	height 60px
+	width 60px
+	font-size 30px
+	line-height 60px
+	text-align center
+	color $black
+	animation fa-spin 2.5s infinite linear
+		
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-nav
+	top 40px
+	width 8%
+	bottom 40px
+	text-indent -9999px
+	background-color lighten($color, 20%)
+	transition all .4s ease-in-out
+	&:hover
+		background-color lighten($color, 10%)
+
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-prev::after,
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-next::after
+	font-family 'pe7'
+	position absolute
+	top calc(50% - 20px)
+	left calc(50% - 20px)
+	height 40px
+	width 40px
+	text-indent 0
+	text-transform uppercase
+	letter-spacing 2px
+	z-index 80
+	text-align center
+	line-height 40px
+	color $black
+	font-size 34px
+	
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-prev::after
+	content '\e686'
+
+.nivo-lightbox-theme-vlthemes .nivo-lightbox-next::after
+	content '\e684'
+	
+.nivo-lightbox-image img
+	border 3px solid $black
+
+.nivo-lightbox-title-wrap
+	transform translateY(50%)
+
+/*----------------------*/ 
+/*   13-BLOG            */ 
+/*----------------------*/
+
+@keyframes fadeInUp
+	0%
+		transform translateY(0)
+		opacity 1
+	100%
+		transform translateY(40px)
+		opacity 0
+		
+@keyframes fadeInDown
+	0%
+		transform translateY(40px)
+		opacity 0
+	100%
+		transform translateY(0)
+		opacity 1
+
+.fadeInDown
+	animation fadeInDown 1s forwards ease-in-out
+	
+.fadeInUp
+	animation fadeInUp 1s forwards ease-in-out
+
+a.close-ajax
+	position absolute
+	top 0
+	right -80px
+	display flex
+	align-items center
+	justify-content center
+	width 50px
+	border 1px solid $black
+	height 50px
+	font-size 30px
+	color $black
+	z-index 555
+	
+@media (max-width: 768px)
+	a.close-ajax
+		height 40px
+		width 40px
+		line-height 40px
+		font-size 20px
+		position static
+		margin-bottom 20px
+		margin-left auto
+		margin-right auto
+
+.blog-title
+	margin-top 0
+	margin-bottom 0
+
+.blog-post-item-wrap	
+	.thumb
+		line-height 0
+	.thumb + .blog-title
+		margin-top 80px
+
+.blog-masonry .isotope-item
+	margin-bottom 30px
+	
+.preview-post-masonry
+	&:hover 
+		.preview-post-content
+			background-color $color
+		.preview-title
+			color $black
+	.preview-post-content
+		padding 20px 30px
+		border-bottom 4px solid $color
+		transition all .4s ease-in-out
+		.preview-title
+			margin-top 0
+			font-weight 400
+			color $text
+			font-size 20px
+			line-height 1.5em
+			font-weight 400
+		.blog-meta
+			margin-bottom 0
+			ul.cat li a
+				padding 0
+				background none
+			span.date
+				float right
+
+.blog-meta
+	margin-top 20px
+	margin-bottom 40px
+	ul.cat
+		display inline-block
+		li
+			display inline-block
+			a
+				display block
+				line-height 30px
+				padding 0 10px
+				color $black
+				text-transform uppercase
+				font-size 14px
+				font-weight 400
+				background-color $color
+				font-family $f1
+			+ li
+				margin-left 8px
+	span.date
+		display block
+		display inline-block
+		font-size 14px
+		color $lblack
+		line-height 30px
+		margin-left 40px
+		font-family $f1
+	span.post-info
+		display block
+		display inline-block
+		font-size 14px
+		line-height 30px
+		font-family $f1
+		margin-left 40px
+		a
+			margin-right 15px
+			color $gray
+			&:hover
+				color $lblack
+		i
+			margin-right 3px
+
+.blog-thumb
+	&-image-wrap,
+	&-audio-wrap
+		position relative
+	&-video-wrap
+		position relative
+		&::after
+			content ''
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			z-index 2
+			background-color rgba($black, 15%)
+		.btn-play
+			position absolute
+			top calc(50% - 30px)
+			left calc(50% - 30px)
+			z-index 50
+	&-slider-wrap
+		position relative
+		ul
+			position absolute
+			z-index 50
+			bottom 8px
+			right 8px
+			li
+				float left
+				margin-left 8px
+				.blog-arrow-prev,
+				.blog-arrow-next
+					display block
+					height 45px
+					width 45px
+					cursor pointer
+					text-align center
+					line-height 45px
+					background-color lighten($color, 20%)
+					font-size 30px
+					color $black
+					i
+						margin-top 8px
+					&:hover
+						background-color $color
+
+.blog-pagination
+	font-size 0
+
+.pagination
+	display inline-block
+	padding 0
+	margin 0
+	list-style-type none
+	> li
+		display inline
+		> span
+			padding 5px 15px
+			margin 0 5px
+			float left
+			position relative
+			font-size 14px
+			color $text
+			cursor pointer
+			font-weight 400
+			border 2px solid #eee
+			transition all .4s ease-in-out
+		&:hover > span, &.active > span
+			background-color $color
+			border-color $color
+			color $black
+
+
+/*----------------------*/ 
+/*   14-PREVIEW POST    */ 
+/*----------------------*/		
+
+.preview-post-slider-wrap,
+.preview-post-wrap
+	background-color $color
+	.preview-post-content
+		position relative
+	.preview-post
+		padding 0 0 25px 0
+		margin 0 30px
+		position relative
+		&::after
+			content ''
+			position absolute
+			bottom 0
+			left 0
+			height 1px
+			background-color $black
+			width 0px
+			transition all .4s ease-in-out
+		.preview-title
+			color $text
+			font-size 20px
+			line-height 1.5em
+			font-weight 400
+			margin 0
+			padding 0
+			transition all .4s ease-in-out
+		.post-counter
+			font-size 18px
+			line-height 20px	
+		&.active 
+			.preview-title
+				font-weight 400
+				color $black
+			.post-counter
+				font-weight 400
+		&:hover,
+		&.active
+			&::after
+				width 20px
+
+.preview-post-slider-wrap
+	padding 40px
+	.post-counter
+		margin-bottom 20px
+
+.preview-post-wrap
+	padding 70px 0 25px
+	.post-counter
+		position absolute
+		text-align center
+		top 50%
+		left 0
+		transform translateY(-50%)
+	.preview-post
+		margin 0 70px 30px 70px
+		&:last-child
+			margin-bottom 0
+
+.preview-post-nav-left,
+.preview-post-nav-right
+	position absolute
+	text-align center
+	top 50%
+	margin-top -13px
+	i
+		font-size 26px
+		color $black
+		cursor pointer
+		height 26px
+		width 26px
+		line-height 26px
+		text-align center
+		display inline-block
+	
+.preview-post-nav-left
+	left 0
+	
+.preview-post-nav-right
+	right 0
+		
+@media (max-width:543px)
+	.blog-meta span.post-info
+		display block
+		margin-left 0
+		margin-top 10px
+
+@media (max-width: 543px)
+	.preview-post-nav-left,
+	.preview-post-nav-right
+		display none
+	.preview-post-wrap
+		padding-top 40px
+		.post-counter
+			display none
+		.preview-post
+			margin 0 40px 30px 40px
+
+@media (max-width: 768px)
+	.preview-post-nav-left
+		width 30px
+		left -15px	
+	.preview-post-nav-right
+		width 30px
+		right -15px
+	.preview-post-wrap
+		margin-bottom 60px
+		.post-counter
+			width 30px
+			left -100px
+			span
+				display block
+				&.cur
+					padding-right 8px
+				&.sum
+					padding-left 8px
+			span.sep
+				position relative
+				top -8px
+				height 0
+			
+@media (min-width: 768px)
+	.preview-post-nav-left
+		width 60px
+		left -45px	
+	.preview-post-nav-right
+		width 60px
+		right -45px
+
+	.preview-post-wrap .post-counter
+		width 60px
+		left -130px
+
+@media (min-width: 1200px)
+	.preview-post-nav-left
+		width 80px
+		left -65px	
+	.preview-post-nav-right
+		width 80px
+		right -65px
+	.preview-post-wrap .post-counter
+		width 80px
+		left -150px
+
+@media (min-width: 1500px)
+	.preview-post-nav-left
+		width 100px
+		left -85px
+	.preview-post-nav-right
+		width 100px
+		right -85px
+	.preview-post-wrap .post-counter
+		width 100px
+		left -170px
+
+
+/*----------------------*/ 
+/*   15-COMMENTS        */ 
+/*----------------------*/
+
+.comment-list
+	.media > .pull-left
+		padding-right 0
+	.media
+		margin-bottom 30px
+		&.reply-comment
+			margin-left 130px
+		.comment-img
+			height 100px
+			width 100px
+			margin-right 30px
+		.media-body
+			padding-bottom 20px
+			border-bottom 1px $gray dashed
+		&:last-child
+			.media-body
+				border-bottom none
+				padding-bottom 0
+				
+.comment-meta
+	margin-bottom 15px
+	h6
+		line-height 30px
+		margin 0
+		padding 0
+		span
+			margin-left 20px
+			
+.reply-btn
+	border 1px solid $color
+	line-height 28px
+	padding 0 10px
+	text-transform uppercase
+	font-size 14px
+	color $lblack
+	&:hover
+		background-color $color
+
+@media (max-width:543px)
+	.comment-list .media .comment-img
+		height 80px
+		width 80px
+	.comment-meta
+		h6
+			display block
+			float none
+		h6 span
+			margin-left 0
+			display block
+	.reply-btn
+		float left
+		margin-top 10px
+	.comment-list .media.reply-comment
+		margin-left 0
+
+/*----------------------*/ 
+/*   16-PRELOADER BLOG  */ 
+/*----------------------*/
+
+.preloader-blog
+	display none
+	position fixed
+	top 0
+	right 0
+	text-align center
+	height 40px
+	width 40px
+	line-height 40px
+	z-index 6
+	margin 8px
+	color $black
+	&.active
+		display block
+	span
+		display inline-block
+		animation fa-spin 2.5s infinite linear
+		&::after
+			content '\f110'
+			font-family 'FontAwesome'
+	
+/*----------------------*/ 
+/*   17-SIDBAR          */ 
+/*----------------------*/
+
+.footer-sidebar
+	background-color $color
+	padding 70px 55px
+		
+h5.widget-title
+	margin-top 0
+
+.widget 
+	ul
+		li
+			font-size 16px
+			margin-bottom 15px
+			line-height 1.6em
+			span
+				font-size 14px
+			ul
+				width 50%
+				float left
+	
+@media (max-width: 543px)
+	.footer-sidebar
+		padding 70px 25px 25px
+	.widget ul li ul
+		float none
+		width 100%
+
+.tags ul li
+	margin-bottom 4px
+	margin-left 4px
+	display inline-block
+	a
+		display block
+		background-color $white
+		padding 2px 10px
+		&:hover
+			background-color $black
+			color $white
+				
+.fields-newsletter
+	position relative
+	button
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		font-size 14px
+		background none
+		border 1px solid $black
+		padding 0 15px
+		transition all .25s ease-in-out
+		outline none
+		&:hover
+			color $white
+			background-color $black
+	input
+		border 1px solid $black
+		padding-right 50px
+
+/*----------------------*/ 
+/*   18-FOOTER          */ 
+/*----------------------*/
+
+footer
+	padding 20px 0
+	p.copy
+		font-size 16px
+		color $lblack
+		margin 0
+		padding 0
+	&.with-border
+		border-top 1px solid $black
+
+.footer-social
+	float right
+	display inline-block
+	li
+		float left
+		margin-left 16px
+		a
+			font-size 16px
+			i
+				transition all .25s ease-in-out
+	
+.footer-social
+	.fa-adn:hover
+		color #504e54
+		
+	.fa-apple:hover
+		color #aeb5c5
+		
+	.fa-android:hover
+		color #A5C63B 
+		
+	.fa-bitbucket:hover,
+	.fa-bitbucket-square:hover
+		color #003366
+		
+	.fa-bitcoin:hover,
+	.fa-btc:hover
+		color #F7931A
+		
+	.fa-css3:hover
+		color #1572B7
+		
+	.fa-dribbble:hover
+		color #F46899 
+		
+	.fa-dropbox:hover
+		color #018BD3
+		
+	.fa-facebook:hover,
+	.fa-facebook-square:hover
+		color #3C599F
+		
+	.fa-flickr:hover
+		color #FF0084
+		
+	.fa-foursquare:hover
+		color #0086BE
+		
+	.fa-github:hover,
+	.fa-github-alt:hover,
+	.fa-github-square:hover
+		color #070709
+		
+	.fa-google-plus:hover,
+	.fa-google-plus-square:hover
+		color #CF3D2E
+		
+	.fa-html5:hover
+		color #E54D26
+		
+	.fa-instagram:hover
+		color #A1755C
+		
+	.fa-linkedin:hover,
+	.fa-linkedin-square:hover
+		color #0085AE
+		
+	.fa-linux:hover
+		color #FBC002
+		
+	.fa-maxcdn:hover
+		color #F6AE1C
+		
+	.fa-pagelines:hover
+		color #241E20;
+		
+	.fa-pinterest:hover,
+	.fa-pinterest-square:hover
+		color #CC2127
+		
+	.fa-renrencolor:hover
+		color #025DAC
+		
+	.fa-skypecolor:hover
+		color #01AEF2
+		
+	.fa-stack-exchangecolor:hover
+		color #245590
+		
+	.fa-stack-overflowcolor:hover
+		color #FF7300
+		
+	.fa-trellocolor:hover
+		color #265A7F
+		
+	.fa-tumblr:hover,
+	.fa-tumblr-squarecolor:hover
+		color #314E6C
+		
+	.fa-twitter:hover,
+	.fa-twitter-squarecolor:hover 
+		color #32CCFE
+		
+	.fa-vimeo-squarecolor:hover
+		color #229ACC
+		
+	.fa-vkcolor:hover
+		color #375474
+		
+	.fa-weibocolor:hover
+		color #D72B2B
+		
+	.fa-windowscolor:hover
+		color #12B6F3
+		
+	.fa-xing:hover,
+	.fa-xing-squarecolor:hover
+		color #00555C
+		
+	.fa-youtube:hover,
+	.fa-youtube-play:hover,
+	.fa-youtube-squarecolor:hover
+		color #C52F30
+		
+@media (max-width: 768px)
+	footer
+		text-align center
+	.footer-social
+		float none
+		li
+			margin-right 8px
+			margin-left 8px		
+		
+@media (min-width: 544px)
+	footer
+		height 60px
+		padding 16px 0
+
+@media (min-width: 1200px)
+	footer
+		height 80px
+		padding 26px 0
+
+@media (min-width: 1500px)
+	footer
+		height 100px
+		padding 36px 0
+
+/*----------------------*/ 
+/*   19-PRELOADER       */ 
+/*----------------------*/
+
+.vl-loading
+	position fixed
+	top calc(50% - 30px)
+	left calc(50% - 30px)
+	height 60px
+	width 60px
+	font-size 30px
+	line-height 60px
+	text-align center
+	display block
+	color $black
+	animation fa-spin 2.5s infinite linear
+	&::after
+		content '\f110'
+		font-family 'FontAwesome'
+		
+@import 'shortcodes.styl'

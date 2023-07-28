@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,300italic,400italic,600,600italic,700,300");
+#theme-options {
+  z-index: 9999;
+  background-color: #fff;
+  position: fixed;
+  top: 150px;
+  left: -220px;
+  width: 220px;
+  color: #000;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#theme-options.open {
+  left: 0;
+  box-shadow: 1px 1px 3px 0 #f7f7f7;
+}
+#theme-options a.switcher_btn {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+#theme-options h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #000;
+  line-height: 50px;
+  height: 50px;
+}
+#theme-options h5 {
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+}
+#theme-options .btn {
+  padding: 8px 23px;
+  margin-bottom: 20px;
+}
+.colors {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+.colors a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 12px;
+  position: relative;
+  border: 1px solid #000;
+  z-index: 6;
+}
+.colors a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -6px;
+  margin-right: -6px;
+  z-index: 2;
+}
+#color1 {
+  background-color: #e1ffff;
+}
+#color1:before {
+  background-color: #e7ffff;
+}
+#color2 {
+  background-color: #ffefea;
+}
+#color2:before {
+  background-color: #fff2ee;
+}
+#color3 {
+  background-color: #ffffc4;
+}
+#color3:before {
+  background-color: #ffffd0;
+}
+@media (max-width: 767px) {
+  #theme-options {
+    display: none;
+  }
+}
