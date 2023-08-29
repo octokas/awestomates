@@ -1,6 +1,6 @@
 # General Settings
-title = "Awestomates - An awestome place for support and learning for new urostomates!"
-baseURL = "awestomates.com" #YOUR SITE URL
+title = "Mountain - Coming Soon & Under Construction Hugo Theme"
+baseURL = " " #YOUR SITE URL
 languageCode = "en-us"
 theme = "mountain"
 resourceDir = "resources"
@@ -534,7 +534,7 @@ tags = 1 #SIDEBAR TAG TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
 
 # Footer Settings
 [params.footer]
-copyright = "Awestomates © 2023. Design & Coded with <i class='fa fa-heartbeat' aria-hidden='true'></i> by <a href='https://github.com/batmanwgd' target='_blank'><u>BatmanWGD</u>.</a>"
+copyright = "Mountain © 2022. Design & Coded by <a href='http://themeforest.net/user/Mountain-Themes' target='_blank'> Mountain-Themes.</a>"
 
 # Up Button Settings
 [params.upBtn]
