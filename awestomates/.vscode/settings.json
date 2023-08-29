@@ -1,7 +1,8 @@
 {
     "customizeUI.stylesheet": {
         ".monaco-workbench .window-title" :
-        "font-size: 10px !important"
+        "font-size: 10px !important",
+        "font-family": "Fira Code"
     },
     "cssrem.rootFontSize": 10,
     "chat.editor.fontSize": 10,
@@ -10,7 +11,509 @@
     "debug.console.fontSize": 10,
     "scm.inputFontSize": 10,
     "editor.fontSize": 10,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "screencastMode.fontSize": 20,
     "metaGo.decoration.fontSize": 10,
-    "npm.packageManager": "yarn"
+    "npm.packageManager": "yarn", // default is auto, options are: auto, npm, pnpm and yarn
+    "[javascript][typescript][json][jsonc][csharp]": {
+        "editor.maxTokenizationLineLength": 9900 // default is 2500
+      },
+      "editor.minimap.autohide": true,
+      "editor.minimap.enabled": false,
+      "search.exclude": { 
+        "**/node_modules": true, 
+        "**/bower_components": true,
+        "**/*.code-search": true 
+      },
+      "telemetry.telemetryLevel": "crash",
+      "diffEditor.codeLens": true,
+      "diffEditor.ignoreTrimWhitespace": false, // special
+      "colorHelper.formatsOrder": [
+        "hsl",
+        "hex",
+        "named"
+      ], // special
+      "editor.acceptSuggestionOnEnter": "smart",
+      "editor.autoIndent": "full", //can choose advanced as an option too,
+      "editor.bracketPairColorization.enabled": true,
+      "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+      "editor.colorDecoratorsActivatedOn": "clickAndHover",
+      "editor.colorDecoratorsLimit": 900,
+      "editor.cursorBlinking": "smooth", // default is blink; can choose phase, expand or solid too
+      "editor.cursorSurroundingLines": 3, // special
+      "editor.find.seedSearchStringFromSelection": "always", //can change to selection too
+      "editor.guides.bracketPairs": true,
+      "editor.hover.delay": 2000, // special
+      "editor.inlineSuggest.enabled": true, // special
+      "editor.linkedEditing": true, // special
+      "editor.multiCursorModifier": "ctrlCmd", // special
+      "editor.mouseWheelZoom": true, // great for track pad, works for zoom with ctl pressed
+      "editor.padding.top": 18, //headroom for editor
+      "editor.padding.bottom": 18, //legroom for editor
+      "editor.pasteAs.showPasteSelector": "afterPaste",
+      "editor.rulers": [
+        120
+      ],
+      "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      }, // special
+      "editor.renderWhitespace": "selection", // special
+      "editor.snippetSuggestions": "bottom", // special
+      "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff4081aa" // a's are transparency levels on the colors (alphas)
+    },
+    "editor.scrollbar.verticalScrollbarSize": 14,
+    "editor.scrollbar.vertical": "auto",
+    "editor.scrollbar.horizontalScrollbarSize": 12,
+    "editor.scrollbar.horizontal": "auto",
+    "editor.roundedSelection": true,
+    "editor.smoothScrolling": false,
+    "editor.scrollBeyondLastLine": true, // hidden feature
+    "editor.suggest.preview": true,
+    "editor.tabCompletion": "onlySnippets", // can also set to on or off, default is off
+    "editor.unfoldOnClickAfterEndOfLine": false,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 110, // I have set right before ruler at 120 for visual clearness
+    "editor.wrappingIndent": "indent", // can set to same or even deepIndent if confusing
+    "editor.wrappingStrategy": "advanced", // default option is simple
+    "workbench.activityBar.visible": true, //special
+    "workbench.colorCustomizations": {
+      "editorIndentGuide.activeBackground": "#00ffc3"
+    },
+    "workbench.commandPalette.history": 999,
+    "workbench.editor.closeEmptyGroups": false, // default is true
+    "workbench.editor.labelFormat": "short", //default is default, but short, medium, and long options are available, learn more here: https://code.visualstudio.com/docs/getstarted/settings
+    "workbench.editor.limit.value": 18, // default is 10
+    "workbench.editor.pinnedTabSizing": "compact", // options are normal by default, compact and shrink
+    "workbench.editor.revealIfOpen": true, // default is false
+    "workbench.editor.showIcons": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.splitInGroupLayout": "horizontal",
+    "workbench.editor.tabSizing": "fit", // also have options of shrink and fixed
+    "workbench.editor.untitled.labelFormat": "name", // default is content but that's messy AF
+    "workbench.editor.wrapTabs": true, // default is false, but I had the horizontal scroll for tabs
+    "workbench.editorAssociations": {},
+    "workbench.list.smoothScrolling": true, // default setting is false
+    "workbench.localHistory.maxFileEntries": 99, // default was 50
+    "workbench.localHistory.maxFileSize": 4098, // default was 256
+    "workbench.localHistory.mergeWindow": 18, // default was 10
+    "workbench.settings.useSplitJSON": false,
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench", // defualt is welcome page, but that's annoying
+    "workbench.tree.indent": 8,
+    "workbench.tree.renderIndentGuides": "onHover",
+    "workbench.trustedDomains.promptInTrustedWorkspace": false,
+    "window.menuBarVisibility": "classic", // default is classic
+    "window.restoreWindows": "preserve", //special
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": " - ",
+    "window.zoomLevel": 0,
+    "files.associations": {
+      "*.html": "html",
+    },
+    "files.defaultLanguage": "en",
+      "files.encoding": "utf8",
+      "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/._*": true //special
+      },
+      "files.insertFinalNewline": true,
+      "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true
+      }, // default is false
+      "files.autoSave": "afterDelay" , //special
+      "emmet.preferences": {
+        "format.forceIndentationForTags": [
+          "address",
+          "article",
+          "aside",
+          "audio",
+          "blockquote",
+          "body",
+          "canvas",
+          "div",
+          "dl",
+          "fieldset",
+          "figcaption",
+          "figure",
+          "footer",
+          "form",
+          "head",
+          "header",
+          "iframe",
+          "main",
+          "map",
+          "nav",
+          "object",
+          "ol",
+          "p",
+          "pre",
+          "script",
+          "section",
+          "style",
+          "table",
+          "tbody",
+          "td",
+          "tfoot",
+          "th",
+          "thead",
+          "tr",
+          "ul",
+          "video"
+        ]
+      }, //special
+      "emmet.showSuggestionsAsSnippets": true, //special
+      "explorer.compactFolders": false, //special
+      "explorer.confirmUndo": "default", // you can also choose verbose and light
+      "explorer.incrementalNaming": "smart", // default is "simple" which adds the word "copy" which I HATE
+      "explorer.openEditors.visible": 18, // default is 9
+      "explorer.sortOrder": "default", // in larger repositories, foldersNestedFiles might be easiest
+      "extensions.ignoreRecommendations": true, //special
+      "search.defaultViewMode": "tree", // can choose tree or list, with list as default,
+      "search.mode": "view", // view is default, but you can also use a newEditor in cases of complicated projects
+      "search.showLineNumbers": true, // default is false, but this helps
+      "search.smartCase": true, // default is false, but this helps too
+      "html-css-class-completion.enableEmmetSupport": true, //special
+      "html.completion.attributeDefaultValue": "doublequotes",
+      "html.format.contentUnformatted": "pre,code,textarea",
+      "html.format.endWithNewline": true, //special
+      "html.format.extraLiners": "head, body, /html, meta, link, section, video, img, table, tr, td, row, header, container, footer, sidebar, nav, menu, column", // default is only head, body, html, but I like all HTML5 sections to be included with the newline formatting
+      "html.format.indentInnerHtml": true, // default is false which is poor formatting
+      "html.format.indentHandlebars": true, // default is false, drives me nuts
+      "html.format.templating": true, // default is false, also crazy-making
+      "html.format.unformatted": "b,em,i,span,strong,wbr", //special
+      "html.format.wrapAttributes": "auto",
+      "html.format.wrapLineLength": 110, // setting to same as ruler and other lines
+      "htmlhint.options": {
+        //HTML Hint options: https://htmlhint.com/docs/user-guide/list-rules
+        "alt-require": true,
+        "attr-lowercase": [
+          "allowReorder",
+          "attributeName",
+          "attributeType",
+          "autoReverse",
+          "baseFrequency",
+          "baseProfile",
+          "calcMode",
+          "clipPath",
+          "clipPathUnits",
+          "contentScriptType",
+          "contentStyleType",
+          "diffuseConstant",
+          "edgeMode",
+          "externalResourcesRequired",
+          "filterRes",
+          "filterUnits",
+          "glyphRef",
+          "gradientTransform",
+          "gradientUnits",
+          "kernelMatrix",
+          "kernelUnitLength",
+          "keyPoints",
+          "keySplines",
+          "keyTimes",
+          "lengthAdjust",
+          "limitingConeAngle",
+          "markerHeight",
+          "markerUnits",
+          "markerWidth",
+          "maskContentUnits",
+          "maskUnits",
+          "numOctaves",
+          "onBlur",
+          "onChange",
+          "onClick",
+          "onFocus",
+          "onKeyUp",
+          "onLoad",
+          "pathLength",
+          "patternContentUnits",
+          "patternTransform",
+          "patternUnits",
+          "pointsAtX",
+          "pointsAtY",
+          "pointsAtZ",
+          "preserveAlpha",
+          "preserveAspectRatio",
+          "primitiveUnits",
+          "refX",
+          "refY",
+          "repeatCount",
+          "repeatDur",
+          "requiredExtensions",
+          "requiredFeatures",
+          "specularConstant",
+          "specularExponent",
+          "spreadMethod",
+          "startOffset",
+          "stdDeviation",
+          "stitchTiles",
+          "surfaceScale",
+          "systemLanguage",
+          "tableValues",
+          "targetX",
+          "targetY",
+          "textLength",
+          "viewBox",
+          "viewTarget",
+          "xChannelSelector",
+          "yChannelSelector",
+          "zoomAndPan"
+        ],
+        "attr-no-duplication": true,
+        "attr-no-unnecessary-whitespace": true,
+        "attr-value-double-quotes": true,
+        "attr-whitespace": true,
+        "doctype-first": true,
+        "empty-tag-not-self-closed": true,
+        "html-lang-require": true,
+        "id-unique": true,
+        "inline-style-disabled": true,
+        "src-not-empty": true,
+        "tag-pair": true,
+        "tagname-lowercase": [
+          "animateMotion",
+          "animateTransform",
+          "clipPath",
+          "feBlend",
+          "feColorMatrix",
+          "feComponentTransfer",
+          "feComposite",
+          "feConvolveMatrix",
+          "feDiffuseLighting",
+          "feDisplacementMap",
+          "feDistantLight",
+          "feDropShadow",
+          "feFlood",
+          "feFuncA",
+          "feFuncB",
+          "feFuncG",
+          "feFuncR",
+          "feGaussianBlur",
+          "feImage",
+          "feMerge",
+          "feMergeNode",
+          "feMorphology",
+          "feOffset",
+          "fePointLight",
+          "feSpecularLighting",
+          "feSpotLight",
+          "feTile",
+          "feTurbulence",
+          "foreignObject",
+          "linearGradient",
+          "radialGradient",
+          "textPath"
+        ],
+        "tagname-specialchars": true,
+        "title-require": true
+      },//special
+      "http.systemCertificates": false, //special
+      // live preview
+      "livePreview.openPreviewTarget": "External Browser", //special
+      "livePreview.autoRefreshPreview": "On Changes to Saved Files", //special
+      "livePreview.tasks.browserPreviewLaunchServerLogging": false, //special
+      // live sass compiler
+      "liveSassCompile.settings.generateMap": false, //special
+      "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+      "markdown.occurrencesHighlight.enabled": true, // default is false for whatever reason
+      "markdown.preview.breaks": true, // default false, poor decision
+      "markdown.preferredMdPathExtensionStyle": "removeExtension", // default is auto, but I prefer removal per hugo, netlify, etc. so options are removeExtension, includeExtension, and auto
+      "markdown.preview.typographer": true, // default is false and can be switched for performance
+      "markdown.styles": [], // extra flare I like or makes easier to read
+      "markdown.suggest.paths.includeWorkspaceHeaderCompletions": "onDoubleHash", // default is onDoubleHash but onSingleHash is more like other links
+      "markdown.trace.extension": "on", // default is off, but why not debug markdown?
+      "markdown.updateLinksOnFileMove.enabled": "prompt", // default is never, but this is a neat feature, options include never, prompt and always
+      "markdown.updateLinksOnFileMove.enableForDirectories": true,
+      "markdown.updateLinksOnFileMove.include": [
+        "**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}", // default
+        "**/*.{jpg,jpe,jpeg,png,bmp,gif,ico,webp,avif,tiff,svg,mp4}", // default
+        "**/*.{css,scss,sass}",
+      ],
+      // placeholder images
+      "placeholderImages.quoteStyle": "double", //special
+      "emmet.excludeLanguages": [], // fixes the bug for markdown emmet issue
+      "emmet.includeLanguages": {
+        "markdown": "html",
+        "vue-html": "html",
+        "javascript":"javascriptreact"
+      }, // enables emmet for VueJS and ReactJS
+      "javascript.format.semicolons": "remove", // default is ignore, but let's make it pretty
+      "javascript.updateImportsOnFileMove.enabled": "prompt",
+      "typescript.format.semicolons": "remove", // default is ignore, but let's make it pretty
+      "css.format.maxPreserveNewLines": 2, // default is null
+      "css.format.braceStyle": "expand", // default is collapse, but let's make pretty
+      "css.format.spaceAroundSelectorSeparator": true, // default is false, but that's hairy
+      "css.lint.ieHack": "ignore", // hidden feature, only necessary for IE7 older clients
+      "less.format.braceStyle": "expand", // same as css
+      "less.format.spaceAroundSelectorSeparator": true, // same as css
+      "scss.format.braceStyle": "expand", // same as css
+      "scss.format.spaceAroundSelectorSeparator": true, // same as css
+      "jshint.enable": false,
+      "eslint.enable": false,
+      "extensions.autoCheckUpdates": true,
+      "extensions.autoUpdate": 
+      "onlyEnabledExtensions", // default is true, but that's shady, options are onlyEnabledExtensions, true and false
+      "task.quickOpen.history": 50, // default was 30
+      // my super specific lanuguage driven overrides
+      "[git-commit]": {
+        "editor.rulers": [72],
+        "workbench.editor.restoreViewState": false
+      },
+      "[handlebars]": {
+        "editor.suggest.insertMode": "replace"
+      },
+      "[html]": {
+        "editor.suggest.insertMode": "replace"
+      },
+      "[jsonc]": {
+        "editor.quickSuggestions": {
+          "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+      },
+      "[json]": {
+        "editor.quickSuggestions": {
+          "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+      },
+      "[makefile]": {
+        "editor.insertSpaces": false
+      },
+      "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "strings": "off",
+          "other": "off"
+        },
+        "editor.tabSize": 4,
+        "editor.unicodeHighlight.ambiguousCharacters": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "editor.wordWrap": "on"
+      },
+      "[plaintext]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false
+      },
+      "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false
+      },
+      "[scss]": {
+        "editor.suggest.insertMode": "replace"
+      },
+      "[search-result]": {
+        "editor.lineNumbers": "on"
+      },
+      "[shellscript]": {
+        "files.eol": "\n"
+      },
+      "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false
+      },
+      // git updates/changes/alterations
+      "git.enabled": true,
+      "git.allowForcePush": true, // default false
+      "git.allowNoVerifyCommit": true, // default false
+      "git.alwaysShowStagedChangesResourceGroup": false,
+      "git.alwaysSignOff": false,
+      "git.autofetch": "all", // default false
+      "git.autofetchPeriod": 180,
+      "git.autorefresh": true,
+      "git.autoStash": false,
+      "git.branchPrefix": "kas_",
+      "git.branchRandomName.dictionary": ["colors"], // default is adjectives, animals
+      "git.branchRandomName.enable": false,
+      "git.branchValidationRegex": "kas_*", // default is nothing, but since we want kas_ to prefix
+      "git.branchWhitespaceChar": "_", // default is -
+      "git.checkoutType": ["local", "remote", "tags"],
+      "git.confirmForcePush": true,
+      "git.confirmEmptyCommits": true,
+      "git.commandsToLog": [],
+      "git.countBadge": "all", // default is all, but you can say tracked or just off
+      "git.decorations.enabled": true,
+      "git.detectSubmodules": true,
+      "git.detectSubmodulesLimit": 18, // default was 10
+      "git.enableCommitSigning": false, // default is false, but needed on certain projects
+      "git.enableSmartCommit": true, // default is false for whatever reason; Commit all changes when there are no staged changes
+      "git.enableStatusBarSync": true,
+      "git.fetchOnPull": false, // default is false for whatever reason; When enabled, fetch all branches when pulling. Otherwise, fetch just the current one.
+      "git.followTagsWhenSync": false,
+      "git.inputValidationLength": 108, // default was 72
+      "git.inputValidationSubjectLength": 72, // default was 50
+      "git.mergeEditor": true, // default was false for whatever reason
+      "git.openAfterClone": "prompt", // default is prompt, depends on complications of project... other options include alwaysNewWindow and whenNoFolderOpen
+      "git.openDiffOnClick": true,
+      "git.openRepositoryInParentFolders": "prompt", // depends on project, will sometimes flip to never
+      "git.postCommitCommand": "sync", // default is none, but depends on complexity of project; options are none, sync (push and pull) and push
+      "git.promptToSaveFilesBeforeCommit": "always", // depends on complexity, default is always; options include never and staged
+      "git.pullBeforeCheckout": true, // default is false, and can be a buggar on complex projects, but this is safer
+      "git.repositoryScanIgnoredFolders": ["node_modules"],
+      "git.repositoryScanMaxDepth": -1, // default is 1, no limit is -1.
+      "git.requireGitUserConfig": true,
+      "git.showActionButton": {
+        "commit": true,
+        "publish": true,
+        "sync": true,
+        "pull": true // added
+      },
+      "git.showCommitInput": true,
+      "git.showInlineOpenFileAction": true,
+      "git.showProgress": true,
+      "git.showPushSuccessNotification": true, // default false for whatever reason
+      "git.similarityThreshold": 25,
+      "git.smartCommitChanges": "all",
+      "git.statusLimit": 90000, //default is 10000
+      "git.suggestSmartCommit": true,
+      "git.supportCancellation": true, // default is false, but why in the world? power to cancel to the people!
+      "git.terminalAuthentication": true,
+      "git.terminalGitEditor": false,
+      "git.timeline.date": "committed", // default is committed, can make authored too if needed to be flipped for certain gov projects
+      "git.timeline.showAuthor": true,
+      "git.timeline.showUncommitted": true, // default is false, but this is how I can see if there will be too many queued
+      "git.untrackedChanges": "mixed",
+      "git.useCommitInputAsStashMessage": true, // default is false, but I hate separate stash messages, more nonsense to read
+      "github.gitProtocol": "ssh", // default is https, but why??? 
+      "mediaPreview.video.autoPlay": false,
+      "mediaPreview.video.loop": false,
+      "merge-conflict.autoNavigateNextConflict.enabled": true, // default is foolishly false
+      "merge-conflict.codeLens.enabled": true,
+      "merge-conflict.decorators.enabled": true,
+      "merge-conflict.diffViewPosition": "Current", // can flip this to "Below" or "Besides" in complicated windows/projects
+      "debug.javascript.autoAttachFilter": "disabled", // default is disabled, but I think it's useful. OPTIONS INCL: 
+       //  - always: Auto attach to every Node.js process launched in the terminal.
+       //  - smart: Auto attach when running scripts that aren't in a node_modules folder.
+       //  - onlyWithFlag: Only auto attach when the `--inspect` is given.
+       //  - disabled: Auto attach is disabled and not shown in status bar.
+       "debug.javascript.autoAttachSmartPattern": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**",
+        "**/$KNOWN_TOOLS$/**"
+      ], // Configures glob patterns for determining when to attach in "smart" `debug.javascript.autoAttachFilter` mode. `$KNOWN_TOOLS$` is replaced with a list of names of common test and code runners
+      "npm.exclude": "",
+      "npm.fetchOnlinePackageInfo": true,
+      "npm.enableScriptExplorer": true, // default false, but setting here can prevent extra extensions
+      "npm.enableRunFromFolder": true, // default false, but setting here can prevent extra extensions
+      "npm.runSilent": false,
+      "npm.scriptExplorerAction": "open", // default is open, options include run
+      "npm.scriptExplorerExclude": [], // scripts to exclude from the scripts view
+      "npm.scriptHover": true, // default true; display hover with 'Run' and 'Debug' commands for scripts
+      "references.preferredLocation": "view" // default is peek, but I'd rather see a full view
+      // user settting only
+      // "security.workspace.trust.untrustedFiles": "open",
 }
