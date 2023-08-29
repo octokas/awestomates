@@ -1,15 +1,15 @@
 {
     "customizeUI.stylesheet": {
         ".monaco-workbench .window-title" :
-        "font-size: 8px !important"
+        "font-size: 10px !important"
     },
-    "cssrem.rootFontSize": 8,
-    "chat.editor.fontSize": 8,
-    "terminal.integrated.fontSize": 8,
-    "markdown.preview.fontSize": 8,
-    "debug.console.fontSize": 8,
-    "scm.inputFontSize": 8,
-    "editor.fontSize": 8,
+    "cssrem.rootFontSize": 10,
+    "chat.editor.fontSize": 10,
+    "terminal.integrated.fontSize": 10,
+    "markdown.preview.fontSize": 10,
+    "debug.console.fontSize": 10,
+    "scm.inputFontSize": 10,
+    "editor.fontSize": 10,
     "screencastMode.fontSize": 20,
-    "metaGo.decoration.fontSize": 8
+    "metaGo.decoration.fontSize": 10
 }

@@ -1,7 +1,7 @@
 baseURL = 'https://awestomates.com'
 languageCode = 'en-us'
 title = 'Awestomates'
-theme = "emily"
+theme = "mountain"
 enableInlineShortcodes = true
 defaultContentLanguage = "en"
 enableEmoji = true

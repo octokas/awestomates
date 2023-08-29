@@ -1,6 +1,6 @@
 ---
-title: "Blog"
-date: 2023-07-18T10:56:44-04:00
-draft: false
----
+title: Blog
+subtitle: Hello. Our awesome blog
+text: We don't want to conquer the cosmos, we simply want to extend the boundaries of Earth to the frontiers of the cosmos. 
 
+---
