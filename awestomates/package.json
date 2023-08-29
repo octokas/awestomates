@@ -1,11 +1,12 @@
 {
   "name": "awestomates",
-  "version": "1.0.0",
-  "description": "An awesome place for stomas.",
+  "version": "1.8.0",
+  "description": "An awesome place for stomates!",
   "main": "index.js",
   "repository": "https://awestomates.com",
   "author": "Kaska Miskolczi",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "local": "hugo server --disableFastRender"
   },
