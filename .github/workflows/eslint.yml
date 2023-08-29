@@ -16,7 +16,8 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
-    - cron: '44 15 * * 4'
+    - cron: '45 15 * * 5'
+    # At 03:45 PM, only on Friday
 
 jobs:
   eslint:
@@ -48,3 +49,4 @@ jobs:
         with:
           sarif_file: eslint-results.sarif
           wait-for-processing: true
+          continue-on-error: true
