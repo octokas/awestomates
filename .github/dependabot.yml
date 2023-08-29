@@ -1,0 +1,59 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    pull-request-branch-name:
+      separator: "_"
+    rebase-strategy: "disabled"
+    target-branch: "ghactions"
+    labels:
+      - "dbot"
+      - "ghactions"
+    versioning-strategy: increase-if-necessary
+    commit-message:
+      prefix: "github actions"
+      include: "scope"
+    open-pull-requests-limit: 108
+    reviewers:
+      - "octocat"
+      - "batmanwgd"
+        
+  - package-ecosystem: "yarn" 
+    directory: "/" 
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    pull-request-branch-name:
+      separator: "_"
+    rebase-strategy: "disabled"
+    target-branch: "dependabot"
+    labels:
+      - "dbot"
+      - "yarn" 
+      - "dependencies"
+    versioning-strategy: increase-if-necessary
+    allow:
+      - dependency-name: "lodash"
+      - dependency-name: "react*"
+      - dependency-name: "node*"
+      - dependency-name: "scss*"
+      - dependency-name: "npm-check"
+    commit-message:
+      prefix: "yarn"
+      include: "scope"
+    ignore:
+      - dependency-name: "express"
+      - dependency-name: "node*"
+      versions: ["14.x", "15.x", "16.x"]
+    open-pull-requests-limit: 108
+    reviewers:
+      - "octocat"
+      - "batmanwgd"
