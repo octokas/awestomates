@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+{{ partial "head.html" . }}
+
+<body class="page{{ if .IsHome }} home{{ end }}{{ if .Params.type }} coming-soon{{ end }} {{ if not .Params.builder }}not-builder{{ end }}">
+
+    {{ "<!-- Preloader -->" | safeHTML }}
+    {{ partial "preloader.html" . }}
+
+    {{ "<!-- Header -->" | safeHTML }}
+    {{ partial "header.html" . }}
+
+    {{ "<!-- Wrapper -->" | safeHTML }}
+		<div class="wrapper{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "page" ) }} single-post{{ end }}{{ end }}">
+      {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ "<!-- Footer -->" | safeHTML }}
+    {{ partial "footer.html" . }}
+  
+
+  {{ "<!-- Scripts -->" | safeHTML }}
+  {{ partial "scripts.html" . }}
+
+</body>
+
+</html>

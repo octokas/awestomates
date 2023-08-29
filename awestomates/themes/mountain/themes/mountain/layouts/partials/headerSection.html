@@ -1,0 +1,2222 @@
+{{ with .Site.Data.home.header }}
+{{ if .enable }}
+
+{{ "<!-- Section Started Header Coming Soon -->" | safeHTML }}
+<div class="header-section">
+
+        <div class="logo">
+            <img src="{{ .logo | absURL }}" width="{{ .widthLogo }}" height="{{ .heightLogo }}" alt="logo" />
+        </div>
+
+        <h1>{{ .title }}</h1>
+
+        <p>{{ .description | safeHTML }}</p>
+
+
+        <!-- COUNTDOWN -->
+        <div class="countdown" data-timer="{{ .countdown }}"></div>
+        <!-- /COUNTDOWN -->
+
+        <!-- MOUSE ICON -->
+        <div class="mouse">
+            <a href="{{ .urlMouse }}">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+        <!-- /MOUSE ICON -->
+
+{{ end }}
+{{ end }}
+
+    {{ with .Params.backgroundColor }}
+    {{ if .enable }}
+
+        {{ "<!-- BACKGROUND COLOR -->" | safeHTML }}
+
+        <div class="color-box" style="background-color: {{ .color | safeCSS }}"></div>
+ 
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.singleImage }}
+    {{ if .enable }}
+
+        {{ "<!-- SINGLE BACKGROUND IMAGE -->" | safeHTML }}
+
+        <div class="image-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                $(".image-box").backstretch("{{ .image | absURL }}");
+
+            });
+
+        </script>
+ 
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.slideshowImages }}
+    {{ if .enable }}
+
+        {{ "<!-- SLIDESHOW BACKGROUND IMAGE -->" | safeHTML }}
+
+        <div class="image-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                $(".image-box").backstretch([
+
+                    {{ range .images }}
+
+                        "{{ . | absURL }}", 
+
+                    {{ end }}
+
+                ],{duration: {{ .duration }}, fade: {{ .fade }}});
+
+            });
+
+        </script>
+
+    {{ end }}
+    {{ end }}
+
+
+    {{ with .Params.youtubeVideo }}
+    {{ if .enable }}
+
+        {{ "<!-- YOUTUBE BACKGROUND VIDEO -->" | safeHTML }}
+
+        <div class="video-box"></div>
+
+        <!-- YOUTUBE PLAYER -->
+        <div id="video" data-property="{videoURL:'{{ .videoURL }}',containment:'.video-box', showControls:false, autoPlay:true, loop:true, mute: {{ .mute }}}"></div>
+        <!-- /YOUTUBE PLAYER -->
+
+        <script>
+
+            var myPlayer;
+
+            jQuery.noConflict()(function($) {
+
+                var options = {
+                    mobileFallbackImage: "{{ .poster | absURL }}",
+                    coverImage: "{{ .coverImage | absURL }}",
+                    playOnlyIfVisible  : false
+                };
+
+                myPlayer = jQuery("#video").YTPlayer(options);
+
+            });
+        
+        </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.html5Video }}
+    {{ if .enable }}
+
+        {{ "<!-- HTML5 BACKGROUND VIDEO -->" | safeHTML }}
+
+        <div class="video-html5-box"></div>
+
+        <script>
+
+            var instance = new vidbg(
+                ".video-html5-box",
+                    {
+                        'mp4': '{{ .videoURL | absURL }}',
+                        'poster': '{{ .poster | absURL }}',
+                    }, {
+                        muted:{{ .mute }},
+                        loop:{{ .loop }},
+                        overlay: false
+                    }
+            );
+
+        </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.winterEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- WINTER BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="snow"></canvas>
+        </div>
+
+        <script>
+
+           var opacitySnow = {{ .opacity }};
+           var sizeSnow = {{ .size }};
+           var speedSnow = {{ .speed }};
+           var snow = {{ .color }};
+           var colorSnow = snow.slice(0,-4);
+
+       </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.LowPolyEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- LOW-POLY BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="low-poly"></canvas>
+        </div>
+
+        <script>
+
+            var alpha = {{ .opacity }};
+            var size = {{ .size }};
+            var density = {{ .density }};
+
+            var circle = {{ .color }};
+            var circleColor = circle.slice(0,-5);
+
+       </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.constellationEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CONSTELLATION BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="constellation"></canvas>
+        </div>
+
+        <script>
+
+            var lineColor = {{ .lineColor }};
+            var circleColor = {{ .circleColor }};
+
+       </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.particlesEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- PARTICLES BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="particles"></div>
+        </div>
+
+        <script>
+
+            var MAX_PARTICLES = {{ .maxParticles }};
+            var COLOURS = {{ .colours }};
+
+       </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.rainbowSquaresEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- RAINBOW SQUARES BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="rainbow"></canvas>
+        </div>
+
+        <script>
+
+            var N_SQUARES = {{ .quantitySquares }};
+            var speed = {{ .speed }};
+            var sizeone = {{ .size1 }};
+            var sizetwo = {{ .size2 }};
+
+        </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.shootingStarsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- SHOOTING STARS BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="stars"></canvas>
+        </div>
+
+        <script>
+
+            var particleLifeAcf = {{ .particleLife }};
+            var probability = {{ .particleRenderProbability }};
+            var quantity = {{ .quantity }};
+            var sizeone = {{ .size1 }};
+            var sizetwo = {{ .size2 }};
+            var borderColorAcf = {{ .borderColor }};
+            var backgroundColorAcf = {{ .backgroundColor }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.starfieldEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- STARFIELD BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="starfield"></canvas>
+        </div>
+
+        <script>
+
+            var speed = {{ .speed }};
+            var density = {{ .density }};
+            var backgroundColor = {{ .backgroundColor }};
+            var starColor = {{ .starColor }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.gravityEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- GRAVITY BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="gravity"></canvas>
+        </div>
+
+        <script>
+
+            var particleSize = {{ .particleSize }};
+            var particleColor = {{ .particleColor }};
+            var pointSize = {{ .pointSize }};
+            var backgroundColor = {{ .backgroundColor }};
+            var pointColor = {{ .pointBorderColor }};
+            var pointBackgroundColor = {{ .pointBackgroundColor }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.fireworksEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- FIREWORKS BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="fireworks"></canvas>
+        </div>
+
+        <script>
+
+            var speed = {{ .speed }};
+            var minimum = {{ .minimumAmountRocket }};
+            var maximum = {{ .maximumAmountRocket }};
+
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.geometricEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- GEOMETRIC BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="geometric"></div>
+        </div>
+
+        <script>
+
+            var speed = {{ .speed }};
+            var quantity = {{ .quantity }};
+            var hover = {{ .hover }};
+            var click = {{ .click }};
+            var line = {{ .lineColor }};
+            var circle = {{ .circleColor }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.bubblesEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- BUBBLES BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="bubble"></canvas>
+        </div>
+
+        <script>
+
+            var quantity = {{ .quantity }};
+            var color1 = {{ .color1 }};
+            var color2 = {{ .color2 }};
+            var color3 = {{ .color3 }};
+            var color4 = {{ .color4 }};
+            var color5 = {{ .color5 }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.mosaicEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- MOSAIC BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="mosaic"></canvas>
+        </div>
+
+        <script>
+
+            var sideMosaic = {{ .side }};
+            var shineMosaic = {{ .shine }};
+            var base = {{ .baseTime }};
+            var added = {{ .addedTime }};
+            var background = {{ .backgroundColor }};
+
+            var backgroundColor = background.slice(0,-4);
+
+            var stroke = {{ .strokeColor }};
+            var color1 = {{ .color1 }};
+            var mosaic1 = color1.slice(0,-4);
+            var color2 = {{ .color2 }};
+            var mosaic2 = color2.slice(0,-4);
+            var color3 = {{ .color3 }};
+            var mosaic3 = color3.slice(0,-4);
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.rainEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- RAIN BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="rain"></canvas>
+        </div>
+
+        <script>
+
+            var dropAlpha = "{{ "/images/effects/rain/drop-alpha.png" | absURL }}"
+            var dropColor = "{{ "/images/effects/rain/drop-color.png" | absURL }}"
+            var imagebg = {{ .image | absURL }};
+			var imagefg = {{ .image | absURL }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.rainVideoEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- RAIN VIDEO BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="rain"></canvas>
+        </div>
+
+        <script>
+
+            var dropAlpha = "{{ "/images/effects/rain/drop-alpha.png" | absURL }}"
+            var dropColor = "{{ "/images/effects/rain/drop-color.png" | absURL }}"
+
+         </script>
+
+        <video class="rain-video" poster="{{ .poster | absURL }}" autoplay loop muted>
+
+            <source src="{{ .videoURL | absURL }}" type="video/mp4">
+
+        </video>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.surfaceEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- SURFACE BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="surface"></div>
+        </div>
+
+        <script>
+
+            var speed = {{ .speed }};
+            var ambient_color = {{ .ambient }};
+            var diffuse_color = {{ .diffuse }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.magnetoEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- MAGNETO BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="magneto"></div>
+        </div>
+
+        <script>
+
+            var color_1_magneto = {{ .color1 }};
+            var color_2_magneto = {{ .color2 }};
+            var color_3_magneto = {{ .color3 }};
+            var bg_color_magneto = {{ .backgroundColor }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.liquidEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- LIQUID BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="liquid"></canvas>
+        </div>
+
+        <script>
+
+            var color_1_liquid = {{ .color1 }};
+            var color_2_liquid = {{ .color2 }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.confettiEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CONFETTI BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="confetti"></div>
+        </div>
+
+        <script>
+
+            var max_particles_confetti = {{ .maxParticles }};
+            var colours_confetti = {{ .colours }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.orbitEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- ORBIT BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas id="orbit"></canvas>
+        </div>
+
+        <script>
+
+            var count_orbit = {{ .count }};
+            var speed_orbit = {{ .speed }};
+            var radius_orbit = {{ .radius }};
+            var size_orbit = {{ .size }};
+            var maxdistance_orbit = {{ .maxDistance }};
+
+            var color_orbit = {{ .color }};
+            var color_orbit_rgba = color_orbit.slice(5,-6);
+            var background_orbit = {{ .backgroundColor }};
+            var background_orbit_rgba = background_orbit.slice(5,-6);
+            var background_orbit_2 = {{ .backgroundColor2 }};
+            var background_orbit_2_rgba = background_orbit_2.slice(5,-6);
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.swirlEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- SWIRL BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="swirl"></div>
+        </div>
+
+        <script>
+
+            var background_swirl = {{ .background }};
+            var speed_swirl = {{ .speed }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.shiftEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- SHIFT BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="shift"></div>
+        </div>
+
+        <script>
+
+            var speed_shift = {{ .speed }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.coalesceEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- COALESCE BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="coalesce"></div>
+        </div>
+
+        <script>
+            
+            var background_coalesce = {{ .backgroundColor }};
+			var speed_coalesce = {{ .speed }};
+			var particle_coalesce = {{ .particleCount }};
+
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.pipelineEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- PIPELINE BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="pipeline"></div>
+        </div>
+
+        <script>
+            
+            var background_pipeline = {{ .backgroundColor }};
+			var count_pipeline = {{ .pipeCount }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.auroraEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- AURORA BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="aurora"></div>
+        </div>
+
+        <script>
+            
+            var raycount_aurora = {{ .rayCount }};
+			var speed_aurora = {{ .speed }};
+			var background_aurora = {{ .backgroundColor }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.stardustEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- STARDUST BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="stardust"></div>
+        </div>
+
+        <script>
+            
+            var particle_stardust = {{ .particleColor }};
+			var micro_stardust = {{ .microParticleColor }};
+			var gradient_stardust = {{ .gradientColor }};
+			var gradient_stardust_2 = {{ .gradientColor2 }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.abstractartEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- ABSTRACTART BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="abstractart"></div>
+        </div>
+
+        <script>
+            
+            var color_abstractart = {{ .color }};
+			var color_abstractart_2 = {{ .color2 }};
+			var background_abstractart = {{ .backgroundColor }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.connectionsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CONNECTIONS BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="connections"></div>
+        </div>
+
+        <script>
+
+          var color_connections = {{ .color }};
+          var color_connections_2 = {{ .color2 }};
+          var color_connections_3 = {{ .color3 }};
+          var color_connections_4 = {{ .color4 }};
+          var color_connections_5 = {{ .color5 }};
+          var background_connections = {{ .backgroundColor }};
+          var strokestyle_connections = {{ .strokeStyle }};
+          var linewidth_connections = {{ .lineWidth }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.alienEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- ALIEN BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="alien"></div>
+        </div>
+
+        <script>
+
+          var color_alien = {{ .color }};
+          var color_alien_2 = {{ .color2 }};
+          var color_alien_3 = {{ .color3 }};
+          var background_alien = {{ .backgroundColor }};
+          var background_alien_2 = {{ .backgroundColor2 }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.ballsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- BALLS BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div id="balls"></div>
+        </div>
+
+        <script>
+
+          var color_balls = {{ .color }};
+          var color_balls_2 = {{ .color2 }};
+          var color_balls_3 = {{ .color3 }};
+          var color_balls_4 = {{ .color4 }};
+
+         </script>
+  
+    {{ end }}
+    {{ end }}
+
+    {{ if or .Params.landscapeStyle1Effect.enable .Params.landscapeStyle2Effect.enable }}
+
+        {{ "<!-- LANDSCAPE BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <canvas class="landscape"></canvas>
+        </div>
+
+    {{ end }}
+
+    {{ with .Params.landscapeStyle1Effect }}
+    {{ if .enable }}
+
+        <script>
+
+            var pallete = "{{ "/images/effects/landscape/pallete.png" | absURL }}"
+
+        </script>
+
+        <script id="custom-vertex" type="x-shader/x-vertex">
+
+            //
+            // GLSL textureless classic 3D noise "cnoise",
+            // with an RSL-style periodic variant "pnoise".
+            // Author:  Stefan Gustavson (stefan.gustavson@liu.se)
+            // Version: 2011-10-11
+            //
+            // Many thanks to Ian McEwan of Ashima Arts for the
+            // ideas for permutation and gradient selection.
+            //
+            // Copyright (c) 2011 Stefan Gustavson. All rights reserved.
+            // Distributed under the MIT license. See LICENSE file.
+            // https://github.com/stegu/webgl-noise
+            //
+
+            vec3 mod289(vec3 x)
+            {
+                return x - floor(x * (1.0 / 289.0)) * 289.0;
+            }
+
+            vec4 mod289(vec4 x)
+            {
+                return x - floor(x * (1.0 / 289.0)) * 289.0;
+            }
+
+            vec4 permute(vec4 x)
+            {
+                return mod289(((x*34.0)+1.0)*x);
+            }
+
+            vec4 taylorInvSqrt(vec4 r)
+            {
+                return 1.79284291400159 - 0.85373472095314 * r;
+            }
+
+            vec3 fade(vec3 t) {
+                return t*t*t*(t*(t*6.0-15.0)+10.0);
+            }
+
+            // Classic Perlin noise
+            float cnoise(vec3 P)
+            {
+                vec3 Pi0 = floor(P); // Integer part for indexing
+                vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1
+                Pi0 = mod289(Pi0);
+                Pi1 = mod289(Pi1);
+                vec3 Pf0 = fract(P); // Fractional part for interpolation
+                vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
+                vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+                vec4 iy = vec4(Pi0.yy, Pi1.yy);
+                vec4 iz0 = Pi0.zzzz;
+                vec4 iz1 = Pi1.zzzz;
+
+                vec4 ixy = permute(permute(ix) + iy);
+                vec4 ixy0 = permute(ixy + iz0);
+                vec4 ixy1 = permute(ixy + iz1);
+
+                vec4 gx0 = ixy0 * (1.0 / 7.0);
+                vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+                gx0 = fract(gx0);
+                vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+                vec4 sz0 = step(gz0, vec4(0.0));
+                gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+                gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+                vec4 gx1 = ixy1 * (1.0 / 7.0);
+                vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+                gx1 = fract(gx1);
+                vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+                vec4 sz1 = step(gz1, vec4(0.0));
+                gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+                gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+                vec3 g000 = vec3(gx0.x,gy0.x,gz0.x);
+                vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
+                vec3 g010 = vec3(gx0.z,gy0.z,gz0.z);
+                vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
+                vec3 g001 = vec3(gx1.x,gy1.x,gz1.x);
+                vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
+                vec3 g011 = vec3(gx1.z,gy1.z,gz1.z);
+                vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
+
+                vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+                g000 *= norm0.x;
+                g010 *= norm0.y;
+                g100 *= norm0.z;
+                g110 *= norm0.w;
+                vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+                g001 *= norm1.x;
+                g011 *= norm1.y;
+                g101 *= norm1.z;
+                g111 *= norm1.w;
+
+                float n000 = dot(g000, Pf0);
+                float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+                float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+                float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+                float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+                float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+                float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+                float n111 = dot(g111, Pf1);
+
+                vec3 fade_xyz = fade(Pf0);
+                vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+                vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+                float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+                return 2.2 * n_xyz;
+            }
+
+            // Classic Perlin noise, periodic variant
+            float pnoise(vec3 P, vec3 rep)
+            {
+                vec3 Pi0 = mod(floor(P), rep); // Integer part, modulo period
+                vec3 Pi1 = mod(Pi0 + vec3(1.0), rep); // Integer part + 1, mod period
+                Pi0 = mod289(Pi0);
+                Pi1 = mod289(Pi1);
+                vec3 Pf0 = fract(P); // Fractional part for interpolation
+                vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
+                vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+                vec4 iy = vec4(Pi0.yy, Pi1.yy);
+                vec4 iz0 = Pi0.zzzz;
+                vec4 iz1 = Pi1.zzzz;
+
+                vec4 ixy = permute(permute(ix) + iy);
+                vec4 ixy0 = permute(ixy + iz0);
+                vec4 ixy1 = permute(ixy + iz1);
+
+                vec4 gx0 = ixy0 * (1.0 / 7.0);
+                vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+                gx0 = fract(gx0);
+                vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+                vec4 sz0 = step(gz0, vec4(0.0));
+                gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+                gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+                vec4 gx1 = ixy1 * (1.0 / 7.0);
+                vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+                gx1 = fract(gx1);
+                vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+                vec4 sz1 = step(gz1, vec4(0.0));
+                gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+                gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+                vec3 g000 = vec3(gx0.x,gy0.x,gz0.x);
+                vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
+                vec3 g010 = vec3(gx0.z,gy0.z,gz0.z);
+                vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
+                vec3 g001 = vec3(gx1.x,gy1.x,gz1.x);
+                vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
+                vec3 g011 = vec3(gx1.z,gy1.z,gz1.z);
+                vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
+
+                vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+                g000 *= norm0.x;
+                g010 *= norm0.y;
+                g100 *= norm0.z;
+                g110 *= norm0.w;
+                vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+                g001 *= norm1.x;
+                g011 *= norm1.y;
+                g101 *= norm1.z;
+                g111 *= norm1.w;
+
+                float n000 = dot(g000, Pf0);
+                float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+                float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+                float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+                float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+                float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+                float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+                float n111 = dot(g111, Pf1);
+
+                vec3 fade_xyz = fade(Pf0);
+                vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+                vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+                float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+                return 2.2 * n_xyz;
+            }
+
+            #define PI 3.1415926535897932384626433832795
+            
+            uniform float time;
+            uniform float scroll;
+            uniform float maxHeight;
+            uniform float speed;
+            uniform float distortCenter;
+            uniform float roadWidth;
+            varying float vDisplace;
+
+            varying float fogDepth;
+
+            void main(){
+
+                float t = time * speed;
+                float wRoad = distortCenter;
+                float wRoad2 = wRoad * 0.5;
+                
+                float angleCenter = uv.y * PI*4.0;
+                angleCenter += t * 0.9;
+                
+                float centerOff = (
+                    sin(angleCenter) + 
+                    sin(angleCenter*0.5) 
+                ) * wRoad;
+
+                
+                vec3 noiseIn = vec3(uv, 1.0)*10.0;
+                float noise = cnoise(vec3(noiseIn.x, noiseIn.y + scroll, noiseIn.z));
+                noise += 1.0;
+                float h = noise;
+                float angle = (uv.x - centerOff) * PI;
+                float f = abs(cos(angle));
+                h *= pow(f, 1.5 + roadWidth);
+                
+
+                vDisplace = h;
+                
+
+                h*=maxHeight;
+
+                vec3 transformed = vec3( position.x, position.y, position.z + h );
+
+
+                vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
+                gl_Position = projectionMatrix * mvPosition;
+                
+                fogDepth = -mvPosition.z;
+
+            }
+
+        </script>
+            <script id="custom-fragment" type="x-shader/x-fragment">
+                uniform float time;
+                uniform vec3 color;
+                uniform sampler2D pallete;
+                varying float vDisplace;
+
+                uniform vec3 fogColor;
+                uniform float fogNear;
+                uniform float fogFar;
+                varying float fogDepth;
+
+                void main(){
+
+                    vec2 stripPos = vec2( 0.0, vDisplace * (sin(time)*0.5+0.7) );
+                    vec4 stripColor = texture2D( pallete, stripPos );
+                    stripColor *= pow(1.0-vDisplace, 1.0);
+
+                    gl_FragColor = stripColor;
+
+                    #ifdef USE_FOG
+                        float fogFactor = smoothstep( fogNear, fogFar, fogDepth );
+                        gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
+                    #endif
+                }
+
+        </script>
+         
+    {{ end }}     
+    {{ end }}
+
+    {{ with .Params.landscapeStyle2Effect }}
+    {{ if .enable }}
+
+        <script>
+
+            var pallete = "{{ "/images/effects/landscape/pallete2.png" | absURL }}"
+
+        </script>
+
+        <script id="custom-vertex" type="x-shader/x-vertex">
+
+            //
+            // GLSL textureless classic 3D noise "cnoise",
+            // with an RSL-style periodic variant "pnoise".
+            // Author:  Stefan Gustavson (stefan.gustavson@liu.se)
+            // Version: 2011-10-11
+            //
+            // Many thanks to Ian McEwan of Ashima Arts for the
+            // ideas for permutation and gradient selection.
+            //
+            // Copyright (c) 2011 Stefan Gustavson. All rights reserved.
+            // Distributed under the MIT license. See LICENSE file.
+            // https://github.com/stegu/webgl-noise
+            //
+
+            vec3 mod289(vec3 x)
+            {
+                return x - floor(x * (1.0 / 289.0)) * 289.0;
+            }
+
+            vec4 mod289(vec4 x)
+            {
+                return x - floor(x * (1.0 / 289.0)) * 289.0;
+            }
+
+            vec4 permute(vec4 x)
+            {
+                return mod289(((x*34.0)+1.0)*x);
+            }
+
+            vec4 taylorInvSqrt(vec4 r)
+            {
+                return 1.79284291400159 - 0.85373472095314 * r;
+            }
+
+            vec3 fade(vec3 t) {
+                return t*t*t*(t*(t*6.0-15.0)+10.0);
+            }
+
+            // Classic Perlin noise
+            float cnoise(vec3 P)
+            {
+                vec3 Pi0 = floor(P); // Integer part for indexing
+                vec3 Pi1 = Pi0 + vec3(1.0); // Integer part + 1
+                Pi0 = mod289(Pi0);
+                Pi1 = mod289(Pi1);
+                vec3 Pf0 = fract(P); // Fractional part for interpolation
+                vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
+                vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+                vec4 iy = vec4(Pi0.yy, Pi1.yy);
+                vec4 iz0 = Pi0.zzzz;
+                vec4 iz1 = Pi1.zzzz;
+
+                vec4 ixy = permute(permute(ix) + iy);
+                vec4 ixy0 = permute(ixy + iz0);
+                vec4 ixy1 = permute(ixy + iz1);
+
+                vec4 gx0 = ixy0 * (1.0 / 7.0);
+                vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+                gx0 = fract(gx0);
+                vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+                vec4 sz0 = step(gz0, vec4(0.0));
+                gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+                gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+                vec4 gx1 = ixy1 * (1.0 / 7.0);
+                vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+                gx1 = fract(gx1);
+                vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+                vec4 sz1 = step(gz1, vec4(0.0));
+                gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+                gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+                vec3 g000 = vec3(gx0.x,gy0.x,gz0.x);
+                vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
+                vec3 g010 = vec3(gx0.z,gy0.z,gz0.z);
+                vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
+                vec3 g001 = vec3(gx1.x,gy1.x,gz1.x);
+                vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
+                vec3 g011 = vec3(gx1.z,gy1.z,gz1.z);
+                vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
+
+                vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+                g000 *= norm0.x;
+                g010 *= norm0.y;
+                g100 *= norm0.z;
+                g110 *= norm0.w;
+                vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+                g001 *= norm1.x;
+                g011 *= norm1.y;
+                g101 *= norm1.z;
+                g111 *= norm1.w;
+
+                float n000 = dot(g000, Pf0);
+                float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+                float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+                float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+                float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+                float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+                float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+                float n111 = dot(g111, Pf1);
+
+                vec3 fade_xyz = fade(Pf0);
+                vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+                vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+                float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+                return 2.2 * n_xyz;
+            }
+
+            // Classic Perlin noise, periodic variant
+            float pnoise(vec3 P, vec3 rep)
+            {
+                vec3 Pi0 = mod(floor(P), rep); // Integer part, modulo period
+                vec3 Pi1 = mod(Pi0 + vec3(1.0), rep); // Integer part + 1, mod period
+                Pi0 = mod289(Pi0);
+                Pi1 = mod289(Pi1);
+                vec3 Pf0 = fract(P); // Fractional part for interpolation
+                vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0
+                vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+                vec4 iy = vec4(Pi0.yy, Pi1.yy);
+                vec4 iz0 = Pi0.zzzz;
+                vec4 iz1 = Pi1.zzzz;
+
+                vec4 ixy = permute(permute(ix) + iy);
+                vec4 ixy0 = permute(ixy + iz0);
+                vec4 ixy1 = permute(ixy + iz1);
+
+                vec4 gx0 = ixy0 * (1.0 / 7.0);
+                vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+                gx0 = fract(gx0);
+                vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
+                vec4 sz0 = step(gz0, vec4(0.0));
+                gx0 -= sz0 * (step(0.0, gx0) - 0.5);
+                gy0 -= sz0 * (step(0.0, gy0) - 0.5);
+
+                vec4 gx1 = ixy1 * (1.0 / 7.0);
+                vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+                gx1 = fract(gx1);
+                vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
+                vec4 sz1 = step(gz1, vec4(0.0));
+                gx1 -= sz1 * (step(0.0, gx1) - 0.5);
+                gy1 -= sz1 * (step(0.0, gy1) - 0.5);
+
+                vec3 g000 = vec3(gx0.x,gy0.x,gz0.x);
+                vec3 g100 = vec3(gx0.y,gy0.y,gz0.y);
+                vec3 g010 = vec3(gx0.z,gy0.z,gz0.z);
+                vec3 g110 = vec3(gx0.w,gy0.w,gz0.w);
+                vec3 g001 = vec3(gx1.x,gy1.x,gz1.x);
+                vec3 g101 = vec3(gx1.y,gy1.y,gz1.y);
+                vec3 g011 = vec3(gx1.z,gy1.z,gz1.z);
+                vec3 g111 = vec3(gx1.w,gy1.w,gz1.w);
+
+                vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));
+                g000 *= norm0.x;
+                g010 *= norm0.y;
+                g100 *= norm0.z;
+                g110 *= norm0.w;
+                vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));
+                g001 *= norm1.x;
+                g011 *= norm1.y;
+                g101 *= norm1.z;
+                g111 *= norm1.w;
+
+                float n000 = dot(g000, Pf0);
+                float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));
+                float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));
+                float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));
+                float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));
+                float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));
+                float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));
+                float n111 = dot(g111, Pf1);
+
+                vec3 fade_xyz = fade(Pf0);
+                vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
+                vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
+                float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
+                return 2.2 * n_xyz;
+            }
+
+            #define PI 3.1415926535897932384626433832795
+            
+            uniform float time;
+            uniform float maxHeight;
+            uniform float speed;
+            uniform float distortCenter;
+            uniform float roadWidth;
+            varying float vDisplace;
+
+            varying float fogDepth;
+
+            void main(){
+
+                float t = time * speed;
+                float wRoad = distortCenter;
+                float wRoad2 = wRoad * 0.5;
+                
+                float angleCenter = uv.y * PI*4.0;
+                angleCenter += t * 0.9;
+                
+                float centerOff = (
+                    sin(angleCenter) + 
+                    sin(angleCenter*0.5) 
+                ) * wRoad;
+
+                
+                vec3 noiseIn = vec3(uv, 1.0)*10.0;
+                float noise = cnoise(vec3(noiseIn.x, noiseIn.y + t, noiseIn.z));
+                noise += 1.0;
+                float h = noise;
+                float angle = (uv.x - centerOff) * PI;
+                float f = abs(cos(angle));
+                h *= pow(f, 1.5 + roadWidth);
+                
+
+                vDisplace = h;
+                
+
+                h*=maxHeight;
+
+                vec3 transformed = vec3( position.x, position.y, position.z + h );
+
+
+                vec4 mvPosition = modelViewMatrix * vec4( transformed, 1.0 );
+                gl_Position = projectionMatrix * mvPosition;
+                
+                fogDepth = -mvPosition.z;
+
+            }
+
+        </script>
+            <script id="custom-fragment" type="x-shader/x-fragment">
+                uniform float time;
+                uniform vec3 color;
+                uniform sampler2D pallete;
+                varying float vDisplace;
+
+                uniform vec3 fogColor;
+                uniform float fogNear;
+                uniform float fogFar;
+                varying float fogDepth;
+
+                void main(){
+
+                    vec2 stripPos = vec2( 0.0, vDisplace );
+                    vec4 stripColor = texture2D( pallete, stripPos );
+                    stripColor *= pow(1.0-vDisplace, 1.0);
+
+                    gl_FragColor = stripColor;
+
+                    #ifdef USE_FOG
+                        float fogFactor = smoothstep( fogNear, fogFar, fogDepth );
+                        gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
+                    #endif
+                }
+
+            </script>
+         
+    {{ end }}     
+    {{ end }}
+
+    {{ with .Params.borealSkyEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- BOREAL SKY BACKGROUND EFFECT -->" | safeHTML }}
+
+        <style>
+				
+            canvas {
+             position: absolute!important;
+             width: 100%!important;
+             height: 100%!important;
+             left: 0!important;
+             top: 0!important;
+             display: block;
+             z-index: 1!important;
+             --color-bg: {{ .backgroundColor | safeCSS }};
+             --color-bg-2: {{ .backgroundColor2 | safeCSS }};
+             --color-bg-3: {{ .backgroundColor3 | safeCSS }};
+             background: radial-gradient(ellipse at 30% 48%,var(--color-bg) 0,var(--color-bg-2) 45%,var(--color-bg-3) 150%);
+            }
+
+        </style>
+
+        <div id="effect-box">
+            <div id="vendors-lines"></div>
+        </div>
+
+        <script>
+
+            var COLOURS = {{ .colours }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.colorsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- COLORS BACKGROUND EFFECT -->" | safeHTML }}
+
+        <style>
+				
+            canvas {
+             position: absolute!important;
+             width: 100%!important;
+             height: 100%!important;
+             left: 0!important;
+             top: 0!important;
+             display: block;
+             z-index: 1!important;
+             --color-bg: {{ .backgroundColor | safeCSS }};
+             --color-bg-2: {{ .backgroundColor2 | safeCSS }};
+             background: radial-gradient(ellipse at 50% 50%,var(--color-bg) 40%,var(--color-bg-2) 150%);
+            }
+
+        </style>
+
+        <div id="effect-box">
+            <div id="vendors-lines"></div>
+        </div>
+
+        <script>
+
+            var COLOURS = {{ .colours }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.confettiLinesEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CONFETTI LINES BACKGROUND EFFECT -->" | safeHTML }}
+
+        <style>
+				
+            canvas {
+             position: absolute!important;
+             width: 100%!important;
+             height: 100%!important;
+             left: 0!important;
+             top: 0!important;
+             display: block;
+             z-index: 1!important;
+             --color-bg: {{ .backgroundColor | safeCSS }};
+             --color-bg-2: {{ .backgroundColor2 | safeCSS }};
+             background: radial-gradient(ellipse at 75% 0,var(--color-bg) 50%,var(--color-bg-2) 250%);
+            }
+
+        </style>
+
+        <div id="effect-box">
+            <div id="vendors-lines"></div>
+        </div>
+
+        <script>
+
+            var COLOURS = {{ .colours }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.starsLinesEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- STARS LINES BACKGROUND EFFECT -->" | safeHTML }}
+
+        <style>
+				
+            canvas {
+             position: absolute!important;
+             width: 100%!important;
+             height: 100%!important;
+             left: 0!important;
+             top: 0!important;
+             display: block;
+             z-index: 1!important;
+             --color-bg: {{ .backgroundColor | safeCSS }};
+             background-color: var(--color-bg);
+            }
+
+        </style>
+
+        <div id="effect-box">
+            <div id="vendors-lines"></div>
+        </div>
+
+        <script>
+
+            var color_stars = {{ .colorStars }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.quantumEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- QUANTUM BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="quantum"></canvas>
+        </div>
+
+        <script>
+
+            var background_quantum = {{ .backgroundColor }};
+            var gemisphere_light = {{ .hemisphereLight }};
+            var gemisphere_light_2 = {{ .hemisphereLight2 }};
+            var directional_light = {{ .directionalLight }};
+            var mesh_phong_material = {{ .meshPhongMaterial }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.physicsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- PHYSICS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="physics"></canvas>
+        </div>
+
+        <script>
+
+            var color_physics = {{ .color }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.heuristicsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- HEURISTICS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="heuristics"></canvas>
+        </div>
+
+        <script>
+
+            var background_heuristics = {{ .backgroundColor }};
+            var color_heuristics = {{ .color }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.hawkingEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- HAWKING BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="hawking"></canvas>
+        </div>
+
+        <script>
+
+            var background_hawking = {{ .backgroundColor }};
+            var color_1_hawking = {{ .color }};
+            var color_2_hawking = {{ .color2 }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.starWarsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- STAR WARS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="star_wars"></canvas>
+        </div>
+
+        <script>
+
+            var texture_bg_star_wars = {{ .image | absURL }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.brickTunnelEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- BRICK TUNNEL BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="brick_tunnel"></canvas>
+        </div>
+
+        <script>
+
+            var texture_bg_brick_tunnel = {{ .image | absURL }};
+
+         </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.triangleEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- TRIANGLE BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="triangle"></canvas>
+        </div>
+
+  
+    {{ end }}
+    {{ end }}    
+    
+    {{ with .Params.birdsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- BIRDS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+             VANTA.BIRDS({
+               el: "#effect-box",
+               backgroundColor: {{ .backgroundColor }},
+               color1: {{ .color }},
+               color2: {{ .color2}},
+               birdSize: {{ .birdSize }},
+               wingSpan: {{ .wingSpan }},
+               speedLimit: {{ .speedLimit }},
+               separation: {{ .separation }},
+               alignment: {{ .alignment }},
+               cohesion: {{ .cohesion }},
+               quantity: {{ .quantity }}
+             })
+
+          });
+
+           </script>
+
+  
+    {{ end }}
+    {{ end }} 
+    
+    {{ with .Params.cloudsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CLOUDS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                VANTA.CLOUDS2({
+                    el: "#effect-box",
+                    backgroundColor: {{ .backgroundColor }},
+                    skyColor: {{ .skyColor }},
+                    cloudColor: {{ .cloudColor }},
+                    speed: {{ .speed }},
+                    texturePath: "{{ "/images/effects/clouds/noise.png" | absURL }}"
+				})
+
+          });
+
+           </script>
+
+  
+    {{ end }}
+    {{ end }}   
+
+    {{ with .Params.topologyEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- TOPOLOGY BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                VANTA.TOPOLOGY({
+                    el: "#effect-box",
+                    backgroundColor: {{ .backgroundColor }},
+                    color: {{ .color }},
+				})
+
+          });
+
+           </script>
+
+  
+    {{ end }}
+    {{ end }} 
+
+    {{ with .Params.netEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- NET BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                VANTA.NET({
+                    el: "#effect-box",
+                    backgroundColor: {{ .backgroundColor }},
+                    color: {{ .color }},
+                    points: {{ .points }},
+                    maxDistance: {{ .maxDistance }},
+                    spacing: {{ .spacing }},
+				})
+
+          });
+
+           </script>
+
+  
+    {{ end }}
+    {{ end }} 
+
+    {{ with .Params.dotsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- DOTS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+            jQuery.noConflict()(function($) {
+
+                VANTA.DOTS({
+                    el: "#effect-box",
+                    backgroundColor: {{ .backgroundColor }},
+                    color: {{ .color }},
+                    color2: {{ .color2 }},
+                    size: {{ .size }},
+                    spacing: {{ .spacing }},
+				})
+
+          });
+
+           </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.coronavirus3dEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- CORONAVIRUS 3D BACKGROUND EFFECT -->" | safeHTML }}
+
+        <div id="effect-box">
+            <div class="virus"></div>
+        </div>
+
+        <script id="vertexShader" type="x-shader/x-vertex">
+            uniform float p;
+            varying float intensity;
+            void main()
+            {
+                vec3 vNormal = normalize( normalMatrix * normal );
+                intensity = pow(1.0 - abs(dot(vNormal, vec3(0, 0, 1))), p);
+                gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+            }
+        </script>
+
+        <!-- fragment shader a.k.a. pixel shader -->
+        <script id="fragmentShader" type="x-shader/x-vertex">
+                uniform vec3 glowColor;
+                varying float intensity;
+                void main()
+                {
+                    vec3 glow = glowColor * intensity;
+                    gl_FragColor = vec4( glow, 1.0 );
+                }
+        </script>
+
+
+        <script type="module">
+
+            import * as THREE from "{{ "/plugins/effects/coronavirus/three.module.js" | absURL }}";
+            import Stats from "{{ "/plugins/effects/coronavirus/stats.module.js" | absURL }}";
+            import { GUI } from "{{ "/plugins/effects/coronavirus/dat.gui.module.js" | absURL }}";
+            import { OrbitControls } from "{{ "/plugins/effects/coronavirus/OrbitControls.js" | absURL }}";
+            import { STLLoader } from "{{ "/plugins/effects/coronavirus/STLLoader.js" | absURL }}";
+            import { BokehShader, BokehDepthShader } from "{{ "/plugins/effects/coronavirus/BokehShader2.js" | absURL }}";
+
+            var spread = 60;
+            var particleMax = 400;
+            var bitMax = {{ .max }};
+            var particles = [];
+            var bits = [];
+
+            var container, camera, scene, renderer, materialDepth, controls;
+
+            var windowHalfX = window.innerWidth / 2;
+            var windowHalfY = window.innerHeight / 2;
+
+            var postprocessing = { enabled: true };
+            var shaderSettings = {
+              rings: 4,
+              samples: 7
+            };
+
+            let effectController = {
+              enabled: true,
+              jsDepthCalculation: false,
+              shaderFocus: false,
+
+              fstop: 20.428,
+              maxblur: {{ .blur }},
+
+              showFocus: false,
+              focalDepth: 15,
+              manualdof: false,
+              vignetting: true,
+              depthblur: true,
+
+              threshold: 0.225,
+              gain: 2.0,
+              bias: 0.0,
+              fringe: 0.0,
+
+              focalLength: 30,
+              noise: true,
+              pentagon: true,
+
+              dithering: 0.0001
+            };
+
+            init();
+            animate();
+
+            function getRnd(min, max) {
+              return Math.random() * (max - min + 1)  + min;
+            }
+
+            function init() {
+              container = document.querySelector(".virus")
+            
+
+              scene = new THREE.Scene();
+              scene.background = new THREE.Color({{ .backgroundColor }}); 
+
+              renderer = new THREE.WebGLRenderer();
+              renderer.setPixelRatio( window.devicePixelRatio );
+              renderer.setSize( window.innerWidth, window.innerHeight );
+              renderer.autoClear = false;
+              container.appendChild( renderer.domElement );
+
+              camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, spread - 5 );
+              //controls = new OrbitControls(camera, renderer.domElement);
+              camera.position.x = 0;
+              camera.position.z = 0;
+              camera.position.y = 0;
+              camera.lookAt(scene.position);
+              scene.add( camera );
+
+              var depthShader = BokehDepthShader;
+              materialDepth = new THREE.ShaderMaterial( {
+                uniforms: depthShader.uniforms,
+                vertexShader: depthShader.vertexShader,
+                fragmentShader: depthShader.fragmentShader
+              } );
+              materialDepth.uniforms[ "mNear" ].value = camera.near;
+              materialDepth.uniforms[ "mFar" ].value = camera.far;
+              var XRayVirusMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                  p: { type: "f", value: 2 },
+                  glowColor: { type: "c", value: new THREE.Color({{ .colorVirus }}) },
+                },
+                vertexShader: document.getElementById("vertexShader").text,
+                fragmentShader: document.getElementById("fragmentShader").text,
+                side: THREE.DoubleSide,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                depthWrite: false // seperate to shader depth, make false to ensure both sides of the virus are ddddrawn - preventing dark patches.
+              });
+
+              var XRayBitMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                  p: { type: "f", value: 2 },
+                  glowColor: { type: "c", value: new THREE.Color({{ .colorVirus }}) },
+                },
+                vertexShader: document.getElementById("vertexShader").text,
+                fragmentShader: document.getElementById("fragmentShader").text,
+                side: THREE.DoubleSide,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                depthWrite: false // seperate to shader depth, make false to ensure both sides of the virus are ddddrawn - preventing dark patches.
+              });
+
+              initPostprocessing();
+              for ( var e in effectController ) {
+                if ( e in postprocessing.bokeh_uniforms ) {
+                  postprocessing.bokeh_uniforms[ e ].value = effectController[ e ];
+                }
+              }
+              postprocessing.enabled = effectController.enabled;
+              postprocessing.bokeh_uniforms[ "znear" ].value = camera.near;
+              postprocessing.bokeh_uniforms[ "zfar" ].value = camera.far;
+              camera.setFocalLength( effectController.focalLength );
+
+              var loader = new STLLoader();
+              loader.load("{{ "/plugins/effects/coronavirus/virus2.stl" | absURL }}", function(geometry) {
+                for(let i=0; i < particleMax; i++){
+
+                  let mesh = new THREE.Mesh(geometry, XRayVirusMaterial);
+                  mesh.scale.set(.08,.08,.08);
+                  let x = getRnd(-spread, spread);
+                  let y = getRnd(-spread, spread);
+                  let z = getRnd(-spread, spread);
+                  let rx = getRnd(-Math.PI, Math.PI);
+                  let ry = getRnd(-Math.PI, Math.PI);
+                  let rz = getRnd(-Math.PI, Math.PI);
+
+                  let rSpeed = 2;
+                  let rxv = getRnd(-rSpeed, rSpeed);
+                  let ryv = getRnd(-rSpeed, rSpeed);
+                  let rzv = getRnd(-rSpeed, rSpeed);
+                  mesh.position.set(x, y, z);
+                  mesh.rotation.set(rx, ry, rz);
+
+                  particles.push({
+                    mesh: mesh,  
+                    x: x, y: y, z: z, 
+                    rx: rx, ry: ry, rz: rz, 
+                    rxv: rxv, ryv: ryv, rzv: rzv
+                  });
+                  scene.add(mesh);
+
+                }
+
+                let bitGeometry = new THREE.SphereGeometry( .3, 8, 8);
+                for(let i=0; i < bitMax; i++){
+                  let sphere = new THREE.Mesh( bitGeometry, XRayBitMaterial );
+                  //sphere.scale.set(.3,.3,.3);
+                  let x = getRnd(-spread, spread);
+                  let y = getRnd(-spread, spread);
+                  let z = getRnd(-spread, spread);
+                  let rx = getRnd(-Math.PI, Math.PI);
+                  let ry = getRnd(-Math.PI, Math.PI);
+                  let rz = getRnd(-Math.PI, Math.PI);
+                  let rSpeed = 1;
+                  let rxv = getRnd(rSpeed, rSpeed);
+                  let ryv = getRnd(rSpeed, rSpeed);
+                  let rzv = getRnd(rSpeed, rSpeed);
+                  sphere.position.set(x, y, z);
+                  sphere.rotation.set(rx, ry, rz);
+                  bits.push({mesh: sphere, 
+                             x: x, y: y, z: z, 
+                             rx: rx, ry: ry, rz: rz, 
+                             rxv: rxv, ryv: ryv, rzv: rzv});
+                  scene.add( sphere );
+                }
+
+              });
+
+              window.addEventListener( "resize", onWindowResize, false );
+            }
+
+            function onWindowResize() {
+              camera.aspect = window.innerWidth / window.innerHeight;
+              camera.updateProjectionMatrix();
+              windowHalfX = window.innerWidth / 2;
+              windowHalfY = window.innerHeight / 2;
+              postprocessing.rtTextureDepth.setSize( window.innerWidth, window.innerHeight );
+              postprocessing.rtTextureColor.setSize( window.innerWidth, window.innerHeight );
+              postprocessing.bokeh_uniforms[ "textureWidth" ].value = window.innerWidth;
+              postprocessing.bokeh_uniforms[ "textureHeight" ].value = window.innerHeight;
+              renderer.setSize( window.innerWidth, window.innerHeight );
+            }
+
+            function initPostprocessing() {
+              postprocessing.scene = new THREE.Scene();
+              postprocessing.camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 10000, 10000 );
+              postprocessing.camera.position.z = 100;
+              postprocessing.scene.add( postprocessing.camera );
+              var pars = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBFormat };
+              postprocessing.rtTextureDepth = new THREE.WebGLRenderTarget( window.innerWidth, window.innerHeight, pars );
+              postprocessing.rtTextureColor = new THREE.WebGLRenderTarget( window.innerWidth, window.innerHeight, pars );
+              var bokeh_shader = BokehShader;
+              postprocessing.bokeh_uniforms = THREE.UniformsUtils.clone( bokeh_shader.uniforms );
+              postprocessing.bokeh_uniforms[ "tColor" ].value = postprocessing.rtTextureColor.texture;
+              postprocessing.bokeh_uniforms[ "tDepth" ].value = postprocessing.rtTextureDepth.texture;
+              postprocessing.bokeh_uniforms[ "textureWidth" ].value = window.innerWidth;
+              postprocessing.bokeh_uniforms[ "textureHeight" ].value = window.innerHeight;
+              postprocessing.materialBokeh = new THREE.ShaderMaterial( {
+                uniforms: postprocessing.bokeh_uniforms,
+                vertexShader: bokeh_shader.vertexShader,
+                fragmentShader: bokeh_shader.fragmentShader,
+                defines: {
+                  RINGS: shaderSettings.rings,
+                  SAMPLES: shaderSettings.samples
+                }
+              } );
+              postprocessing.quad = new THREE.Mesh( new THREE.PlaneBufferGeometry( window.innerWidth, window.innerHeight ), postprocessing.materialBokeh );
+              postprocessing.quad.position.z = - 500;
+              postprocessing.scene.add( postprocessing.quad );
+            }
+
+            function shaderUpdate() {
+              postprocessing.materialBokeh.defines.RINGS = shaderSettings.rings;
+              postprocessing.materialBokeh.defines.SAMPLES = shaderSettings.samples;
+              postprocessing.materialBokeh.needsUpdate = true;
+            }
+
+            function animate() {
+              requestAnimationFrame( animate, renderer.domElement );
+              virusUpdate();
+              bitsUpdate();
+              camera.rotation.x += 0.0033187;
+              camera.rotation.y += 0.0052349;
+              camera.rotation.z += 0.00323;
+
+              render();
+            }
+
+            function virusUpdate(){
+              for(let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                
+                p.x += 0.04;
+                p.z += 0.0011;
+                if(p.x > spread) p.x = -spread;
+                if(p.z > spread) p.z = -spread;
+                p.mesh.position.x = p.x;
+                p.mesh.position.z = p.z;
+
+                p.rx += (p.rxv / 100);
+                p.ry += (p.ryv / 100);
+                p.rz += (p.rzv / 100);
+                p.mesh.rotation.set(p.rx, p.ry, p.rz);
+              }
+            }
+
+            function bitsUpdate(){
+              for(let i = 0; i < bits.length; i++) {
+                let p = bits[i];
+                p.x += 0.04;
+                p.z += 0.0011;
+                if(p.x > spread) p.x = -spread;
+                if(p.z > spread) p.z = -spread;
+                p.mesh.position.x = p.x;
+                p.mesh.position.z = p.z;
+
+                p.rx += (p.rxv / 100);
+                p.ry += (p.ryv / 100);
+                p.rz += (p.rzv / 100);
+                p.mesh.rotation.set(p.rx, p.ry, p.rz);
+              }
+            }
+
+            function linearize( depth ) {
+              var zfar = camera.far;
+              var znear = camera.near;
+              return - zfar * znear / ( depth * ( zfar - znear ) - zfar );
+            }
+
+            function smoothstep( near, far, depth ) {
+              var x = saturate( ( depth - near ) / ( far - near ) );
+              return x * x * ( 3 - 2 * x );
+            }
+
+            function saturate( x ) {
+              return Math.max( 0, Math.min( 1, x ) );
+            }
+
+            function render() {
+
+              if ( postprocessing.enabled ) {
+                renderer.clear();
+                // render scene into texture
+                renderer.setRenderTarget( postprocessing.rtTextureColor );
+                renderer.clear();
+                renderer.render( scene, camera );
+                // render depth into texture
+                scene.overrideMaterial = materialDepth;
+                renderer.setRenderTarget( postprocessing.rtTextureDepth );
+                renderer.clear();
+                renderer.render( scene, camera );
+                scene.overrideMaterial = null;
+                // render bokeh composite
+                renderer.setRenderTarget( null );
+                renderer.render( postprocessing.scene, postprocessing.camera );
+              } else {
+                scene.overrideMaterial = null;
+                renderer.setRenderTarget( null );
+                renderer.clear();
+                renderer.render( scene, camera );
+              }
+            }
+
+        </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.glitchEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- GLITCH BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas id="glitch"></canvas>
+        </div>
+
+        <script>
+
+            var imageGlitch = {{ .image | absURL }};
+
+        </script>
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.hillsEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- HILLS BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas class="p-canvas-webgl" id="hills"></canvas>
+        </div>
+
+        <script>
+
+            var color = {{ .color }};
+
+        </script>
+
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.waterDropletEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- WATER DROPLET BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box">
+            <canvas id="water-droplet"></canvas>
+        </div>
+
+        <script>
+
+            var alpha = "{{ "/images/effects/water/alpha.png" | absURL }}"
+            var shine = "{{ "/images/effects/water/shine.png" | absURL }}"
+            var imageWater = {{ .image | absURL }};
+            var maximumMassGravity_water = {{ .maximumMassGravity }};
+            var maximumMass_water = {{ .maximumMass }};
+            var dropletGrowSpeed_water = {{ .dropletGrowSpeed }};
+            var dropletShrinkSpeed_water = {{ .dropletShrinkSpeed }};
+
+        </script>
+
+
+  
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.globeEffect }}
+    {{ if .enable }}
+
+        {{ "<!-- GLOBE BACKGROUND EFFECT -->" | safeHTML }}
+
+
+        <div id="effect-box"></div>
+
+        <script>
+
+         jQuery.noConflict()(function($) {
+
+          VANTA.GLOBE({
+            el: "#effect-box",
+            color: {{ .color }},
+            color2: {{ .color2 }},
+            size: {{ .size }},
+            backgroundColor: {{ .backgroundColor }}
+          })
+
+       });
+
+        </script>
+    {{ end }}
+    {{ end }}
+
+
+</div>

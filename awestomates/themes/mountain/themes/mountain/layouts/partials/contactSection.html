@@ -1,0 +1,22 @@
+{{ with .Site.Data.home.contact }}
+{{ if .enable }}
+
+{{ "<!-- Section Contact -->" | safeHTML }}
+<section class="section-contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <h2 class="wow fadeUp" data-wow-delay=".3s">{{ .title }}</h2>
+      <div class="col-md-12">
+          <form id="contact-form" action="{{ .formspreeURL }}" method="post">
+              <input class="wow fadeUp" data-wow-delay=".3s" type="text" name="name" id="name" placeholder="{{ i18n "yourName" }}" />
+              <input class="wow fadeUp" data-wow-delay=".3s" type="email" name="email" id="email" placeholder="{{ i18n "yourEmail" }}" />
+              <textarea class="wow fadeUp" data-wow-delay=".3s" name="msg" id="msg" placeholder="{{ i18n "yourMessage" }}"></textarea>
+              <input class="wow fadeUp" data-wow-delay=".3s" type="submit" name="submit" id="submit" value="{{ i18n "sendMessage" }}" />
+          </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

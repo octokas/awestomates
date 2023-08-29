@@ -1,0 +1,148 @@
+/*
+*	Mountain - Coming Soon & Under Construction Hugo Theme
+*	Version: 1.0.0
+*	Author: Mountain-Themes
+*	Author URL: https://themeforest.net/user/mountain-themes
+*	Mountain © 2022. Design & Coded by Mountain-Themes.
+*/
+
+/* SETTINGS VARIABLES
+	- Pageloader
+	- Background Colors
+	- Colors
+	- Fonts & Fonts Size 
+	- Menu
+	- Menu Coming Soon Page
+	- Blog
+	- Section Header
+	- Section Services
+	- Section Subscribe
+	- Section Contact
+	- Section Google Map
+	- Footer
+*/
+
+/* Pageloader */
+$background_pageloader: #fff;
+
+/* Background Colors */
+$default_bg: #fff;
+
+/* Colors */
+$default_color: #000;
+
+/* Fonts & Fonts Size */
+$default_font: "Open Sans", sans-serif;
+$heading_font: "Iceberg", sans-serif;
+
+$default_size: 13px;
+
+/* Menu */
+$menu_font: "Rajdhani", sans-serif;
+$menu_font_size: 14px;
+$menu_letter_spacing: 1px;
+$menu_text_transform: uppercase;
+
+$menu_color: #000;
+$menu_color_hover: #8f8f8f;
+
+$submenu_color: #fff;
+$submenu_color_hover: #a3a3a3; 
+$submenu_bg_color: #050505;
+
+/* Menu Coming Soon Page */
+$menu_color_coming_page: #fff;
+$menu_hover_color_coming_page: #bfbebe;
+
+/* Blog */
+$blog_color_style: #16b6ea;
+
+/* Section Header */
+$background_image_header: url(../images/overlay.png);
+$background_color_header: rgba(95, 96, 96, 0.4);
+
+$heading_font_header: "Raleway", sans-serif;
+$heading_font_size_header: 2.5em;
+$heading_font_weight_header: 300;
+
+$text_font_size_header: 14px;
+$text_color_header: #fff;
+
+$countdown_font_header: 'Iceberg', sans-serif;
+$countdown_font_size_header: 4em;
+$countdown_font_size_text_header: 16px;
+$countdown_color_header: #fff;
+
+$mouse_icon_color_header: #F9F9F9;
+$mouse_border_header: 2px solid rgba(255, 255, 255, 0.6);
+
+/* Section Services */
+$section_bg_color_services: #fff;
+
+$icon_bg_services: #16b6ea;
+$icon_font_size_services: 50px;
+$icon_shadow_color_services: rgb(19, 155, 199) 1px 1px, rgb(19, 155, 199) 2px 2px, rgb(19, 155, 199) 3px 3px, rgb(19, 155, 199) 4px 4px, rgb(19, 155, 199) 5px 5px, rgb(19, 155, 199) 6px 6px, rgb(19, 155, 199) 7px 7px, rgb(19, 155, 199) 8px 8px, rgb(19, 155, 199) 9px 9px, rgb(19, 155, 199) 10px 10px, rgb(19, 155, 199) 11px 11px, rgb(19, 155, 199) 12px 12px, rgb(19, 156, 200) 13px 13px, rgb(19, 158, 202) 14px 14px, rgb(19, 159, 204) 15px 15px, rgb(19, 161, 206) 16px 16px, rgb(19, 162, 208) 17px 17px, rgb(20, 164, 210) 18px 18px, rgb(20, 165, 212) 19px 19px, rgb(20, 167, 214) 20px 20px, rgb(20, 168, 216) 21px 21px, rgb(20, 170, 218) 22px 22px, rgb(20, 171, 220) 23px 23px, rgb(21, 173, 222) 24px 24px, rgb(21, 174, 224) 25px 25px, rgb(21, 176, 226) 26px 26px, rgb(21, 177, 228) 27px 27px, rgb(21, 179, 230) 28px 28px, rgb(21, 180, 232) 29px 29px, rgb(22, 182, 234) 30px 30px;
+$icon_icon_color_services: #fff;
+
+$heading_font_size_services: 15px;
+$heading_font_weight_services: 600;
+$heading_border_services: solid 2px #16b6ea;
+$heading_border_width_services: 35px;
+
+$text_color_services: #8c9398;
+
+/* Section Subscribe */
+$heading_color_icon_subscribe: #fff;
+$heading_color_subscribe: #fff;
+
+$input_text_bg_subscribe: rgba(255, 255, 255, 0.1);
+$input_text_border_subscribe: solid 1px rgba(255, 255, 255, 0.17);
+$input_text_color_subscribe: #fff;
+$input_text_color_error_text_subscribe: #fff;
+$input_text_color_error_icon_subscribe: #16b6ea;
+
+$button_bg_subscribe: rgba(22, 182, 234, 0.52);
+$border_subscribe: 1px solid rgba(22, 182, 234, 0.52);
+$color_subscribe: #fff;
+$font_size_subscribe: 13px;
+$font_weight_subscribe: 700;
+
+$button_bg_hover_subscribe: transparent;
+$button_border_hover_subscribe: solid 1px rgba(255, 255, 255, 0.17);
+$button_color_hover_subscribe: #fff;
+
+/* Section Contact */
+$section_bg_color_contact: #f3f5f8;
+
+$heading_font_size_contact: 20px;
+$heading_color_contact: #000;
+
+$input_border_contact: 2px solid #ddd;
+$input_border_focus_contact: 2px solid #bbb;
+$input_text_color_error_icon_contact: #16b6ea;
+
+$button_bg_contact: rgba(22, 182, 234, 0);
+$button_border_contact: 2px solid #16b6ea;
+$button_color_contact: #737373;
+$button_font_size_contact: 13px;
+$button_font_weight_contact: 700;
+
+$button_bg_hover_contact: #16b6ea;
+$button_color_hover_contact: #fff;
+
+/* Section Google Map */
+$contact_info_bg_map: rgba(243, 245, 248, 0.85);
+$contact_info_color_map: #242830;
+
+$zoom_icon_bg_map: rgba(22, 182, 234, 0.7);
+$zoom_hover_icon_bg_map: #16b6ea;
+
+/* Footer */
+$footer_bg: #242830;
+
+$up_button_bg_footer: rgba(22, 182, 234, 0.5);
+$up_button_color_footer: #fff;
+$up_button_icon_color_footer: #fff;
+
+$up_button_hover_bg_footer: rgba(22, 182, 234, 1);
+$up_button_hover_color_footer: #fff;

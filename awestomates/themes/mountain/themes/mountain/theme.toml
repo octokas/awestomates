@@ -1,0 +1,12 @@
+name = "mountain"
+license = "GPL"
+licenselink = "https://themeforest.net/licenses/terms/regular"
+description = "Mountain is a minimal, responsive, business coming soon / landing page / one page Hugo Theme."
+homepage = "https://mountainthemes.dev/"
+tags = ["clean", "minimal", "blog", "responsive", "google analytics", "bootstrap", "under construction", "coming soon", "modern", "countdown", "contact form", "creative"]
+features = ['bootstrap 5', 'responsive design', 'blog', 'responsive', 'minimal', 'one page', 'under construction', 'hugo-theme', 'coming soon', 'creative', 'contact-form']
+min_version = "0.41"
+
+[author]
+  name = "Mountain-Themes"
+  homepage = "https://mountainthemes.dev/"

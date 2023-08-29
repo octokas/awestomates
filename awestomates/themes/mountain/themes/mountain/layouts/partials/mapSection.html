@@ -1,0 +1,40 @@
+{{ with .Site.Data.home.map }}
+{{ if .enable }}
+
+{{ "<!-- Section Google Map -->" | safeHTML }}
+<section class="section-map" id="map">
+
+    <div id="google-container"></div>
+    <div id="zoom-in"></div>
+    <div id="zoom-out"></div>
+
+                <script>
+                    
+                    var colorMap = {{ .colorMap }};
+                    var iconLocation = "{{ .iconLocation | absURL }}"
+                    var titleIconLocation = "{{ .titleIconLocation }}"
+                    var latitudeG = {{ .latitude }};
+                    var longitudeG = {{ .longitude }};
+                    var mapZoomG = {{ .mapZoom }};
+        
+                </script>
+
+<div class="contact-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    {{ range .items }}
+                      <div class="col-md-4 contact-box">
+                        <i aria-hidden="true" class="{{ .icon }}"></i>{{ .title }}
+                      </div>
+                    {{ end }}
+                </div>       
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{{ end }}
+{{ end }}

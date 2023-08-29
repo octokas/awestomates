@@ -1,0 +1,62 @@
+[readMore]
+other = "Read more"
+
+[authorBy]
+other = "by"
+
+[yourName]
+other = "Name"
+
+[yourEmail]
+other = "Email"
+
+[yourMessage]
+other = "Message"
+
+[submit]
+other = "Submit"
+
+[sendMessage]
+other = "Send message"
+
+[latestPosts]
+other = "Latest Posts"
+
+[taxonomyPageList]
+other = "Latest Posts by"
+
+[share]
+other = "Share"
+
+[tags]
+other = "Tags"
+
+[comments]
+other = "Comments"
+
+[nextPost]
+other = "Next Post"
+
+[prevPost]
+other = "Previous Post"
+
+[category]
+other = "Category"
+
+[search]
+other = "Search"
+
+[searchResults]
+other = "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+[searchNotFound]
+other = "No matches found"
+
+[categories]
+other = "Categories"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Page not found."
