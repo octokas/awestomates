@@ -11,5 +11,6 @@
     "scm.inputFontSize": 10,
     "editor.fontSize": 10,
     "screencastMode.fontSize": 20,
-    "metaGo.decoration.fontSize": 10
+    "metaGo.decoration.fontSize": 10,
+    "npm.packageManager": "yarn"
 }
