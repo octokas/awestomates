@@ -1,8 +1,61 @@
 # Netlify configuration
 
 [build]
-  command = "hugo"
   publish = "public"
+  command = "hugo --gc --minify"
 
 [build.environment]
   HUGO_VERSION = "0.101.0"
+
+[context.production.environment]
+  HUGO_VERSION = "0.117.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+  command = "yarn run build"
+
+[context.split1]
+command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+HUGO_VERSION = "0.117.0"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.117.0"
+
+[context.branch-deploy]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.117.0"
+
+[context.next.environment]
+HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+from = "/npmjs/*"
+to = "/npmjs/"
+status = 200
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+
+	[plugins.inputs]
+    baseUrl = "https://awestomates.com/"
+    sitemapPath = "/sitemap.xml"
+    ignorePeriod = 0
+    providers = [
+      "google",
+      "yandex"
+    ]
+
+[dev]
+  framework = "#custom"
+  command = "yarn run local"
+  targetPort = 1313
+  port = 8888
+  publish = "public"
+  autoLaunch = false

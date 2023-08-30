@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "local": "hugo server --disableFastRender"
+    "local": "hugo server --disableFastRender",
+    "build": ""
   },
   "dependencies": {
     "hugo": "^0.0.3",
