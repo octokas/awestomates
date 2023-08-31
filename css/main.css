@@ -1746,7 +1746,7 @@ form input.margin-l, form textarea.margin-l {
 }
 @media only screen and (min-width: 1400px) {
   .header {
-    height: 9rem;
+    height: 12rem;
   }
 }
 
@@ -2750,7 +2750,7 @@ form input.margin-l, form textarea.margin-l {
 
 .inner__content {
   position: relative;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 /* @media only screen and (max-width: 1200px) {
   .inner__content {
