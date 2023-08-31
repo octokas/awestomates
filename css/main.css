@@ -134,7 +134,7 @@ input::-moz-focus-inner {
   width: 5px;
   background: #242424;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   ::-webkit-scrollbar {
     display: block;
   }
@@ -709,7 +709,7 @@ h1 {
   font: normal 400 4rem/1.2 "Poppins", sans-serif;
   color: #ffffff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   h1 {
     font-size: 5rem;
   }
@@ -752,7 +752,7 @@ h2 {
   font: normal 400 3rem/1.2 "Poppins", sans-serif;
   color: #ffffff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   h2 {
     font-size: 3.8rem;
   }
@@ -913,7 +913,7 @@ a {
   font: normal 400 3rem/1.2 "Poppins", sans-serif;
   color: #ffffff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .popup-title__title {
     font-size: 4rem;
   }
@@ -924,7 +924,7 @@ a {
   color: #aaaaaa;
   margin-top: 2.5rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .popup-title__text {
     margin-top: 2.3rem;
   }
@@ -1090,7 +1090,7 @@ a {
   overflow: hidden;
   text-align: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .btn {
     display: inline-block;
   }
@@ -1281,7 +1281,7 @@ a {
   right: 5.8rem;
   width: 3.4rem;
   height: 3.4rem;
-  margin-right: 2rem;
+  margin-right: 1.8rem;
   font: normal 600 1.4rem/3.4rem "Poppins", sans-serif;
   color: #ffffff;
 }
@@ -1334,12 +1334,12 @@ a {
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .btn-s {
     margin-right: 3.4rem;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1072px) {
   .btn-s {
     width: auto;
     position: absolute;
@@ -2335,7 +2335,7 @@ form input.margin-l, form textarea.margin-l {
 .navigation li a.active-link .link-hover {
   color: #ffffff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .navigation li {
     font-size: 4.4rem;
   }
@@ -2397,7 +2397,7 @@ form input.margin-l, form textarea.margin-l {
   letter-spacing: normal;
   text-transform: lowercase;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .media__countdown #countdown {
     font-size: 5.6rem;
   }
@@ -2624,7 +2624,7 @@ form input.margin-l, form textarea.margin-l {
   position: relative;
   padding: 3.4rem 3.4rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .popup__container {
     position: absolute;
     left: 0;
@@ -2654,7 +2654,7 @@ form input.margin-l, form textarea.margin-l {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   z-index: 1;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .popup__content {
     max-width: 510px;
     padding: 3.4rem 3.4rem;
@@ -2740,13 +2740,13 @@ form input.margin-l, form textarea.margin-l {
   height: 100%;
   background-color: #000000;
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .inner {
     height: 100%;
     padding-top: 0;
     overflow: hidden;
   }
-}
+} */
 
 .inner__content {
   position: relative;
@@ -2762,28 +2762,35 @@ form input.margin-l, form textarea.margin-l {
 .inner__media {
   position: relative;
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .inner__info,
 .inner__media {
     height: 100%;
   }
-}
+} */
 
 .inner__media {
-  /* height: 80vh; */
+  height: 126vh;
   min-height: 600px;
 }
-@media only screen and (max-width: 1200px) {
+.inner__info {
+  height: 150vh;
+  min-height: 700px;
+}
+
+/* @media only screen and (max-width: 1200px) {
   .inner__media {
     height: 100%;
   }
-}
+} */
 
 .blocks-container {
   padding: 80px 0;
   /* padding: 60px 0; */
 }
-@media only screen and (max-width: 1200px) {
+
+/** COME BACK HERE **/
+/* @media only screen and (max-width: 1200px) {
   .blocks-container {
     position: absolute;
     left: 0;
@@ -2796,7 +2803,25 @@ form input.margin-l, form textarea.margin-l {
     width: 100%;
     padding: 0;
   }
-}
+} */
+
+/* @media only screen and (min-width: 748px) {
+  .blocks-container {
+    position: absolute;
+    left: 0;
+    top: 74%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+    padding: 0;
+  }
+  .inner__info {
+    height: 100%;
+  }
+} */
 
 .media-container {
   position: relative;
@@ -2806,14 +2831,14 @@ form input.margin-l, form textarea.margin-l {
 .media-container.portfolio-container {
   height: auto;
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .media-container {
     height: 100%;
   }
   .media-container.portfolio-container {
     height: 100%;
   }
-}
+} */
 
 .content-block {
   padding: 0 3.4rem;
@@ -2861,12 +2886,12 @@ form input.margin-l, form textarea.margin-l {
 .image-caption.opposite {
   background-color: rgba(0, 0, 0, 0.1);
 }
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1072px) {
   .image-caption {
     width: auto;
     text-align: left;
   }
-}
+} */
 /* COME BACK HERE */
 /* @media only screen and (min-width: 1200px) {
   .image-caption {
@@ -2882,12 +2907,12 @@ form input.margin-l, form textarea.margin-l {
     background-color: transparent;
   }
 } */
-@media only screen and (max-width: 1400px) {
+/* @media only screen and (max-width: 1400px) {
   .image-caption {
     left: 8rem;
     bottom: 12rem;
   }
-}
+} */
 
 #about {
   height:90%
@@ -2922,11 +2947,11 @@ form input.margin-l, form textarea.margin-l {
   height: 3.6rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1400px) {
   .skillbar {
     height: 3.6rem;
   }
-}
+} */
 
 .skillbar-title {
   position: absolute;
@@ -2981,7 +3006,7 @@ form input.margin-l, form textarea.margin-l {
 .features__item h3 {
   padding-left: 2.4rem;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .features__item:nth-of-type(3) {
     margin-bottom: 0;
   }
@@ -3001,7 +3026,7 @@ form input.margin-l, form textarea.margin-l {
 .contactdata__item:last-of-type {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1072px) {
   .contactdata__item {
     margin-bottom: 0;
   }
