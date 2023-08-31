@@ -1337,7 +1337,7 @@ a {
     margin-right: 3.4rem;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   .btn-s {
     width: auto;
     position: absolute;
@@ -1744,7 +1744,7 @@ form input.margin-l, form textarea.margin-l {
 }
 @media only screen and (min-width: 1400px) {
   .header {
-    height: 9rem;
+    height: 12rem;
   }
 }
 
@@ -2717,7 +2717,8 @@ form input.margin-l, form textarea.margin-l {
 /* ------------------------------------------------*/
 .inner {
   position: absolute;
-  top: 14%;
+  /* top: 0; */
+  top: 15%;
   left: 0;
   width: 100%;
   min-width: 360px;
@@ -2736,7 +2737,7 @@ form input.margin-l, form textarea.margin-l {
   height: 100%;
   background-color: #000000;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .inner {
     height: 100%;
     padding-top: 0;
@@ -2758,7 +2759,7 @@ form input.margin-l, form textarea.margin-l {
 .inner__media {
   position: relative;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .inner__info,
 .inner__media {
     height: 100%;
@@ -2769,7 +2770,7 @@ form input.margin-l, form textarea.margin-l {
   height: 80vh;
   min-height: 600px;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .inner__media {
     height: 100%;
   }
@@ -2778,7 +2779,7 @@ form input.margin-l, form textarea.margin-l {
 .blocks-container {
   padding: 80px 0;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .blocks-container {
     position: absolute;
     left: 0;
@@ -2801,7 +2802,7 @@ form input.margin-l, form textarea.margin-l {
 .media-container.portfolio-container {
   height: auto;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .media-container {
     height: 100%;
   }
@@ -2817,12 +2818,12 @@ form input.margin-l, form textarea.margin-l {
 .content-block:last-of-type {
   margin-bottom: 0;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   .content-block {
     padding: 0 6rem;
   }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .content-block {
     padding: 0 8rem;
   }
@@ -2876,7 +2877,7 @@ form input.margin-l, form textarea.margin-l {
     background-color: transparent;
   }
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .image-caption {
     left: 8rem;
     bottom: 12rem;
