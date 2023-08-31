@@ -155,8 +155,10 @@ $(function() {
       transitionDuration: 2000,
       slides: [
         { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" },
-        { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" },
-        { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" }
+        { src: "https://awestomates.netlify.app/img/ostomy-library-2.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-3.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-4.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-5.png" }
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });
@@ -171,8 +173,10 @@ $(function() {
       transitionDuration: 2000,
       slides: [
         { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" },
-        { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" },
-        { src: "https://awestomates.netlify.app/img/ostomy-library-1.png" }
+        { src: "https://awestomates.netlify.app/img/ostomy-library-2.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-3.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-4.png" },
+        { src: "https://awestomates.netlify.app/img/ostomy-library-5.png" }
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });
