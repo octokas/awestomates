@@ -155,6 +155,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* overflow-y: scroll; */
 }
 
 html {
@@ -215,9 +216,10 @@ img {
   position: relative;
   height: auto;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) { /*come back for scroll */
   .fullheight {
     height: 100%;
+    /* overflow-y: scroll; */
   }
 }
 
@@ -802,7 +804,7 @@ h5 {
 }
 
 p {
-  font: normal 300 1.4rem/1.6 "Poppins", sans-serif;
+  font: normal 300 1.6rem/1.6 "Poppins", sans-serif;
   color: #aaaaaa;
 }
 p span {
@@ -1337,7 +1339,7 @@ a {
     margin-right: 3.4rem;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .btn-s {
     width: auto;
     position: absolute;
@@ -1955,9 +1957,10 @@ form input.margin-l, form textarea.margin-l {
     display: block;
     position: absolute;
     bottom: 0;
+    /* bottom: -200px; */
     left: 0;
     width: 100%;
-    height: 8rem;
+    height: 5rem;
     overflow: hidden;
     z-index: 2;
   }
@@ -2023,7 +2026,7 @@ form input.margin-l, form textarea.margin-l {
 .main {
   position: relative;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   padding-top: 8rem;
   background-color: #0c0c0c;
@@ -2723,7 +2726,8 @@ form input.margin-l, form textarea.margin-l {
   min-width: 360px;
   height: 100%;
   background-color: #0c0c0c;
-  overflow-y: auto;
+  overflow-y: scroll;
+  /* overflow-y: auto; COME BACK HERE */ 
   z-index: 1;
 }
 .inner::after {
@@ -2746,13 +2750,13 @@ form input.margin-l, form textarea.margin-l {
 
 .inner__content {
   position: relative;
-  padding-top: 80px;
+  padding-top: 40px;
 }
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .inner__content {
     padding-top: 0;
   }
-}
+} */
 
 .inner__info,
 .inner__media {
@@ -2766,7 +2770,7 @@ form input.margin-l, form textarea.margin-l {
 }
 
 .inner__media {
-  height: 80vh;
+  /* height: 80vh; */
   min-height: 600px;
 }
 @media only screen and (max-width: 1200px) {
@@ -2777,6 +2781,7 @@ form input.margin-l, form textarea.margin-l {
 
 .blocks-container {
   padding: 80px 0;
+  /* padding: 60px 0; */
 }
 @media only screen and (max-width: 1200px) {
   .blocks-container {
@@ -2819,12 +2824,12 @@ form input.margin-l, form textarea.margin-l {
 }
 @media only screen and (max-width: 1200px) {
   .content-block {
-    padding: 0 6rem;
+    padding: 0 3rem;
   }
 }
 @media only screen and (max-width: 1400px) {
   .content-block {
-    padding: 0 8rem;
+    padding: 0 4rem;
   }
 }
 
@@ -2862,7 +2867,8 @@ form input.margin-l, form textarea.margin-l {
     text-align: left;
   }
 }
-@media only screen and (min-width: 1200px) {
+/* COME BACK HERE */
+/* @media only screen and (min-width: 1200px) {
   .image-caption {
     left: 6rem;
     bottom: 11rem;
@@ -2875,12 +2881,16 @@ form input.margin-l, form textarea.margin-l {
   .image-caption.opposite {
     background-color: transparent;
   }
-}
+} */
 @media only screen and (max-width: 1400px) {
   .image-caption {
     left: 8rem;
     bottom: 12rem;
   }
+}
+
+#about {
+  height:90%
 }
 
 /* ------------------------------------------------*/
