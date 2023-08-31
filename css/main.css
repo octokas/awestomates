@@ -43,7 +43,7 @@
 /* ------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .media-image-1 {
-  background-image: url("https://awestomates.com/img/ostomy-library-1.png");
+  background-image: url("https://awestomates.netlify.app/img/ostomy-library-1.png");
 }
 
 .media-image-2 {
@@ -51,7 +51,7 @@
 }
 
 .media-full-1 {
-  background-image: url(".https://awestomates.com/img/ostomy-library-1.png");
+  background-image: url(".https://awestomates.netlify.app/img/ostomy-library-1.png");
 }
 
 .media-full-4 {
@@ -67,7 +67,7 @@
 }
 
 .split-slide-1 {
-  background-image: url("https://awestomates.com/img/ostomy-library-1.png");
+  background-image: url("https://awestomates.netlify.app/img/ostomy-library-1.png");
 }
 
 .split-slide-2 {
@@ -80,11 +80,11 @@
 
 .about-image {
   /* background-image: url("https://dummyimage.com/960x1080/4d4d4d/636363"); */
-  background-image: url("https://awestomates.com/img/about-kaska-awestomates.jpg");
+  background-image: url("https://awestomates.netlify.app/img/about-kaska-awestomates.jpg");
 }
 
 .contact-image {
-  background-image: url("https://awestomates.com/img/contact_2271743793-acorned.png");
+  background-image: url("https://awestomates.netlify.app/img/contact_2271743793-acorned.png");
 }
 
 /* ------------------------------------------------*/
@@ -2217,7 +2217,7 @@ form input.margin-l, form textarea.margin-l {
   background-position: bottom center;
   -moz-background-size: 150%;
        background-size: 150%;
-  background-image: url("https://awestomates.com/img/ostomy_2200017887-2-acorned.png");
+  background-image: url("https://awestomates.netlify.app/img/ostomy_2200017887-2-acorned.png");
 }
 @media only screen and (min-width: 1200px) {
   .nav__background {
