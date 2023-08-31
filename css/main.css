@@ -84,7 +84,7 @@
 }
 
 .contact-image {
-  background-image: url("https://awestomates.netlify.app/img/contact_2271743793-acorned.png");
+  background-image: url("../img/contact_482101567-2-acorned.png");
 }
 
 /* ------------------------------------------------*/
@@ -1930,9 +1930,8 @@ form input.margin-l, form textarea.margin-l {
 .footer-mobile {
   display: block;
   width: 100%;
-  height: 8rem;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1072px) {
   .footer-mobile {
     display: none;
   }
@@ -1952,7 +1951,7 @@ form input.margin-l, form textarea.margin-l {
 .footer-desktop {
   display: none;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1072px) {
   .footer-desktop {
     display: block;
     position: absolute;
@@ -1965,7 +1964,7 @@ form input.margin-l, form textarea.margin-l {
     z-index: 2;
   }
 }
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
   .footer-desktop {
     height: 9rem;
   }
@@ -2776,6 +2775,11 @@ form input.margin-l, form textarea.margin-l {
 .inner__info {
   height: 150vh;
   min-height: 700px;
+}
+
+#contact__media,
+#contact__info {
+  height: 86vh !important;
 }
 
 /* @media only screen and (max-width: 1200px) {
