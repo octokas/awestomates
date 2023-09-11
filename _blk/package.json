@@ -1,0 +1,22 @@
+{
+  "name": "awestomates",
+  "version": "2.0.3",
+  "description": "An awesome place for new stomates!",
+  "main": "index.js",
+  "repository": "git@github.com:batmanwgd/awestomates.git",
+  "author": "Kaska Miskolczi <batmanwgd@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "hugo": "^0.0.3",
+    "shepherd.js": "^11.2.0"
+  },
+  "devDependencies": {
+    "npm-check": "^6.0.1"
+  },
+  "scripts": {
+    "local": "yarn install && hugo serve --disableFastRender",
+    "prep": "rm -rf ./public && yarn install --force",
+    "build": "hugo --gc --minify"
+  }
+}

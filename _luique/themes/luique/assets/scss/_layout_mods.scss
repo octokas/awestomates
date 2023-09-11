@@ -1,0 +1,105 @@
+/*
+*	Luique - Personal Portfolio Hugo Theme
+*	Version: 1.0.0
+*	Author: bslthemes
+*	Author URL: http://themeforest.net/user/bslthemes
+*	Copyright © Luique by bslthemes. All Rights Reserved.
+*/
+
+
+.section.hero-started .info-list ul li {
+    width: 100%;
+    max-width: 320px;
+    //padding: 36px;
+    padding: 24px;
+}
+
+.section.hero-started .info-list ul li .num {
+    width: 60%;
+    margin: 0 auto;
+        margin-left: -5px;
+        margin-right: 15px;
+}
+
+.section.hero-started .info-list ul li .num strong {
+    padding-right: 10px;
+    top: 0;
+    margin: 0 auto;
+        margin-right: -10px;
+        margin-left: -10px;
+}
+
+.section.hero-started .info-list ul li .value {
+    width: 100%;
+    font-size: 18px;
+}
+
+.section.hero-started .title {
+    font-size: 76px;
+}
+
+.lui-section-hero .container .lui-started {
+    width: 100%;
+    max-width: 96vw;
+}
+
+.section.hero-started .slide img {
+    top: 3.5vh;
+    left: 6vw;
+    width: 100%;
+    max-width: 50vw;
+}
+
+.section.hero-started .slide .circle.circle-1 {
+    top: 3.5vh;
+    left: 6vw;
+    width: 100%;
+    max-width: 50vw;
+}
+
+.grn-ck {
+    //font-family: jost;
+    color: #29a587;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 15px 0 0;
+    padding-right: 10px;
+    // text-transform: uppercase;
+    letter-spacing: .05em;
+    text-shadow: 2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000, 5px 5px 0 rgba(0,0,0,.2);
+}
+
+.bfe-aft {
+    color: #900d3eff !important;
+    text-decoration: none !important;
+    outline: none !important;
+    cursor: pointer;
+
+}
+
+.xtra {
+    color: #900d3eff !important;
+}
+
+.header .logo {
+    width: 100%;
+    max-width: 180px;
+}
+
+.preloader .spinner-logo img {
+    width: 400px;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+        margin-bottom: 5%;
+        margin-left: -30%;
+}
+
+.preloader .spinner-logo img, .header .logo {
+    //filter: invert(60%) sepia(12%) saturate(2163%) hue-rotate(115deg) brightness(88%) contrast(89%); // awestomates green
+    filter: invert(8%) sepia(41%) saturate(24%) hue-rotate(351deg) brightness(36%) contrast(84%); // close to #242424
+}
+
+.section.hero-started .slide img {
+    object-position: left;
+}

@@ -1,0 +1,91 @@
+{{ $social := .Site.Params.social }}
+{{ with .Site.Data.home.hero }}
+{{ if .enable }}
+
+<!-- Section - Hero Started -->
+<section class="lui-section lui-section-hero lui-gradient-top" id="started-section">
+  <div class="container">
+
+    <!-- Construction Modal -->
+    <div class="modal" id="modal">
+      <div class='modal__container'>
+        <img class="modal__img" src="https://drive.google.com/uc?export=view&id=1hsqRgrdpr5T673KZLyUmHVoLWcv159MC">
+        <div class="modal__content">
+          <h1 class="modal__title">SPONSOR MY EDUCATION <span>START-UP CONTEST</span><h1>
+           <p class="modal__paragraph">This contest is geared towards discovering and funding innovative ideas.</p>
+            <button class="modal__button">Click here to participate</button>
+        </div>
+            <i id="close" class="fas fa-times"></i>
+      </div>
+    </div>
+
+    <!-- Hero Started -->
+    <div class="lui-started v-line v-line-left">
+      <div class="section hero-started">
+        <div class="content scrolla-element-anim-1 scroll-animate" data-animate="active">
+          <div class="titles">
+            <div class="lui-subtitle">
+              <span>{{ .before_title | safeHTML }}</span>
+            </div>
+            <h1 class="title splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+              <span>{{ .title | safeHTML }}</span>
+            </h1>
+            <div class="label lui-subtitle">
+              {{ .after_title | safeHTML }}
+            </div>
+          </div>
+          <div class="description">
+            <div>
+              <p>{{ .description | markdownify }}</p>
+            </div>
+            <div class="social-links">
+              {{ range $social }}
+              <a target="_blank" rel="nofollow" href="{{ .url }}" title="{{ .title }}">
+                <i aria-hidden="true" class="{{ .icon }}"></i>
+              </a>
+              {{ end }}
+            </div>
+          </div>
+          <div class="bts">
+            <a target="_blank" href="{{ .button1.link }}" class="btn">
+              <span>{{ .button1.label }}</span>
+            </a>
+            <a href="{{ .button2.link }}" class="btn-lnk xtra">{{ .button2.label }}</a>
+          </div>
+        </div>
+        <div class="slide scrolla-element-anim-1 scroll-animate" data-animate="active">
+          <img decoding="async" src="{{ .image | absURL }}" alt="{{ .image_alt }}" />
+
+          <span class="circle circle-1"></span>
+
+          <span class="circle img-1" style="background-image: url(images/pat-1.png);"></span>
+          <span class="circle img-2" style="background-image: url(images/pat-2.png);"></span>
+          <span class="circle img-3" style="background-image: url(images/pat-2.png);"></span>
+
+          <div class="info-list">
+            <ul>
+              {{ range .info }}
+              
+                <li>
+                  <span class="num">
+                    {{ .num | safeHTML }}
+                  </span>
+                  <a target="_blank" class="bfe-aft" href="{{ .link | absURL }}"><span class="value">
+                    {{ .value | safeHTML }}
+                  </span></a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lui-bgtitle">
+        <span>{{ .bg_title }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

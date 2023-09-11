@@ -1,0 +1,291 @@
+# Sections content configuration file
+##
+### use navigation.yml file to re-order, delete or add section of each card
+### here you can find all content in all pre-build sections
+
+### Hero [ hero-image ]
+hero:
+  enable: 1
+  image: "images/about/profile2.png"
+  image_alt: "Zoé Miller"
+  title: "<b>Zoé</b> Miller"
+  before_title: "Hello, <b>my name is</b>"
+  after_title: "I am <strong>Web Developer</strong>"
+  description: "From France, Paris. I have rich experience in web design, also I am good at wordpress. I love to talk with you about our unique."
+  button1:
+    label: "Download CV"
+    link: "https://drive.google.com/"
+  button2:
+    label: "My Skills"
+    link: "#skills-section"
+  bg_title: "Web Developer"
+  info:
+    - num: "12 <strong>+</strong>"
+      value: "Years of <strong>Experience</strong>"
+
+    - num: "330"
+      value: "Completed <strong>Projects</strong>"
+
+### Services [ services ]
+services:
+  enable: 1
+  title: "What I Do"
+  subtitle: "my <b>Services</b>"
+  bg_title: "Services"
+
+  items:
+    - title: "Web Design &amp; Logo"
+      subtitle: "Web Development"
+      text: "Web designers craft the overall vision &amp; plan for a website layout. Professional logo development: Business, Company, or Personal."
+      button_label: "See Pricing"
+      button_link: "#pricing-section"
+
+    - title: "iOS &amp; Android"
+      subtitle: "Apps Development"
+      text: "Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing."
+      button_label: "See Pricing"
+      button_link: "#pricing-section"
+
+    - title: "Unity &amp; Unreal Engine"
+      subtitle: "Game Development"
+      text: "Creating games &amp; describes the design, development and release of a game. Developing unique mobile android and ios games."
+      button_label: "See Pricing"
+      button_link: "#pricing-section"
+
+    - title: "Google Ads"
+      subtitle: "Advertising"
+      text: "Advertising services include: Google search result pages, gmails, YouTube and other websites participated in Google Ads program."
+      button_label: "See Pricing"
+      button_link: "#pricing-section"
+
+    - title: "Sound Track"
+      subtitle: "Music Writing"
+      text: "Music copying, writing, creating, transcription and composition services."
+      button_label: "See Pricing"
+      button_link: "#pricing-section"
+
+### Portfolio [ portfolio ]
+#items generates from dir /_works/*
+portfolio:
+  enable: 1
+  title: "Portfolio"
+  subtitle: "my <b>Cases</b>"
+  bg_title: "Portfolio"
+  button:
+    link: "works/"
+    label: "View More"
+
+### Skills [ skills ]
+skills:
+  enable: 1
+  title: "Professional Skills"
+  subtitle: "my <b>Talent</b>"
+  bg_title: "Skills"
+
+  column1:
+    items:
+      - label: "PHP" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "85" #0-100 progress in %
+
+      - label: "Python" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "75" #0-100 progress in %
+
+  column2:
+    items:
+      - label: "JavaScript" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "75" #0-100 progress in %
+
+      - label: "React" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "70" #0-100 progress in %
+
+  column3:
+    items:
+      - label: "WordPress" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "90" #0-100 progress in %
+
+      - label: "Adobe XD" #0-10 progress in dots
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        value: "80" #0-100 progress in %
+
+### Resume [ resume ]
+resume:
+  enable: 1
+  title: "Resume"
+  subtitle: "my <b>Story</b>"
+  bg_title: "History"
+
+  education:
+    title: "Education"
+    items:
+      - name: "CoderHouse Courses"
+        subname: "Backend Programming"
+        period: "2014 - 2016"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+      - name: "Lviv National Academy of Arts"
+        subname: "Faculty of Design"
+        period: "2012 - 2014"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+      - name: "IT Future"
+        subname: "High School"
+        period: "2010 - 2012"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+  experience:
+    title: "Experience"
+    items:
+      - name: "UI Head &amp; Manager"
+        subname: "Soft Tech Inc."
+        period: "2020 - <b>Present</b>"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+      - name: "UI / UX Specialist"
+        subname: "Kana Design Studio"
+        period: "2018 - 2020"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+      - name: "Plugins Developer"
+        subname: "Fiverr.com"
+        period: "2016 - 2018"
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+
+### Testimonials [ testimonials ]
+testimonials:
+  enable: 1
+  title: "Testimonials"
+  subtitle: "what <b>Customers Say</b>"
+  bg_title: "Reviews"
+
+  items:
+    - image: "images/testimonials/testi4-2.jpg"
+      name: "Barbara Wilson"
+      role: "CEO Company"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+    - image: "images/testimonials/testi4-1.jpg"
+      name: "Charlie Smith"
+      role: "Designer"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+    - image: "images/testimonials/testi4-4.jpg"
+      name: "Roy Wang"
+      role: "Manager GYM"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+    - image: "images/testimonials/testi4-3.jpg"
+      name: "Jennifer Smith"
+      role: "CEO &amp; Founder"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+    - image: "images/testimonials/testi4-5.jpg"
+      name: "Paul Freeman"
+      role: "Photographer"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+
+### Pricing [ pricing ]
+pricing:
+  enable: 1
+  title: "Pricing"
+  subtitle: "my <b>Price Board</b>"
+  bg_title: "Pricing"
+
+  items:
+    - name: "Hourley Basis"
+      center: false
+      price: "39 <b>$</b>"
+      price_after: "Hour"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida."
+      list:
+        - value: "Brand Design"
+          included: true
+        - value: "Web Development"
+          included: true
+        - value: "Advertising"
+          included: false
+        - value: "Photography"
+          included: false
+      button:
+        label: "Start Project"
+        link: "#contact-section"
+
+    - name: "Freelancing"
+      center: true
+      label: "Popular"
+      price: "259 <b>$</b>"
+      price_after: "Week"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida."
+      list:
+        - value: "Brand Design"
+          included: true
+        - value: "Web Development"
+          included: true
+        - value: "Advertising"
+          included: true
+        - value: "Photography"
+          included: false
+      button:
+        label: "Start Project"
+        link: "#contact-section"
+
+    - name: "Full Time"
+      center: false
+      price: "1.249 <b>$</b>"
+      price_after: "Month"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida."
+      list:
+        - value: "Brand Design"
+          included: true
+        - value: "Web Development"
+          included: true
+        - value: "Advertising"
+          included: true
+        - value: "Photography"
+          included: true
+      button:
+        label: "Start Project"
+        link: "#contact-section"
+
+
+### Blog [ blog ]
+#items generates from dir /_posts/*
+blog:
+  enable: 1
+  title: "Latest Blog"
+  subtitle: "my <b>Articles and Advice</b>"
+  bg_title: "Blog"
+  button:
+    label: "View Blog"
+    link: "blog/"
+
+
+### Contact [ contacts ]
+contacts:
+  enable: 1
+  title: "Contact Me"
+  subtitle: "Let’s <b>Talk About Ideas</b>"
+  bg_title: "Contact Me"
+
+  list:
+    - label: "Address"
+      icon: "far fa-map"
+      text: "North Tower, Toronto, Canada"
+
+    - label: "Freelance"
+      icon: "far fa-user"
+      text: "Available Right Now"
+
+    - label: "Email"
+      icon: "far fa-envelope"
+      text: "zoe.miller@mydomain.com"
+
+    - label: "Phone"
+      icon: "far fa-address-book"
+      text: "+1 900 - 900 - 9000"

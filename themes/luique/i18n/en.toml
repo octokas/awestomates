@@ -1,0 +1,132 @@
+[home]
+other = "Home"
+
+[blog]
+other = "Blog"
+
+[blogSubtitle]
+other = "All the most current news and events of my life"
+
+[all]
+other = "All"
+
+[readMore]
+other = "Read more"
+
+[viewProject]
+other = "View Project"
+
+[by]
+other = "By"
+
+[yourName]
+other = "Full Name"
+
+[enterYourName]
+other = "Enter your full name"
+
+[yourEmail]
+other = "Email Address"
+
+[enterYourEmail]
+other = "Enter your email address"
+
+[yourMessage]
+other = "Message"
+
+[enterYourMessage]
+other = "Enter your message here"
+
+[yourSubject]
+other = "Your Subject"
+
+[acceptTerms]
+other = "* Accept the terms and conditions."
+
+[submit]
+other = "Submit"
+
+[taxonomyPageList]
+other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+
+[readingTime]
+one = "1 min read"
+other = "{{ .Count }} mins read"
+
+[share]
+other = "Share"
+
+[shareOn]
+other = "Share on"
+
+[tags]
+other = "Tags"
+
+[comments]
+other = "Comments"
+
+[next]
+other = "Next"
+
+[prev]
+other = "Previous"
+
+[nextPost]
+other = "Next Post"
+
+[prevPost]
+other = "Previous Post"
+
+[nextProject]
+other = "Next Project"
+
+[prevProject]
+other = "Previous Project"
+
+[sendMessage]
+other = "Send Message"
+
+[successMessage]
+other = "Thanks, your message is sent successfully."
+
+[developedBy]
+other = "Developed By"
+
+[category]
+other = "Category"
+
+[categories]
+other = "Categories"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Whoops!"
+
+[errorText]
+other = "The page you’re looking for doesn’t exist or has been moved."
+
+[new]
+other = "new"
+
+[search]
+other = "Search ..." 
+
+[recentPosts]
+other = "Recent Posts"
+
+[latestPosts]
+other = "Latest Posts"
+
+[followMe]
+other = "Follow Me"
+
+[worksSubtitle]
+other = "my <b>Cases</b>"
+
+[worksBgTitle]
+other = "Portfolio"
+
+[livePreview]
+other = "Live Preview"

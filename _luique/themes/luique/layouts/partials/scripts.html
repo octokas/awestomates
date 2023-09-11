@@ -1,0 +1,33 @@
+<script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<script src="{{ "plugins/bootstrap/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "plugins/validate/jquery.validate.min.js" | absURL }}"></script>
+<script src="{{ "plugins/swiper/swiper.min.js" | absURL }}"></script>
+<script src="{{ "plugins/magnific-popup/magnific-popup.min.js" | absURL }}"></script>
+<script src="{{ "plugins/splitting/splitting.js" | absURL }}"></script>
+<script src="{{ "plugins/imagesloaded/imagesloaded.pkgd.min.js" | absURL }}"></script>
+<script src="{{ "plugins/isotope/isotope.pkgd.js" | absURL }}"></script>
+<script src="{{ "plugins/jarallax/jarallax.min.js" | absURL }}"></script>
+<script src="{{ "plugins/scrolla/jquery.scrolla.js" | absURL }}"></script>
+<script src="{{ "plugins/skrollr/skrollr.js" | absURL }}"></script>
+<script src="{{ "plugins/cookie/jquery.cookie.js" | absURL }}"></script>
+<script src="{{ "plugins/typed/typed.js" | absURL }}"></script>
+<script src="{{ "plugins/rrssb/rrssb.js" | absURL }}"></script>
+<script src="{{ "https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js" | absURL }}"></script>
+
+{{ if .Site.Params.sidebar.search }}
+<script src="{{ "plugins/mark/mark.js" | absURL }}"></script>
+<script src="{{ "plugins/fuse/fuse.js" | absURL }}"></script>
+<script src="{{ "plugins/search/simple-search.js" | absURL }}"></script>
+{{ end }}
+
+{{ $formhandler := resources.Get "js/form-handler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+
+{{ $script := resources.Get "js/common.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ $script := resources.Get "js/typed-txt.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ $script := resources.Get "js/construction.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>

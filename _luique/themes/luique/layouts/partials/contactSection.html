@@ -1,0 +1,115 @@
+{{ $action := .Site.Params.formspreeURL }}
+{{ with .Site.Data.home.contacts }}
+{{ if .enable }}
+
+<!-- Section - Contacts -->
+<section class="lui-section lui-gradient-bottom" id="contact-section">
+
+  <!-- Heading -->
+  <div class="lui-heading">
+    <div class="container">
+
+      <div class="m-titles align-center">
+        <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .title | safeHTML }}</span>
+        </h2>
+        <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .subtitle | safeHTML }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="lui-contacts v-line v-line-left">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+
+          <div class="numbers-items">
+            {{ range .list }}
+            <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <div class="icon">
+                <i aria-hidden="true" class="{{ .icon }}"></i>
+              </div>
+              <div class="title">
+                <span>{{ .label | safeHTML }}</span>
+              </div>
+              <div class="lui-text">
+                <span>{{ .text | safeHTML }}</span>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+
+          <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
+            <div class="bg-img" style="background-image: url(images/pat-1.png);"></div>
+            <div class="contacts-form">
+              <form id="cform" action="{{ $action }}" method="post">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="group">
+                      <label>
+                        {{ i18n "yourName" }} <b>*</b>
+                        <input type="text" name="name" >
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="group">
+                      <label>
+                        {{ i18n "yourEmail" }} <b>*</b>
+                        <input type="email" name="email" >
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="group">
+                      <label>
+                        {{ i18n "yourSubject" }} <b>*</b>
+                        <input type="text" name="subject" >
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="group">
+                      <label>
+                        {{ i18n "yourMessage" }} <b>*</b>
+                        <textarea name="message"></textarea>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
+                    <div class="terms-label">{{ i18n "acceptTerms" }}</div>
+                    <a href="#" class="btn" onclick="$('#cform').submit(); return false;">
+                      <span>{{ i18n "sendMessage" }}</span>
+                    </a>
+                  </div>
+                </div>
+              </form>
+              <div class="alert-success" id="formAlertSuccess" style="display: none;">
+                <p>{{ i18n "successMessage" }}</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lui-bgtitle">
+        <span>{{ .bg_title }}</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{{ end }}
+{{ end }}

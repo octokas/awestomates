@@ -1,0 +1,190 @@
+{{ define "main" }}
+
+<!-- Section Started Heading -->
+<section class="section section-inner started-heading">
+
+	<!-- Heading -->
+	<div class="container">
+		<div class="m-titles align-left">
+			<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+				<span>{{ .Title }}</span>
+			</h1>
+			<div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+				<span>{{ .Params.category }}</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Details -->
+	<div class="v-line v-line-right v-line-top">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+
+					<div class="m-details">
+						{{ range .Params.info }}
+						<div class="details-label">
+							<span>{{ .label | safeHTML }}</span>
+							<strong><span>{{ .value | safeHTML }}</span></strong>
+						</div>
+						{{ end }}
+						<div class="details-label">
+							<span>{{ i18n "categories" }}</span>
+							<strong><span>{{ .Params.category }}</span></strong>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 align-right">
+
+					<a target="_blank" href="{{ .Params.live_preview }}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<span>{{ i18n "livePreview" }}</span>
+					</a>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section>
+
+{{ with .Params.full_image }}
+<!-- Section - Image -->
+<div class="section section-inner">
+	<!-- Image -->
+	<div class="m-image-large">
+		<div class="image">
+			<div class="img js-parallax" style="background-image: url({{ . | absURL }});"></div>
+		</div>
+	</div>
+</div>
+{{ end }}
+
+{{ with .Params.description1 }}
+{{ if .enable }}
+<!-- Section - Description -->
+<section class="section section-inner">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="post-content">
+					<h4>{{ .title | safeHTML }}</h4>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="post-content">
+					{{ .text1 | safeHTML }}
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="post-content">
+					{{ .text2 | safeHTML }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ with .Params.gallery }}
+{{ if .enable }}
+<!-- Section - Gallery -->
+<div class="section section-inner">
+	<div class="container">
+		<!-- Section Gallery -->
+		<div class="m-gallery">
+			<div class="row">
+				{{ range .images }}
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="works-item">
+						<div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
+							<div class="img">
+								<a href="{{ . | absURL }}" class="has-popup-image">
+									<img decoding="async" src="{{ . | absURL }}" alt="image" loading="lazy">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}
+{{ end }}
+
+{{ with .Params.description2 }}
+{{ if .enable }}
+<!-- Section - Description -->
+<section class="section section-inner">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="post-content">
+					<h4>{{ .title | safeHTML }}</h4>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="post-content">
+					{{ .text1 | safeHTML }}
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="post-content">
+					{{ .text2 | safeHTML }}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ with .Params.video }}
+{{ if .enable }}
+<!-- Section - Video -->
+<div class="section section-inner m-video-large">
+	<div class="video">
+		<div class="img js-parallax" style="background-image: url({{ .poster | absURL }});"></div>
+		<iframe class="js-video-iframe" data-src="https://www.youtube.com/embed/{{ .id }}?showinfo=0&amp;rel=0&amp;autoplay=1"></iframe>
+		<div class="play"></div>
+	</div>
+</div>
+{{ end }}
+{{ end }}
+
+{{ if or .NextInSection .PrevInSection }}
+<!-- Section - Navigation -->
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="h-titles h-navs">
+			{{ if .NextInSection }}
+			<a href="{{ .NextInSection.Permalink }}">
+				<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-animate="active">
+					{{ i18n "nextProject" }}
+				</span>
+				<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+					{{ .NextInSection.Title }}
+				</span>
+			</a>
+			{{ else }}
+			<a href="{{ .PrevInSection.Permalink }}">
+				<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-animate="active">
+					{{ i18n "prevProject" }}
+				</span>
+				<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+					{{ .PrevInSection.Title }}
+				</span>
+			</a>
+			{{ end }}
+		</div>
+	</div>
+</div>
+{{ end }}
+
+{{ end }}

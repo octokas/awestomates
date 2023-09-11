@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{ $dateFormat := .Site.Params.dateFormat }}
+
+<!-- Section Started Heading -->
+<section class="section section-inner started-heading">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="m-titles align-center">
+      <h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+        <span>{{ .Title }}</span>
+      </h1>
+      <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+        <span>{{ i18n "latestPosts" . }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section - Blog -->
+<div class="section section-inner m-archive">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+
+        <!-- Blog Items -->
+        <div class="articles-container">
+          {{ range .Paginator.Pages }}
+          <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+            <div class="image">
+              <a href="{{ .Permalink }}">
+                <img src="{{ .Params.featureImage | absURL }}" alt="{{ .Title }}" loading="lazy">
+              </a>
+            </div>
+            <div class="desc">
+              <div class="category lui-subtitle">
+                <span>{{ .PublishDate.Format $dateFormat }}</span>
+              </div>
+              <h5 class="lui-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h5>
+              <div class="lui-text">
+                <p>{{ .Summary }} &#8230;</p>
+
+                <div class="readmore">
+                  <a href="{{ .Permalink }}" class="lnk">{{ i18n "readMore" }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+        {{ partial "pagination" .}}
+
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+        {{ partial "sidebar" .}}
+      </div>
+    </div>
+
+    <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+  </div>
+</div>
+
+{{ end }}

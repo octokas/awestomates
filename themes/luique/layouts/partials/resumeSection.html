@@ -1,0 +1,98 @@
+{{ with .Site.Data.home.resume }}
+{{ if .enable }}
+
+<!-- Section - Resume -->
+<section class="lui-section lui-gradient-bottom" id="resume-section">
+
+  <!-- Heading -->
+  <div class="lui-heading">
+    <div class="container">
+
+      <div class="m-titles align-center">
+        <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .title | safeHTML }}</span>
+        </h2>
+        <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .subtitle | safeHTML }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="v-line v-line-left">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+          <h5 class="history-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+            <span>{{ .education.title | safeHTML }}</span>
+          </h5>
+          <div class="history-items">
+            {{ range $index, $value := .education.items }}
+            <div class="history-item lui-collapse-item{{ if not $index }} opened{{ end }} scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <h6 class="name lui-collapse-btn{{ if not $index }} active{{ end }}">
+                <span>{{ .name | safeHTML }}</span>
+              </h6>
+              <div class="history-content">
+                <div class="subname">
+                  <span>{{ .subname | safeHTML }}</span>
+                </div>
+                <div class="date lui-subtitle">
+                  <span>{{ .period | safeHTML }}</span>
+                </div>
+                <div class="text">
+                  <div>
+                    <p>{{ .text | safeHTML }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+          <h5 class="history-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+            <span>{{ .experience.title | safeHTML }}</span>
+          </h5>
+          <div class="history-items">
+            {{ range $index, $value := .experience.items }}
+            <div class="history-item lui-collapse-item{{ if not $index }} opened{{ end }} scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <h6 class="name lui-collapse-btn{{ if not $index }} active{{ end }}">
+                <span>{{ .name | safeHTML }}</span>
+              </h6>
+              <div class="history-content">
+                <div class="subname">
+                  <span>{{ .subname | safeHTML }}</span>
+                </div>
+                <div class="date lui-subtitle">
+                  <span>{{ .period | safeHTML }}</span>
+                </div>
+                <div class="text">
+                  <div>
+                    <p>{{ .text | safeHTML }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lui-bgtitle">
+        <span>{{ .bg_title }}</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{{ end }}
+{{ end }}

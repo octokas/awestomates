@@ -1,0 +1,72 @@
+{{ $dateFormat := .Site.Params.dateFormat }}
+{{ with .Site.Data.home.blog }}
+{{ if .enable }}
+
+<!-- Section - Blog -->
+<section class="lui-section lui-gradient-top" id="blog-section">
+
+	<!-- Heading -->
+	<div class="lui-heading">
+	  <div class="container">
+  
+		<div class="m-titles align-center">
+		  <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+			<span>{{ .title | safeHTML }}</span>
+		  </h2>
+		  <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+			<span>{{ .subtitle | safeHTML }}</span>
+		  </div>
+		</div>
+  
+	  </div>
+	</div>
+  
+	<!-- Archive -->
+	<div class="v-line v-line-right">
+	  <div class="container">
+  
+		<div class="blog-items row">
+		  {{ range first 3 (where $.Site.RegularPages "Section" "blog") }}
+		  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+			<div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+			  <div class="image">
+				<a href="{{ .Permalink }}">
+				  <img decoding="async" src="{{ .Params.featureImage | absURL }}" alt="{{ .Title }}" />
+				</a>
+			  </div>
+			  <div class="desc">
+				<div class="category lui-subtitle">
+				  <span>{{ .PublishDate.Format $dateFormat }}</span>
+				</div>
+				<h5 class="lui-title">
+				  <a href="{{ .Permalink }}">{{ .Title }}</a>
+				</h5>
+				<div class="lui-text">
+				  <p>{{ .Summary }} &#8230;</p>
+				  <div class="readmore">
+					<a href="{{ .Permalink }}" class="lnk">{{ i18n "readMore" }}</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  {{ end }}
+		</div>
+  
+		<div class="load-more">
+		  <a href="{{ .button.link }}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+			<span>{{ .button.label }}</span>
+		  </a>
+		</div>
+  
+		<div class="lui-bgtitle">
+		  <span>{{ .bg_title }}</span>
+		</div>
+  
+	  </div>
+	</div>
+  
+</section>
+
+{{ end }}
+{{ end }}

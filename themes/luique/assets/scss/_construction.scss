@@ -1,0 +1,67 @@
+/*
+*	Awestomates - An awesome place for new ostomates
+*	Version: 1.8.0
+*	Author: Kaska
+*	Author URL: https://github.com/batmanwgd
+*	Copyright © Awestomates by Kaska. All Rights Reserved.
+*/
+
+.shepherd-element {
+    max-width: 96vw;
+    text-align: center;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header, .shepherd-button {
+    //background: rgba(144, 13, 62, 1);
+    //background: #29a587;
+    background: rgb(41, 165, 135);
+    text-align: center;
+}
+
+.shepherd-button {
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    height: 56px;
+    line-height: 52px;
+    text-align: center;
+    text-decoration: none;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.3, 0, 0.3, 1);
+    border: 2px solid #000;
+    background: none;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 56px;
+    -webkit-border-radius: 56px;
+}
+
+.shepherd-button.shepherd-button-secondary:not(:disabled):hover, .shepherd-button.shepherd-button-secondary:hover, .shepherd-button:hover {
+    background: none !important;
+    color: whitesmoke;
+}
+
+#construction-label {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.shepherd-text {
+    font-size: 1.6rem;
+    padding: 6vw;
+    text-align: center;
+}
+
+.shepherd-footer {
+    padding-bottom: 6vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}

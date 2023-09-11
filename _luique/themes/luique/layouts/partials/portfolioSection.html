@@ -1,0 +1,81 @@
+{{ $portfolio := .Site.Params.portfolio }}
+{{ with .Site.Data.home.portfolio }}
+{{ if .enable }}
+
+<!-- Section - Works -->
+<section class="lui-section lui-gradient-top" id="works-section">
+
+  <!-- Heading -->
+  <div class="lui-heading">
+    <div class="container">
+
+      <div class="m-titles align-center">
+        <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .title | safeHTML }}</span>
+        </h2>
+        <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+          <span>{{ .subtitle | safeHTML }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Works -->
+  <div class="v-line v-line-right">
+    <div class="container">
+
+      <div class="works-box">
+        <div class="filter-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+          <a href="#" class="lui-subtitle active" data-href=".works-col">{{ i18n "all" }}</a>
+          {{ range $portfolio.filters }}
+          <a href="#" class="lui-subtitle" data-href=".sorting-{{ .slug }}">{{ .name }}</a>
+          {{ end }}
+        </div>
+
+        <div class="works-items works-masonry-items row">
+          {{ range first $portfolio.homeNumOfItems (where $.Site.RegularPages "Section" "portfolio") }}
+          <div class="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-{{ .Params.category_slug }}">
+            <div class="works-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <div class="image">
+                <div class="img">
+                  <a href="{{ .Permalink }}">
+                    <img decoding="async" src="{{ .Params.image | absURL }}" alt="{{ .Title }}" />
+                    <span class="overlay"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="desc">
+                <span class="category">{{ .Params.category }}</span>
+                <h5 class="name">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h5>
+                <div class="text">
+                  <p>{{ .Params.short_description }}</p>
+                </div>
+                <a href="{{ .Permalink }}" class="lnk">{{ i18n "viewProject" }}</a>
+              </div>
+              <div class="bg-img" style="background-image: url(images/pat-2.png);"></div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+
+        <div class="load-more-link">
+          <a href="{{ .button.link }}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+            <span>{{ .button.label }}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lui-bgtitle">
+        <span>{{ .bg_title }}</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{{ end }}
+{{ end }}

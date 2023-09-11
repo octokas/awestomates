@@ -1,0 +1,51 @@
+<head>
+  <title>{{ .Title }}</title>
+
+  {{ "<!-- Meta -->" | safeHTML }}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="author" content="bslthemes" />
+
+  {{ "<!-- Google Fonts -->" | safeHTML }}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+
+  {{ "<!-- Plugins Stylesheets -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/bootstrap/bootstrap.min.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/font-awesome/css/font-awesome.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/magnific-popup/magnific-popup.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/splitting/splitting.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/swiper/swiper.min.css" | absURL }}" />
+  <link rel="stylesheet" href="{{ "plugins/animate/animate.css" | absURL }}" />
+
+  {{ "<!-- Sheppard Tours -->" | safeHTML }}
+  <link rel="stylesheet" href="{{ "plugins/shepherd/shepherd.css" | absURL }}" />
+
+  {{ "<!-- Main Stylesheets -->" | safeHTML }}
+  {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+  <link rel="stylesheet" href="{{ "plugins/template-dark/dark.css" | absURL }}" />
+  
+  {{ "<!-- Favicon -->" | safeHTML }}
+  <link rel="shortcut icon" href="{{ "images/favicon/favicon.ico" | absURL }}" type="image/x-icon" />
+  <link rel="icon" href="{{ "images/favicon/favicon.ico" | absURL }}" type="image/x-icon" />
+
+  {{ with site.Params.googleAnalytics }}
+  {{ "<!-- Google Analytics -->" | safeHTML }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+</head>

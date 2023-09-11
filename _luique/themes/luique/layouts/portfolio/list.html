@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{ $portfolio := .Site.Params.portfolio }}
+
+<!-- Section Started Heading -->
+<section class="section section-inner started-heading">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="m-titles align-center">
+      <h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+        <span>{{ .Title }}</span>
+      </h1>
+      <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+        <span>{{ i18n "worksSubtitle" | safeHTML }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section - Works -->
+<section class="lui-section">
+
+  <!-- Works -->
+  <div class="v-line v-line-right v-line-top">
+    <div class="container">
+
+      <div class="works-box{% if categories.layout == 'list' %} works-list{% endif %}">
+        <div class="filter-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+          <a href="#" class="lui-subtitle active" data-href=".works-col">{{ i18n "all" }}</a>
+          {{ range $portfolio.filters }}
+          <a href="#" class="lui-subtitle" data-href=".sorting-{{ .slug }}">{{ .name }}</a>
+          {{ end }}
+        </div>
+        <div class="works-items{{ if eq $portfolio.layout "grid" }} works-masonry-items{{ end }}{{ if eq $portfolio.layout "list" }} works-list-items{{ end }} row">
+          {{ range .Data.Pages }}
+          <div class="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-{{ .Params.category_slug }}">
+            <div class="works-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+              <div class="image">
+                <div class="img">
+                  <a href="{{ .Permalink }}">
+                    <img decoding="async" src="{{ .Params.image | absURL }}" alt="{{ .Title }}" >
+                    <span class="overlay"></span>
+                  </a>
+                </div>
+              </div>
+              <div class="desc">
+                <span class="category">{{ .Params.category }}</span>
+                <h5 class="name">
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h5>
+                <div class="text">
+                  <p>{{ .Params.short_description }}</p>
+                </div>
+                <a href="{{ .Permalink }}" class="lnk">{{ i18n "viewProject" }}</a>
+              </div>
+              <div class="bg-img" style="background-image: url(images/pat-2.png);"></div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="lui-bgtitle">
+        <span>{{ i18n "worksBgTitle" }}</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+{{ end }}

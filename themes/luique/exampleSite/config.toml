@@ -1,0 +1,154 @@
+# General Settings
+title = "Luique - Personal Portfolio Hugo Theme"
+baseURL = "https://bslthemes.com/" #YOUR SITE URL
+languageCode = "en-us"
+theme = "luique"
+resourceDir = "resources"
+paginate = 6
+summaryLength = 20
+DefaultContentLanguage = "en"
+
+# Menu Settings
+[menu]
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "services"
+  name = "Services"
+  url = "#services-section"
+  weight = 2
+[[menu.main]]
+  identifier = "skills"
+  name = "Skills"
+  url = "#skills-section"
+  weight = 3
+[[menu.main]]
+  identifier = "works"
+  name = "Works"
+  url = "#works-section"
+  weight = 4
+[[menu.main]]
+  identifier = "resume"
+  name = "Resume"
+  url = "#resume-section"
+  weight = 5
+[[menu.main]]
+  identifier = "testimonials"
+  name = "Testimonials"
+  url = "#testimonials-section"
+  weight = 6
+[[menu.main]]
+  identifier = "pricing"
+  name = "Pricing"
+  url = "#pricing-section"
+  weight = 7
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "#blog-section"
+  weight = 8
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "#contact-section"
+  weight = 9
+[[menu.main]]
+  identifier = "pages"
+  name = "Pages"
+  url = "#pages"
+  weight = 10
+[[menu.main]]
+  identifier = "pages-blog"
+  parent = "pages"
+  name = "Blog List"
+  url = "/blog/"
+  weight = 1
+[[menu.main]]
+  identifier = "pages-works"
+  parent = "pages"
+  name = "Works List"
+  url = "/portfolio/"
+  weight = 2
+
+# Main Settings
+[params]
+defaultSkin = "light"  # select default UI: "light" or "dark"
+dateFormat = "January 2, 2006"
+authorName = "Zoé Miller"
+disqusComments = "test" #YOUR DISQUS COMMENTS SHORTNAME
+formspreeURL = "" #YOUR FORMSPREE URL
+googleAnalytics = "" #YOUR GOOGLE ANALYTICS CODE
+
+# Preloader Settings
+[params.preloader]
+logo = "images/logo2.png"
+alt = "Zoé Miller"
+
+# Header Settings
+[params.header]
+logo = "images/logo2.png"
+logo_alt =  "Zoé Miller"
+
+# Footer Settings
+[params.footer]
+copyright = "© 2023 <strong>Luique</strong>. All rights reserved"
+developer = "Developed by <strong>bslthemes</strong>"
+
+# Social Settings
+[[params.social]]
+title = "Twitter"
+icon = "fab fa-twitter"
+url = "https://www.twitter.com/"
+weight = 1
+[[params.social]]
+title = "Dribbble"
+icon = "fab fa-dribbble"
+url = "https://www.dribbble.com/"
+weight = 2
+[[params.social]]
+title = "Behance"
+icon = "fab fa-behance"
+url = "https://www.behance.net/"
+weight = 3
+
+# Portfolio Settings
+[params.portfolio]
+homeNumOfItems = 12
+layout = "list" # select works layout options: "grid" or "list"
+[[params.portfolio.filters]]
+name = "UI UX Design"
+slug = "ui-ux-design"
+[[params.portfolio.filters]]
+name = "Photography"
+slug = "photography"
+[[params.portfolio.filters]]
+name = "Development"
+slug = "development"
+[[params.portfolio.filters]]
+name = "Branding"
+slug = "branding"
+
+# Sidebar
+[params.sidebar]
+enable = 1 #SIDEBAR SHOW: [ 1 - yes, 0 - no ]
+search = 1 #SIDEBAR SEARCH WIDGET: [ 1 - yes, 0 - no ]
+latestPosts = 1 #SIDEBAR LATEST POSTS WIDGET: [ 1 - yes, 0 - no ]
+categories = 1 #SIDEBAR CATEGORIES TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
+tags = 1 #SIDEBAR TAG TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
+
+# Sitemap Settings
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
