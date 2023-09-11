@@ -18,11 +18,10 @@ enableInlineShortcodes = true
   url = "/"
   weight = 1
 [[menu.main]]
-  identifier = "resources"
-  name = "Resources"
-  url = "#services-section"
-  weight = 2
-
+  identifier = "getting-started"
+  name = "Getting Started"
+  url = "#getting-started"
+  weight = 0
 
 # Main Settings
 [params]

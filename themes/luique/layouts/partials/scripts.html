@@ -12,7 +12,6 @@
 <script src="{{ "plugins/cookie/jquery.cookie.js" | absURL }}"></script>
 <script src="{{ "plugins/typed/typed.js" | absURL }}"></script>
 <script src="{{ "plugins/rrssb/rrssb.js" | absURL }}"></script>
-<script src="{{ "https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js" | absURL }}"></script>
 
 {{ if .Site.Params.sidebar.search }}
 <script src="{{ "plugins/mark/mark.js" | absURL }}"></script>
@@ -27,7 +26,4 @@
 <script src="{{ $script.Permalink }}"></script>
 
 {{ $script := resources.Get "js/typed-txt.js" | minify }}
-<script src="{{ $script.Permalink }}"></script>
-
-{{ $script := resources.Get "js/construction.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>

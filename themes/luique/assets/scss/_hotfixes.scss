@@ -5,3 +5,11 @@
 *	Author URL: https://github.com/batmanwgd
 *	Copyright © Awestomates by Kaska. All Rights Reserved.
 */
+
+/* SETTINGS FOR LOGO 
+	- Homepage Logo vs Inner Pages
+*/
+
+body > div.container-page > header > div > div > div.col-xs-4.col-sm-4.col-md-4.col-lg-4 > div > a > img {
+    display: none;
+}
