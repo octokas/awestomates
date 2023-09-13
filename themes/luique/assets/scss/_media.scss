@@ -24,7 +24,28 @@
 
     .section.hero-started .slide img, .section.hero-started .slide .circle.circle-1 {
         left: 14vw;
-        top: 35vh;
+        top: 38vh;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #typed-txt {
+        display: block;
+        min-height: 170px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 950px) {
+    .section.hero-started .content {
+        padding-top: 80px;
+    }
+    .section.hero-started .title {
+        font-size: 48px;
+    }
+
+    .section.hero-started .slide img, .section.hero-started .slide .circle.circle-1 {
+        left: 6vw;
+        top: 11vh;
         width: 100%;
         max-width: 600px;
     }
