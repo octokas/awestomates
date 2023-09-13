@@ -55,3 +55,28 @@
         min-height: 170px;
     }
 }
+
+@media screen and (min-width: 960px) and (max-width: 1150px) {
+    .section.hero-started .content {
+        padding-top: 80px;
+    }
+    .section.hero-started .title {
+        font-size: 54px;
+    }
+
+    .section.hero-started .slide img, .section.hero-started .slide .circle.circle-1 {
+        left: 14.5vw;
+        top: 11vh;
+        width: 100%;
+        max-width: 525px;
+    }
+
+    #typed-txt {
+        display: block;
+        min-height: 170px;
+    }
+
+    .section.hero-started .info-list {
+        top: 440px;
+    }
+}
