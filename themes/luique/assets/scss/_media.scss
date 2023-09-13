@@ -15,3 +15,22 @@
         left: 10vw;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .section.hero-started .title {
+        font-size: 48px;
+    }
+
+    .section.hero-started .slide img, .section.hero-started .slide .circle.circle-1 {
+        left: 14vw;
+        top: 35vh;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #typed-txt {
+        display: block;
+        min-height: 170px;
+    }
+}
