@@ -105,3 +105,34 @@
         top: 425px;
     }
 }
+
+@media screen and (min-width: 2200px) {
+
+    .lui-section-hero {
+        padding-bottom: 40px;
+
+    }
+    .section.hero-started .content {
+        padding-top: 0px;
+    }
+    .section.hero-started .title {
+        font-size: 70px;
+    }
+
+    .section.hero-started .slide img, .section.hero-started .slide .circle.circle-1 {
+        left: 6.5vw;
+        top: 11vh;
+        width: 100%;
+        max-width: 605px;
+    }
+
+    #typed-txt {
+        display: block;
+        min-height: 170px;
+    }
+
+    .section.hero-started .info-list {
+        top: 425px;
+        left: -15px;
+    }
+}
