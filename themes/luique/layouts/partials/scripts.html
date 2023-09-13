@@ -1,4 +1,5 @@
 <script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<script src="{{ "plugins/shepherd/shepherd.min.js" | absURL }}"></script>
 <script src="{{ "plugins/bootstrap/bootstrap.min.js" | absURL }}"></script>
 <script src="{{ "plugins/validate/jquery.validate.min.js" | absURL }}"></script>
 <script src="{{ "plugins/swiper/swiper.min.js" | absURL }}"></script>
@@ -26,4 +27,7 @@
 <script src="{{ $script.Permalink }}"></script>
 
 {{ $script := resources.Get "js/typed-txt.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+
+{{ $script := resources.Get "js/hints.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>

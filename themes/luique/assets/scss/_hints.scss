@@ -1,0 +1,39 @@
+.construction-label {
+    // color: #29a587;
+    color: #242424;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.shepherd-element {
+    max-width: 450px;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
+    color: rgba(36, 36, 36, 0.6);
+    width: 100%;
+    max-width: 36px;
+    height: 36px;
+    line-height: 3px;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon:hover, .shepherd-has-title .shepherd-content .shepherd-cancel-icon:focus {
+    color: whitesmoke;
+}
+
+a.btn-tour-bck:before, .btn-tour-bck:before {
+    background: grey;
+    color: whitesmoke;
+}
+
+button:before {
+    background: #900d3eff;
+    color: whitesmoke;
+}
+
+a.btn-tour-fwd:before, .btn-tour-fwd:before {
+    background: #29a587;
+    color: whitesmoke;
+}

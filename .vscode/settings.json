@@ -356,6 +356,7 @@
       "css.format.braceStyle": "expand", // default is collapse, but let's make pretty
       "css.format.spaceAroundSelectorSeparator": true, // default is false, but that's hairy
       "css.lint.ieHack": "ignore", // hidden feature, only necessary for IE7 older clients
+      "css.completion.triggerPropertyValueCompletion": false,
       "less.format.braceStyle": "expand", // same as css
       "less.format.spaceAroundSelectorSeparator": true, // same as css
       "scss.format.braceStyle": "expand", // same as css
