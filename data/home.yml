@@ -11,10 +11,10 @@ hero:
   title: "<b>Awestomates</b> "
   before_title: "Welcome my fellow <b>&nbsp;</b>"
   after_title: "Help &amp; Support for<strong>all ostomies</strong> <div id='typed-txt'></div>"
-  description: "As an awestomate, you're a fighter, strong survivor, and force to be wreckoned with! You've got this! We've got you! 💪🏻&nbsp;💪🏼&nbsp;💪🏽&nbsp;💪🏾&nbsp;💪🏿&nbsp;🦾"
+  description: "As an awestomate, you're a fighter, strong survivor, and force to be reckoned with! You've got this! We've got you! 💪🏻&nbsp;💪🏼&nbsp;💪🏽&nbsp;💪🏾&nbsp;💪🏿&nbsp;🦾"
   button1:
     label: "Get Started »"
-    link: "https://drive.google.com/"
+    link: "#getting-started"
   button2:
     label: "Services »"
     link: "#skills-section"
@@ -26,12 +26,12 @@ hero:
     - num: "FAQ<span class='small-txt'>s</span> <strong>?</strong>"
       value: "AFTER surgery <strong>»</strong>"
 
-### Services [ services ]
+### Getting Started [ getting-started ]
 services:
   enable: 1
-  title: "Resources"
+  title: "Getting Started"
   subtitle: "For where you are<b>now and down the road</b>"
-  bg_title: "Resources"
+  bg_title: "Getting Started"
 
   items:
     - title: "Know Before You Go"
