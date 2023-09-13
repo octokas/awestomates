@@ -12,7 +12,7 @@ const tour = new Shepherd.Tour({
   
   tour.addStep({
     title: '<h5 class="construction-label">This project is a work-in-progress!</h5>',
-    text: `We're working hard to create an AWESOME resource for ALL ostomates. But awesomeness takes time, so it'll be a little while before we're ready to launch.<br><br> You can expect to fully engage with us by the 23rd of February, 2024!`,
+    text: `We're working hard to create an <b><u>AWESOME</u></b> resource for <b><u>ALL ostomates</u></b>. But awesomeness takes time, so it'll be a little while before we're ready to launch.<br><br> You can expect to fully engage with us by the <b>23rd of February, 2024</b>!`,
     attachTo: {
       element: '.titles',
       on: 'right'
