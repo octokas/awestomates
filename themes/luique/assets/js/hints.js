@@ -30,7 +30,7 @@ const tour = new Shepherd.Tour({
           return this.next();
         },
         classes: 'btn btn-tour-fwd',
-        text: 'Next'
+        text: 'Done'
       }
     ],
     id: 'construction'
