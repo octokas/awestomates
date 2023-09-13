@@ -23,9 +23,14 @@
     color: whitesmoke;
 }
 
+a.btn-tour-bck, .btn-tour-bck {
+    margin-right: 15px;
+}
+
 a.btn-tour-bck:before, .btn-tour-bck:before {
     background: grey;
     color: whitesmoke;
+    z-index: -1;
 }
 
 button:before {
@@ -36,4 +41,5 @@ button:before {
 a.btn-tour-fwd:before, .btn-tour-fwd:before {
     background: #29a587;
     color: whitesmoke;
+    z-index: -1;
 }
