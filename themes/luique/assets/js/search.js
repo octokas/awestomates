@@ -1,3 +1,26 @@
+
+//import jsonContent from "./search/faqs.json" assert { type: "json" };
+//var jsonContent = fetchJSONFile("../plugins/search/faqs.json");
+//console.log(jsonContent);
+
+// ==========================================
+// fetch some json without jquery
+//
+function fetchJSONFile(path, callback) {
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function() {
+    if (httpRequest.readyState === 4) {
+      if (httpRequest.status === 200) {
+        var data = JSON.parse(httpRequest.responseText);
+          if (callback) callback(data);
+      }
+    }
+  };
+  httpRequest.open('GET', path);
+  httpRequest.send();
+}
+
+fetchJSONFile('/plugins/search/content.json', function(data){console.log(data)});
 var codesEl;
 var jsonData = [
   {
@@ -58,13 +81,18 @@ function search(ev) {
   var key = ev.target.value;
   codesEl.innerText = null;
   
-  printData(jsonData.filter((data)=>{
+  printData(data.filter((data)=>{
     var regex = new RegExp(key, "i");
     return data.name.match(regex)|| data.code.match(regex);
   }));
 }
 
-window.onload = function() {
+(function(){
   codesEl = document.getElementById("codes");
-  printData(jsonData);
-}
+  printData(fetchJSONFile('/plugins/search/content.json', function(data){console.log(data)}));
+ })();
+
+// window.onload = function() {
+//   codesEl = document.getElementById("codes");
+//   printData(deets);
+// }
