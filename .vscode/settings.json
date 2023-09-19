@@ -11,8 +11,8 @@
     "debug.console.fontSize": 10,
     "scm.inputFontSize": 10,
     "editor.fontSize": 10,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Cascade Code', 'Fira Code'",
+    "editor.fontLigatures": false, // fix for messy !=
     "screencastMode.fontSize": 20,
     "metaGo.decoration.fontSize": 10,
     "npm.packageManager": "yarn", // default is auto, options are: auto, npm, pnpm and yarn
@@ -63,7 +63,8 @@
       "editor.renderWhitespace": "selection", // special
       "editor.snippetSuggestions": "bottom", // special
       "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#ff4081aa" // a's are transparency levels on the colors (alphas)
+        "editorRuler.foreground": "#ff4081aa", // a's are transparency levels on the colors (alphas)
+        "editorIndentGuide.activeBackground1": "#00ffc3"
     },
     "editor.scrollbar.verticalScrollbarSize": 14,
     "editor.scrollbar.vertical": "auto",
@@ -79,10 +80,7 @@
     "editor.wordWrapColumn": 110, // I have set right before ruler at 120 for visual clearness
     "editor.wrappingIndent": "indent", // can set to same or even deepIndent if confusing
     "editor.wrappingStrategy": "advanced", // default option is simple
-    "workbench.activityBar.visible": true, //special
-    "workbench.colorCustomizations": {
-      "editorIndentGuide.activeBackground": "#00ffc3"
-    },
+    "workbench.activityBar.visible": true, //special,
     "workbench.commandPalette.history": 999,
     "workbench.editor.closeEmptyGroups": false, // default is true
     "workbench.editor.labelFormat": "short", //default is default, but short, medium, and long options are available, learn more here: https://code.visualstudio.com/docs/getstarted/settings
