@@ -1,14 +1,45 @@
 # General Settings
 title = "Awestomates - An awesome place for new ostomies."
 baseURL = "https://awestomates.netlify.app/" 
-languageCode = "en-us"
+canonifyURLs = false
+disableAliases = false
+disableHugoGeneratorInject = true
+enableEmoji = true
+enableGitInfo = true
+enableInlineShortcodes = true
+enableRobotsTXT = true
+languageCode = "en-US"
+footnoteReturnLinkContents = '↩'
+paginate = 6
+rssLimit = 12
 theme = "luique"
 resourceDir = "resources"
-paginate = 6
 summaryLength = 20
 DefaultContentLanguage = "en"
-enableEmoji = true
-enableInlineShortcodes = true 
+
+# add redirects/headers
+[outputs]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS", "JSON"]
+section = ["HTML", "RSS", "SITEMAP", "JSON"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+mediaType = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+mediaType = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
 
 # Menu Settings
 [menu]
@@ -74,17 +105,84 @@ tags = 1 #SIDEBAR TAG TAXONOMY WIDGET: [ 1 - yes, 0 - no ]
 
 # Sitemap Settings
 [sitemap]
-  changefreq = "monthly"
+  changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
-[outputs]
-home = ["HTML", "RSS", "JSON"]
+# add output format for section sitemap.xml
+[outputFormats.SITEMAP]
+mediaType = "application/xml"
+baseName = "sitemap"
+isHTML = false
+isPlainText = true
+noUgly = true
+rel  = "sitemap"
 
+# Markup Settings
 [markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.asciidocExt]
+    backend = 'html5'
+    extensions = []
+    failureLevel = 'fatal'
+    noHeaderOrFooter = true
+    preserveTOC = false
+    safeMode = 'unsafe'
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ''
+    footnoteReturnLinkContents = ''
+    fractions = true
+    hrefTargetBlank = true
+    latexDashes = true
+    nofollowLinks = true
+    noreferrerLinks = true
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
   [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.renderer]
+      hardWraps = false
       unsafe = true
+      xhtml = false
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "codepen"
+    tabWidth = 2
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 
 # Minify Settings
@@ -120,3 +218,25 @@ home = ["HTML", "RSS", "JSON"]
       precision = 0
     [minify.tdewolff.xml]
       keepWhitespace = false
+
+# Build Settings
+[build]
+  writeStats = true
+
+# Module Import Settings
+# [module]
+#   [[module.mounts]]
+#     source = "assets"
+#     target = "assets"
+#   [[module.mounts]]
+#     source = "static"
+#     target = "static"
+
+# Taxonomy Settings
+[taxonomies]
+  contributor = "contributors"
+  tag = "tags"
+
+# Relative Permalink Settings
+[RelPermalinks]
+  blog = "/blog/:title/"

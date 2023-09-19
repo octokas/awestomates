@@ -48,7 +48,7 @@ function fetchJSONFile(path, callback) {
 // on first call of search box (CMD-/)
 //
 function loadSearch() {
-    fetchJSONFile('/index.json', function(data){
+    fetchJSONFile('/plugins/search/content.json', function(data){
 
     var options = { // fuse.js options; check fuse.js website for details
       shouldSort: true,
@@ -82,7 +82,7 @@ function executeSearch(term) {
     searchitems = '';
   } else { // build our html
     for (let item in results.slice(0,5)) { // only show first 5 results
-      searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '">' + results[item].item.title + '<br/> <small>'+ results[item].item.section +'</small> — <small>' + results[item].item.date + '</small></a></li>';
+      searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '">' + results[item].item.title + '<br/> <small>'+ results[item].item.summary +'</small> — <small>' + results[item].item.date + '</small></a></li>';
     }
     resultsAvailable = true;
   }

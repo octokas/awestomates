@@ -64,7 +64,24 @@
       "editor.snippetSuggestions": "bottom", // special
       "workbench.colorCustomizations": {
         "editorRuler.foreground": "#ff4081aa", // a's are transparency levels on the colors (alphas)
-        "editorIndentGuide.activeBackground1": "#00ffc3"
+        "editorIndentGuide.activeBackground1": "#00ffc3",
+        "titleBar.activeBackground": "#1D222A",
+        "activityBar.activeBackground": "#29a587",
+        "activityBar.activeBorder": "#29a587",
+        "activityBar.background": "#1D222A",
+        "activityBar.foreground": "#F0EBE3",
+        "activityBar.inactiveForeground": "#F0EBE399",
+        "activityBarBadge.background": "#29a587",
+        "activityBarBadge.foreground": "#F0EBE3",
+        "sash.hoverBorder": "#29a587",
+        "statusBar.background": "#1D222A",
+        "statusBar.foreground": "#F0EBE3",
+        "statusBarItem.hoverBackground": "#29a587",
+        "statusBarItem.remoteBackground": "#29a587",
+        "statusBarItem.remoteForeground": "#F0EBE3",
+        "titleBar.activeForeground": "#F0EBE3",
+        "titleBar.inactiveBackground": "#29a58799",
+        "titleBar.inactiveForeground": "#F0EBE399"
     },
     "editor.scrollbar.verticalScrollbarSize": 14,
     "editor.scrollbar.vertical": "auto",
