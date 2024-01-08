@@ -1,8 +1,8 @@
 # General Settings
-title = "Luique - Personal Portfolio Hugo Theme"
-baseURL = "https://bslthemes.com/" #YOUR SITE URL
+title = "Awestomates - An Awesome place for New Ostomates of all kinds!"
+baseURL = "https://awestomates.netlify.app" 
 languageCode = "en-us"
-theme = "luique"
+theme = "awestomates"
 resourceDir = "resources"
 paginate = 6
 summaryLength = 20
@@ -96,8 +96,8 @@ logo_alt =  "Zoé Miller"
 
 # Footer Settings
 [params.footer]
-copyright = "© 2023 <strong>Luique</strong>. All rights reserved"
-developer = "Developed by <strong>bslthemes</strong>"
+copyright = "© 2023 <strong>Awestomates</strong>. All rights reserved"
+developer = "Developed with <i class='fa fa-heartbeat'></i> by <strong><a target='_blank' href='https://linkedin.com/in/rosenfaden'>Kaska</a></strong>"
 
 # Social Settings
 [[params.social]]

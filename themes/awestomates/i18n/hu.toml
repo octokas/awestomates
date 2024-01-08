@@ -1,0 +1,132 @@
+[home]
+other = "itthon"
+
+[blog]
+other = "Blog"
+
+[blogSubtitle]
+other = "Életem összes aktuális híre és eseménye"
+
+[all]
+other = "Minden"
+
+[readMore]
+other = "Olvass tovább"
+
+[viewProject]
+other = "Projekt megtekintése"
+
+[by]
+other = "Által"
+
+[yourName]
+other = "Teljes név"
+
+[enterYourName]
+other = "Add meg a teljes neved"
+
+[yourEmail]
+other = "Email cím"
+
+[enterYourEmail]
+other = "írd be az email címed"
+
+[yourMessage]
+other = "Üzenet"
+
+[enterYourMessage]
+other = "Írja be üzenetét ide"
+
+[yourSubject]
+other = "Az Ön alanya"
+
+[acceptTerms]
+other = "* Fogadja el a feltételeket."
+
+[submit]
+other = "Beküldés"
+
+[taxonomyPageList]
+other = "Az alábbiakban olyan oldalakat talál, amelyek a „{{ .Title }}” taxonómiai kifejezést használják."
+
+[readingTime]
+one = "1 perc olvasás"
+other = "{{ .Count }} perc olvasás"
+
+[share]
+other = "Ossza meg"
+
+[shareOn]
+other = "Oszd meg"
+
+[tags]
+other = "Címkék"
+
+[comments]
+other = "Hozzászólások"
+
+[next]
+other = "Következő"
+
+[prev]
+other = "Előző"
+
+[nextPost]
+other = "Következő bejegyzés"
+
+[prevPost]
+other = "Előző poszt"
+
+[nextProject]
+other = "Következő Projekt"
+
+[prevProject]
+other = "Előző Projekt"
+
+[sendMessage]
+other = "Üzenet küldése"
+
+[successMessage]
+other = "Köszönjük, üzenetét sikeresen elküldtük."
+
+[developedBy]
+other = "Által kifejlesztett"
+
+[category]
+other = "Kategória"
+
+[categories]
+other = "Kategóriák"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Hoppá!"
+
+[errorText]
+other = "A keresett oldal nem létezik, vagy el lett helyezve."
+
+[new]
+other = "új"
+
+[search]
+other = "Keresés ..." 
+
+[recentPosts]
+other = "Legutóbbi hozzászólások"
+
+[latestPosts]
+other = "Legutóbbi bejegyzések"
+
+[followMe]
+other = "Kövess engem"
+
+[worksSubtitle]
+other = "<b>Eseim</b>"
+
+[worksBgTitle]
+other = "Portfólió"
+
+[livePreview]
+other = "Élő előnézet"

@@ -1,0 +1,132 @@
+[home]
+other = "Heim"
+
+[blog]
+other = "Blog"
+
+[blogSubtitle]
+other = "Ein großartiger Ort für neue Stomaträger aller Art"
+
+[all]
+other = "Alle"
+
+[readMore]
+other = "Mehr lesen"
+
+[viewProject]
+other = "Projekt ansehen"
+
+[by]
+other = "Von"
+
+[yourName]
+other = "Vollständiger Name"
+
+[enterYourName]
+other = "Geben Sie Ihren vollständigen Namen ein"
+
+[yourEmail]
+other = "E-Mail-Adresse"
+
+[enterYourEmail]
+other = "Geben sie ihre E-Mailadresse ein"
+
+[yourMessage]
+other = "Nachricht"
+
+[enterYourMessage]
+other = "Geben Sie hier Ihre Nachricht ein"
+
+[yourSubject]
+other = "Dein Fach"
+
+[acceptTerms]
+other = "* Akzeptieren Sie die Allgemeinen Geschäftsbedingungen."
+
+[submit]
+other = "Einreichen"
+
+[taxonomyPageList]
+other = "Nachfolgend finden Sie Seiten, die den Taxonomiebegriff „{{ .Title }}“ verwenden."
+
+[readingTime]
+one = "1 Minute gelesen"
+other = "{{ .Count }} Minuten gelesen"
+
+[share]
+other = "Aktie"
+
+[shareOn]
+other = "Teilen auf"
+
+[tags]
+other = "Stichworte"
+
+[comments]
+other = "Kommentare"
+
+[next]
+other = "Nächste"
+
+[prev]
+other = "Vorherige"
+
+[nextPost]
+other = "Nächster Beitrag"
+
+[prevPost]
+other = "Vorherigen Post"
+
+[nextProject]
+other = "Nächstes Projekt"
+
+[prevProject]
+other = "Vorheriges Projekt"
+
+[sendMessage]
+other = "Nachricht senden"
+
+[successMessage]
+other = "Vielen Dank, Ihre Nachricht wurde erfolgreich gesendet."
+
+[developedBy]
+other = "Entwickelt von"
+
+[category]
+other = "Kategorie"
+
+[categories]
+other = "Kategorien"
+
+[errorNum]
+other = "404"
+
+[errorTitle]
+other = "Hoppla!"
+
+[errorText]
+other = "Die gesuchte Seite existiert nicht oder wurde verschoben."
+
+[new]
+other = "neu"
+
+[search]
+other = "Suchen ..." 
+
+[recentPosts]
+other = "kürzliche Posts"
+
+[latestPosts]
+other = "Neueste Beiträge"
+
+[followMe]
+other = "Folgen Sie mir"
+
+[worksSubtitle]
+other = "meine <b>Fälle</b>"
+
+[worksBgTitle]
+other = "Portfolio"
+
+[livePreview]
+other = "Live Vorschau"

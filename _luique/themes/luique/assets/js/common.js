@@ -1,9 +1,9 @@
 /**
-*	Luique - Personal Portfolio HTML Template
+*	Awestomates - An Awesome place for New Ostomates of all kinds!
 *	Version: 1.0
-*	Author: bslthemes
-*	Author URL: http://themeforest.net/user/bslthemes
-*	Copyright © Luique by bslthemes. All Rights Reserved.
+*	Author: Kaska Miskolczi
+*	Author URL: https://awestomates.netlify.app
+*	Copyright © Awestomates by Kaska Miskolczi. All Rights Reserved.
 **/
 
 ( function( $ ) {

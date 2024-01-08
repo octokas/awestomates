@@ -1,8 +1,8 @@
 # General Settings
-title = "Awestomates - An awesome place for new ostomies."
-baseURL = "https://awestomates.com/" 
+title = "Awestomates - An Awesome place for New Ostomates of all kinds!"
+baseURL = "https://awestomates.netlify.app" 
 languageCode = "en-us"
-theme = "luique"
+theme = "awestomates"
 resourceDir = "resources"
 paginate = 6
 summaryLength = 20
