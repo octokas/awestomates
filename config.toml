@@ -1,45 +1,51 @@
-# General Settings
+# Adjusted baseline settings for DO App Setup
+theme = "awestomates"
+relativeURLs = true
+baseURL= "/"
 title = "Awestomates - An awesome place for new ostomies."
-baseURL = "https://awestomates.netlify.app/" 
+author = "Kaska Miskolczi"
+paginate = 6
+languageCode = "en-US"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+
+# my favourite additional settings
+enableEmoji = true
+enableGitInfo = true
 canonifyURLs = false
 disableAliases = false
 disableHugoGeneratorInject = true
-enableEmoji = true
-enableGitInfo = true
-enableInlineShortcodes = true
 enableRobotsTXT = true
-languageCode = "en-US"
 footnoteReturnLinkContents = '↩'
-paginate = 6
 rssLimit = 12
-theme = "awestomates"
 resourceDir = "resources"
 summaryLength = 20
-DefaultContentLanguage = "en"
+
 
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS", "JSON"]
 section = ["HTML", "RSS", "SITEMAP", "JSON"]
 
+# Netlify settings to remove for DO App
 # remove .{ext} from text/netlify
-[mediaTypes."text/netlify"]
-suffixes = [""]
-delimiter = ""
+# [mediaTypes."text/netlify"]
+# suffixes = [""]
+# delimiter = ""
 
 # add output format for netlify _redirects
-[outputFormats.REDIRECTS]
-mediaType = "text/netlify"
-baseName = "_redirects"
-isPlainText = true
-notAlternative = true
+# [outputFormats.REDIRECTS]
+# mediaType = "text/netlify"
+# baseName = "_redirects"
+# isPlainText = true
+# notAlternative = true
 
 # add output format for netlify _headers
-[outputFormats.HEADERS]
-mediaType = "text/netlify"
-baseName = "_headers"
-isPlainText = true
-notAlternative = true
+# [outputFormats.HEADERS]
+# mediaType = "text/netlify"
+# baseName = "_headers"
+# isPlainText = true
+# notAlternative = true
 
 # Menu Settings
 [menu]

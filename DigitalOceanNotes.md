@@ -8,3 +8,10 @@ _My notes on converting our hugo project to be automatically detected by Digital
    2. add folder for hugo layouts
    3. remove excess site implementations _(DO keeps seeing as Nodejs Webservice app)_
    4. add `.do` folder with basic build commands
+
+#### Progress Note
+> App Platform looks for any of the following to detect a Hugo application:
+>   config.toml
+>   config.yaml
+>   config.json
+> If this is the case, then why isn't it automatically detecting it's a hugo site?
