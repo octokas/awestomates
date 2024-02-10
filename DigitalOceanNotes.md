@@ -16,3 +16,5 @@ _My notes on converting our hugo project to be automatically detected by Digital
 >   config.yaml
 >   config.json
 > If this is the case, then why isn't it automatically detecting it's a hugo site?
+
+_Because all of the settings should now be complimentary, the only thought I have is that since it's not the "main" branch and it's actually cueing off the "main" branch, I need to try re-forking this branch as a new repository just for DO, and try it that way._
