@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "hugo --gc --minify",
-    "build:preview": "yarn run build -D -F",
+    "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
     "check": "hugo version",
     "clean": "shx rm -rf doks public resources",
     "clean:install": "shx rm -rf package-lock.json bin node_modules ",
@@ -24,7 +24,6 @@
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "module-backup": "mkdir nm-bkup/$(date +\"%d-%m-%Y\") && shx cp -R node_modules nm-bkup/$(date +\"%d-%m-%Y\")",
     "postbuild": "shx rm -rf doks && mv public doks",
-    "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
     "prebuild": "yarn run clean",
     "precheck": "yarn version",
     "prestart": "yarn run clean",
@@ -36,8 +35,17 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
+    "desandro-matches-selector": "^2.0.2",
+    "ev-emitter": "^2.1.2",
+    "fizzy-ui-utils": "^3.0.0",
+    "get-size": "^3.0.0",
     "hugo": "^0.0.3",
     "hugo-installer": "^4.0.1",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "jquery-mousewheel": "^3.1.13",
+    "masonry-layout": "^4.2.2",
+    "outlayer": "^2.1.1",
     "shx": "^0.3.4",
     "yarn": "^1.22.21"
   },
@@ -47,6 +55,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "hugo-extended": "^0.124.1",
+    "npm-check": "^6.0.1",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   }
