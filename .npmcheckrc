@@ -1,0 +1,12 @@
+{
+    "depcheck": {
+        "ignoreMatches": [
+            "hugo",
+            "hugo-installer",
+            "autoprefixer",
+            "npm-check",
+            "postcss",
+            "postcss-cli"
+        ]
+        }
+    }
