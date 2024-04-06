@@ -7,6 +7,7 @@
   "author": "Kaska Miskolczi <batmanwgd@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "update":"./_scripts/git-updates.sh",
     "build": "hugo --gc --minify",
     "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
     "check": "hugo version",
