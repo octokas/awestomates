@@ -64,7 +64,7 @@
       "editor.snippetSuggestions": "bottom", // special
       "workbench.colorCustomizations": {
         "editorRuler.foreground": "#ff4081aa", // a's are transparency levels on the colors (alphas)
-        "editorIndentGuide.activeBackground1": "#00ffc3",
+       /*  "editorIndentGuide.activeBackground1": "#00ffc3",
         "titleBar.activeBackground": "#1D222A",
         "activityBar.activeBackground": "#29a587",
         "activityBar.activeBorder": "#29a587",
@@ -81,7 +81,7 @@
         "statusBarItem.remoteForeground": "#F0EBE3",
         "titleBar.activeForeground": "#F0EBE3",
         "titleBar.inactiveBackground": "#29a58799",
-        "titleBar.inactiveForeground": "#F0EBE399"
+        "titleBar.inactiveForeground": "#F0EBE399" */
     },
     "editor.scrollbar.verticalScrollbarSize": 14,
     "editor.scrollbar.vertical": "auto",
@@ -96,8 +96,7 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 110, // I have set right before ruler at 120 for visual clearness
     "editor.wrappingIndent": "indent", // can set to same or even deepIndent if confusing
-    "editor.wrappingStrategy": "advanced", // default option is simple
-    "workbench.activityBar.visible": true, //special,
+    "editor.wrappingStrategy": "advanced", //special,
     "workbench.commandPalette.history": 999,
     "workbench.editor.closeEmptyGroups": false, // default is true
     "workbench.editor.labelFormat": "short", //default is default, but short, medium, and long options are available, learn more here: https://code.visualstudio.com/docs/getstarted/settings
@@ -105,7 +104,7 @@
     "workbench.editor.pinnedTabSizing": "compact", // options are normal by default, compact and shrink
     "workbench.editor.revealIfOpen": true, // default is false
     "workbench.editor.showIcons": true,
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.editor.splitInGroupLayout": "horizontal",
     "workbench.editor.tabSizing": "fit", // also have options of shrink and fixed
     "workbench.editor.untitled.labelFormat": "name", // default is content but that's messy AF
