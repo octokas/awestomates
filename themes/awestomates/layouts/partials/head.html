@@ -31,6 +31,11 @@
   <link rel="shortcut icon" href="{{ "images/favicon/favicon.ico" | absURL }}" type="image/x-icon" />
   <link rel="icon" href="{{ "images/favicon/favicon.ico" | absURL }}" type="image/x-icon" />
 
+  {{ "<!-- Request Metrics -->" | safeHTML }}
+  <script async crossorigin="anonymous"
+    src="https://cdn.requestmetrics.com/agent/current/rm.js"
+    data-rm-token="j6cp5pq:x8bp8ih"></script>
+
   {{ with site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
