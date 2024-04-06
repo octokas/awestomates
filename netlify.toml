@@ -1,7 +1,7 @@
 # Netlify configuration
 
 [build]
-  command = "hugo"
+  command = "yarn global add hugo-cli && yarn install && hugo"
   publish = "public"
 
 [build.environment]
