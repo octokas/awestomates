@@ -39,5 +39,6 @@
     "hugo": "^0.0.3",
     "shx": "^0.3.4",
     "yarn": "^1.22.21"
-  }
+  },
+  "trustedDependencies": ["hugo-bin"]
 }
