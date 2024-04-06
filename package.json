@@ -24,7 +24,7 @@
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "module-backup": "mkdir nm-bkup/$(date +\"%d-%m-%Y\") && shx cp -R node_modules nm-bkup/$(date +\"%d-%m-%Y\")",
     "postbuild": "shx rm -rf doks && mv public doks",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended",
+    "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
     "prebuild": "yarn run clean",
     "precheck": "yarn version",
     "prestart": "yarn run clean",
@@ -37,8 +37,17 @@
   },
   "dependencies": {
     "hugo": "^0.0.3",
+    "hugo-installer": "^4.0.1",
     "shx": "^0.3.4",
     "yarn": "^1.22.21"
   },
-  "trustedDependencies": ["hugo-bin"]
+  "trustedDependencies": [
+    "hugo-bin"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "hugo-extended": "^0.124.1",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
+  }
 }
