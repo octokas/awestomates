@@ -52,7 +52,12 @@ notAlternative = true
   identifier = "getting-started"
   name = "Getting Started"
   url = "#getting-started"
-  weight = 0
+  weight = 2
+[[menu.main]]
+  identifier = "guides"
+  name = "Guides"
+  url = "guides"
+  weight = 3
 
 # Main Settings
 [params]
@@ -62,6 +67,14 @@ authorName = "Kaska Miskolczi"
 disqusComments = "awestomates" #YOUR DISQUS COMMENTS SHORTNAME
 formspreeURL = "" #YOUR FORMSPREE URL
 googleAnalytics = "" #YOUR GOOGLE ANALYTICS CODE
+
+# Guides Settings
+[params.guides]
+homeNumOfItems = 12
+layout = "list" # select works layout options: "grid" or "list"
+[[params.guides.filters]]
+name = "Pre-Op"
+slug = "pre-op"
 
 # Preloader Settings
 [params.preloader]
@@ -240,3 +253,4 @@ rel  = "sitemap"
 # Relative Permalink Settings
 [RelPermalinks]
   blog = "/blog/:title/"
+  guides = "/guides/:title/"
