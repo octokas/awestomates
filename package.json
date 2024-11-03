@@ -7,7 +7,7 @@
   "author": "Kaska Miskolczi <batmanwgd@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "update":"./_scripts/git-updates.sh",
+    "update": "./_scripts/git-updates.sh",
     "build": "hugo --gc --minify",
     "build:preview": "hugo --baseURL \"${DEPLOY_PRIME_URL:-/}\" --buildDrafts --buildFuture",
     "check": "hugo version",
@@ -48,16 +48,16 @@
     "masonry-layout": "^4.2.2",
     "outlayer": "^2.1.1",
     "shx": "^0.3.4",
-    "yarn": "^1.22.21"
+    "yarn": "1.22.22"
   },
   "trustedDependencies": [
     "hugo-bin"
   ],
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "hugo-extended": "^0.124.1",
+    "autoprefixer": "10.4.20",
+    "hugo-extended": "0.136.5",
     "npm-check": "^6.0.1",
-    "postcss": "^8.4.38",
+    "postcss": "8.4.47",
     "postcss-cli": "^11.0.0"
   }
 }
