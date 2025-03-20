@@ -78,8 +78,8 @@ enableInlineShortcodes = true
 # Main Settings
 [params]
 defaultSkin = "light"  # select default UI: "light" or "dark"
-dateFormat = "January 2, 2006"
-authorName = "Zoé Miller"
+dateFormat = "March 20, 2025"
+authorName = "Kaska Miskolczi"
 disqusComments = "test" #YOUR DISQUS COMMENTS SHORTNAME
 formspreeURL = "" #YOUR FORMSPREE URL
 googleAnalytics = "" #YOUR GOOGLE ANALYTICS CODE
@@ -87,12 +87,12 @@ googleAnalytics = "" #YOUR GOOGLE ANALYTICS CODE
 # Preloader Settings
 [params.preloader]
 logo = "images/logo2.png"
-alt = "Zoé Miller"
+alt = "Kaska Miskolczi"
 
 # Header Settings
 [params.header]
 logo = "images/logo2.png"
-logo_alt =  "Zoé Miller"
+logo_alt =  "Kaska Miskolczi"
 
 # Footer Settings
 [params.footer]
