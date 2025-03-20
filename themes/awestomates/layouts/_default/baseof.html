@@ -11,7 +11,7 @@
     {{ partial "header.html" . }}
 
     {{ "<!-- Wrapper -->" | safeHTML }}
-		<div class="wrapper{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "page" ) }} single-post{{ end }}{{ end }}{{ if .IsPage }}{{ if eq .Type "portfolio" }} portfolio-template{{ end }}{{ end }}">
+		<div class="wrapper{{ if .IsPage }}{{ if or ( eq .Type "blog" ) ( eq .Type "page" ) }} single-post{{ end }}{{ end }}{{ if .IsPage }}{{ if eq .Type "guides" }} guides-template{{ end }}{{ end }}{{ if .IsPage }}{{ if eq .Type "portfolio" }} portfolio-template{{ end }}{{ end }}">
       {{ block "main" . }}{{ end }}
     </div>
 
